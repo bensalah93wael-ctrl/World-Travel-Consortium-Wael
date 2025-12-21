@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>World Travel Consortium | Business Travel Agency</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script type="module" src="/src/js/main.js"></script>
+</head>
+<body class="bg-neutral-50 font-display text-neutral-800 overflow-x-hidden">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <header class="sticky top-0 z-50 w-full border-b border-white/10 bg-brand-dark/95 backdrop-blur-md px-4 lg:px-10 py-3">
+            <div class="mx-auto flex max-w-7xl items-center justify-between">
+                <div class="flex items-center gap-3 text-white">
+                    <div class="flex items-center">
+                        <img alt="World Travel Consortium Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8ld1PW-AcAbIrfygsxn9XPfkmJmA5mxRZjZQ4cjGj19HhoRd7fQmduscPiEw2MYBiR_92MsPchsdNH4IpS6Ti0KGNz5Uzimo4UvWwj4tOI-UxO_fQ8maN9WhzqL3d5Glcaf-R8pcEzeA1NoNLnbpeq9XWg69c1lTEnn4KPC1WKo9FcBR8zYpE2gIyxGq4RWtnnzH5Yl1LxF0FelDQAf-i1h7tyX_5De7K2dNeceUKNVaPu_KCKlgG2pHVjQ_Q7W_NnjBV-hgQdg">
+                    </div>
+                    <div class="flex flex-col -space-y-1">
+                        <h2 class="text-white text-lg font-bold leading-none tracking-tight uppercase">World Travel</h2>
+                        <span class="text-xs text-neutral-400 font-light tracking-[0.2em] lowercase">Consortium</span>
+                    </div>
+                </div>
+                <div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+                    <nav class="flex items-center gap-9">
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2" href="#">
+                            <span class="material-symbols-outlined text-[18px]">explore</span>
+                            Destinations
+                        </a>
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2" href="#">
+                            <span class="material-symbols-outlined text-[18px]">design_services</span>
+                            Services
+                        </a>
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2" href="#">
+                            <span class="material-symbols-outlined text-[18px]">groups</span>
+                            About Us
+                        </a>
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2" href="#">
+                            <span class="material-symbols-outlined text-[18px]">contact_support</span>
+                            Contact
+                        </a>
+                    </nav>
+                    <button id="book-consultation-btn" class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-brand-gradient hover:opacity-90 transition-all text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 gap-2">
+                        <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                        <span class="truncate">Book Consultation</span>
+                    </button>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+            <nav id="mobile-menu" class="hidden lg:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-brand-dark/98 backdrop-blur-xl p-8 flex flex-col gap-6 z-[60]">
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4" href="#">
+                    <span class="material-symbols-outlined">explore</span> Destinations
+                </a>
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4" href="#">
+                    <span class="material-symbols-outlined">design_services</span> Services
+                </a>
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4" href="#">
+                    <span class="material-symbols-outlined">groups</span> About Us
+                </a>
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4" href="#">
+                    <span class="material-symbols-outlined">contact_support</span> Contact
+                </a>
+                <button id="mobile-book-btn" class="mt-4 h-14 bg-brand-gradient text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">calendar_month</span> Book Consultation
+                </button>
+            </nav>
+        </header>
+        <main class="flex-1 w-full flex flex-col items-center">
+            <section class="w-full bg-brand-gradient relative overflow-hidden">
+                <div class="absolute inset-0 bg-brand-dark/20 pointer-events-none"></div>
+                <div class="max-w-7xl w-full mx-auto px-4 py-12 lg:py-20 lg:px-10 relative z-10">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="flex flex-col gap-6 order-1 lg:order-1">
+                            <div class="flex flex-col gap-4">
+                                <span class="text-white/90 font-bold tracking-wider uppercase text-sm w-fit border border-white/30 rounded-full px-3 py-1 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-[16px]">flight_takeoff</span>
+                                    Corporate Travel Reimagined
+                                </span>
+                                <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em]">
+                                    Redefining Corporate Retreats.<br>
+                                    <span class="text-white opacity-90">From Adrenaline to Zen.</span>
+                                </h1>
+                                <p class="text-white/80 text-lg font-normal leading-relaxed max-w-xl">
+                                    Specialized travel logistics for teams seeking extreme challenges to build
+                                    resilience, or spiritual grounding to find clarity.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-4 pt-4">
+                                <button id="hero-cta-btn" class="flex items-center justify-center rounded-lg h-12 px-8 bg-white text-primary hover:bg-neutral-100 transition-colors text-base font-bold shadow-lg gap-2">
+                                    <span class="material-symbols-outlined">rocket_launch</span>
+                                    Start Your Journey
+                                </button>
+                                <button class="flex items-center justify-center rounded-lg h-12 px-8 bg-transparent hover:bg-white/10 border border-white transition-colors text-white text-base font-bold gap-2">
+                                    <span class="material-symbols-outlined">download</span>
+                                    Download Brochure
+                                </button>
+                            </div>
+                        </div>
+                        <div class="relative h-[350px] sm:h-[400px] lg:h-[500px] w-full rounded-2xl overflow-hidden group order-2 lg:order-2 shadow-2xl shadow-brand-dark/30 border border-white/20 bg-brand-dark">
+                            <div class="absolute inset-0 w-full h-full bg-brand-dark">
+                                <div class="absolute inset-0 w-full h-1/2 lg:w-1/2 lg:h-full lg:clip-path-polygon-[0_0,100%_0,85%_100%,0%_100%] z-10 transition-transform duration-700 hover:scale-110">
+                                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjthQTJa_Wp7zBkHQcZSHrr0MbBSDezHuitFJWVzmRQWzA8K-3_AfoAtCJWeeVJnTZvAIq2OlXKkcJOu5kra0F_pUwl-279JUAcnmJLX8iseq_G_Jz11-ynhFpB1ldQXjSOwwW4pktRSJAnYGU4hqzj2Up61GwXPVf5fj5bnOoyAi--iXx0fUW8vRxGo-QsYpXhAIwosXcUimHn-fTOxsFRARYrl2ZXU59Rp5Ug7o74CKmS4HzMdBE3hpFrAL61qiCnTGAcUDSMQ');">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 to-transparent flex items-end p-6">
+                                            <div class="flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-primary-accent">hiking</span>
+                                                <span class="text-white font-bold text-xl">The Edge</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 w-full h-1/2 top-1/2 lg:top-0 lg:w-1/2 lg:left-1/2 lg:h-full z-0">
+                                    <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqYM_9i0DVyssgMIJwS_qqLEMocnJJd_lijbamJmyMHc3YrFitbX5xopAqcxEDnQ4-UHGXLfYiFDo-N8VqXqz8NugOEEJ7v2DalREWFVmeUMDkpYzsd4_SNYtlNnU_TA5Km70fboAmQA1Ji9U6VAF5rtffZnep2OnKNTh-KSzdcl9hZJKL3vetAvY_vIgUVWCixVxbyzFt0GoOC9VutFjzaDDzTXMeXzGSDCr7KFucQZKRLu57ECZQnobU54hSlnSORxgE43CEbQ');">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 to-transparent flex items-end justify-end p-6">
+                                            <div class="flex items-center gap-2">
+                                                <span class="text-white font-bold text-xl">The Center</span>
+                                                <span class="material-symbols-outlined text-secondary-blue">self_improvement</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 bg-white border border-neutral-100 rounded-full p-2 shadow-xl">
+                                <span class="material-symbols-outlined text-primary text-3xl">balance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="w-full bg-neutral-50 py-16 border-y border-neutral-200">
+                <div class="max-w-7xl mx-auto px-4 lg:px-10 flex flex-col gap-10">
+                    <div class="flex flex-col gap-4 text-center max-w-3xl mx-auto">
+                        <h2 class="text-primary text-3xl lg:text-4xl font-bold leading-tight">Why Choose World Travel</h2>
+                        <p class="text-secondary-violet text-lg font-medium">We handle the complex logistics of extreme and remote travel so you can focus on the team experience.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="group flex flex-col gap-4 rounded-xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
+                            <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-brand-gradient group-hover:text-white transition-all duration-300">
+                                <span class="material-symbols-outlined">health_and_safety</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-neutral-800 text-xl font-bold group-hover:text-primary transition-colors">Risk Management</h3>
+                                <p class="text-neutral-600">Safety-first protocols for high-adrenaline activities with certified global guides.</p>
+                            </div>
+                        </div>
+                        <div class="group flex flex-col gap-4 rounded-xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
+                            <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-brand-gradient group-hover:text-white transition-all duration-300">
+                                <span class="material-symbols-outlined">temple_hindu</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-neutral-800 text-xl font-bold group-hover:text-primary transition-colors">Cultural Immersion</h3>
+                                <p class="text-neutral-600">Authentic connections with local traditions, monks, and spiritual leaders.</p>
+                            </div>
+                        </div>
+                        <div class="group flex flex-col gap-4 rounded-xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
+                            <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-brand-gradient group-hover:text-white transition-all duration-300">
+                                <span class="material-symbols-outlined">satellite_alt</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-neutral-800 text-xl font-bold group-hover:text-primary transition-colors">Corporate Logistics</h3>
+                                <p class="text-neutral-600">Seamless travel planning, satellite connectivity, and high-end accommodation for groups.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="w-full bg-white max-w-7xl mx-auto px-4 lg:px-10 py-20">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
+                    <div>
+                        <h2 class="text-primary text-3xl lg:text-4xl font-bold mb-2">Our Signature Tracks</h2>
+                        <p class="text-secondary-violet font-medium">Choose your path: outward challenge or inward reflection.</p>
+                    </div>
+                    <a class="text-secondary-blue font-bold hover:text-primary transition-colors flex items-center gap-1" href="#">
+                        View all destinations <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="group relative overflow-hidden rounded-xl bg-white border border-neutral-200 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-lg">
+                        <div class="aspect-video w-full overflow-hidden relative">
+                            <div class="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3tc95GzvlKf1aIZOVfkDYuC8ZmRVtmHmo_mj9SUjddSOIcVH0OSjC1JPY0D7-JI8jX8OKBCZ55uk-npCppsgAqjydnFb2Uv_yu6rC3GmDtKJLBbFLOsukx7MqNym-aG_AeH5YjI14Mp9RxKKxSiLAcQrClA8nLb3TFakl1vsvNHkZ8ori0ZVSwU64aJX8RE3MX6qtkSVjOKwx8trfBCt-g04dQWyAiFJjOAQE0RiZHcupciA-GhmBSaJVhy3fSyfAZeB4PQ_7oQ');"></div>
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-full p-2 text-primary-accent shadow-md">
+                                <span class="material-symbols-outlined">landscape</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <p class="text-secondary-blue text-sm font-bold tracking-wider uppercase flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-sm">directions_run</span>
+                                    Executive Retreats
+                                </p>
+                            </div>
+                            <h3 class="text-neutral-800 text-2xl font-bold leading-tight mb-2 group-hover:text-primary transition-colors">The Edge of Performance</h3>
+                            <p class="text-neutral-600 text-sm mb-4">Everest Base Camp, Nepal. Push your team's physical and mental limits in the world's most demanding environment.</p>
+                            <div class="flex items-center gap-2 text-neutral-500 text-sm font-medium border-t border-neutral-100 pt-4">
+                                <span class="material-symbols-outlined text-base">schedule</span> 14 Days
+                                <span class="mx-2 text-neutral-300">|</span>
+                                <span class="material-symbols-outlined text-base">groups</span> Max 12 Pax
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl bg-white border border-neutral-200 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-lg">
+                        <div class="aspect-video w-full overflow-hidden relative">
+                            <div class="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQDw8vQ0Kn4lnE0DgXgydjaDXhvRYvZQoywOrh9FPk8zD2eml5uvgfDb-RyfcGNCtSu5U323vjyAoZLQO_0geHwv3NE23hjxT8L9NbtaoUOGIsVVvDBkNGjrHFp_fFO4ppYBPpetJT_py1U2-0nDFX62BpgFZIY8xD0OFqOzx5Ja9h5uAo7gQtVU126JMYJVjYhbdMRVsk5v3JmKnQ6dFC0ZXS0pJ6m_u8iMBvsTdgIlElQsxQC4_pnM_qRBl5ITIDJGLdu6CDzA');"></div>
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-full p-2 text-primary shadow-md">
+                                <span class="material-symbols-outlined">temple_buddhist</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <p class="text-primary text-sm font-bold tracking-wider uppercase flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-sm">psychology</span>
+                                    Spiritual Leadership
+                                </p>
+                            </div>
+                            <h3 class="text-neutral-800 text-2xl font-bold leading-tight mb-2 group-hover:text-primary transition-colors">The Center of Focus</h3>
+                            <p class="text-neutral-600 text-sm mb-4">Kyoto Temples, Japan. Guided meditation and strategic silence to cultivate clarity and visionary thinking.</p>
+                            <div class="flex items-center gap-2 text-neutral-500 text-sm font-medium border-t border-neutral-100 pt-4">
+                                <span class="material-symbols-outlined text-base">schedule</span> 7 Days
+                                <span class="mx-2 text-neutral-300">|</span>
+                                <span class="material-symbols-outlined text-base">groups</span> Max 8 Pax
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="w-full py-20 px-4 bg-neutral-50">
+                <div class="max-w-4xl mx-auto rounded-2xl bg-brand-gradient border border-white/20 p-8 md:p-12 text-center relative overflow-hidden shadow-2xl shadow-primary/20">
+                    <h2 class="relative z-10 text-white text-3xl md:text-5xl font-bold mb-6 tracking-tight flex flex-col items-center gap-3">
+                        <span class="material-symbols-outlined text-5xl opacity-80 mb-2">diamond</span>
+                        Ready to Elevate Your Team?
+                    </h2>
+                    <p class="relative z-10 text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                        Whether you need the adrenaline of the ascent or the clarity of the center, we have a curated itinerary waiting for you.
+                    </p>
+                    <div class="relative z-10 flex flex-col sm:flex-row justify-center gap-4">
+                        <button class="flex items-center justify-center rounded-lg h-12 px-8 bg-white text-primary hover:bg-neutral-100 transition-colors text-base font-bold shadow-lg gap-2">
+                            <span class="material-symbols-outlined">event_available</span>
+                            Book Free Consultation
+                        </button>
+                        <button class="flex items-center justify-center rounded-lg h-12 px-8 bg-transparent border border-white/50 hover:bg-white/10 hover:border-white transition-colors text-white text-base font-bold gap-2">
+                            <span class="material-symbols-outlined">inventory_2</span>
+                            View All Packages
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="w-full bg-brand-dark border-t border-white/10 pt-16 pb-8 px-4 lg:px-10 text-white">
+            <div class="max-w-7xl mx-auto flex flex-col gap-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
+                        <div class="flex items-center gap-2">
+                            <img alt="World Travel Consortium Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmuiYlzRKDK71mCy0ofxTu4i8ROHwfW3Qo-zoE0FRQNLq-Gxn3xTHNWBy4Zsacpv0SEMhCiAv3X4qZATXkt5Wwwla6Z589kCMgCPK40uXkvKAZY2sBSRMouzgJDkBpqgwQ7f0crrR1N2f_45Wn7sp6YWLt6yWAOkDiLwMaMyxsJxkVsemRcvQfbF7cvZ09q935gdyVJ9EETvg0eJ0A6pKfqjAvFW4d_M52rjHM8Ml1vWeMq3hnp8jjEP-_3nH2JjQeFSPUdNHA7g">
+                            <div class="flex flex-col -space-y-1">
+                                <span class="text-sm font-bold uppercase leading-none">World Travel</span>
+                                <span class="text-[10px] text-neutral-400 font-light tracking-widest lowercase">Consortium</span>
+                            </div>
+                        </div>
+                        <p class="text-neutral-400 text-sm">Corporate travel agency specializing in extreme sports and spiritual retreats.</p>
+                    </div>
+                </div>
+                <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-neutral-500 text-sm">© 2023 World Travel Consortium. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
