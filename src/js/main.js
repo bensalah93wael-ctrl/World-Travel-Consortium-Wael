@@ -103,6 +103,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function validateEmail(email) {
+<<<<<<< HEAD
         return /^[^s@]+@[^s@]+.[^s@]+$/.test(email);
+=======
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+>>>>>>> be9d713 (feat: implement initial responsive landing page with interactive mobile menu, booking modal, and form validation using Tailwind CSS.)
     }
 });
