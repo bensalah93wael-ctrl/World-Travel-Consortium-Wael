@@ -92,21 +92,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 1500);
             }
         });
-    }
-
-    function showError(input, show) {
-        const errorMsg = input.nextElementSibling;
-        if (errorMsg && errorMsg.classList.contains('error-msg')) {
-            errorMsg.classList.toggle('hidden', !show);
+        function showError(input, show) {
+            const errorMsg = input.nextElementSibling;
+            if (errorMsg && errorMsg.classList.contains('error-msg')) {
+                errorMsg.classList.toggle('hidden', !show);
+            }
+            input.classList.toggle('border-red-500', show);
         }
-        input.classList.toggle('border-red-500', show);
-    }
 
-    function validateEmail(email) {
-<<<<<<< HEAD
-        return /^[^s@]+@[^s@]+.[^s@]+$/.test(email);
-=======
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
->>>>>>> be9d713 (feat: implement initial responsive landing page with interactive mobile menu, booking modal, and form validation using Tailwind CSS.)
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
     }
 });

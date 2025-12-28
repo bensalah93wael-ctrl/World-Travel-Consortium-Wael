@@ -1,5 +1,8 @@
+import forms from '@tailwindcss/forms';
+import containerQueries from '@tailwindcss/container-queries';
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
     content: ["./index.html", "./about.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
@@ -29,7 +32,7 @@ module.exports = {
         },
     },
     plugins: [
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/container-queries'),
+        forms,
+        containerQueries,
     ],
 }
