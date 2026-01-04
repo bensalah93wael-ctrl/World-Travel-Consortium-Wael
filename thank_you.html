@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Thank You - World Travel Consortium</title>
+    <link rel="icon" type="image/png" href="/logo-icon.png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script type="module" src="/src/js/main.js"></script>
+</head>
+
+<body class="bg-neutral-50 font-display text-neutral-800 overflow-x-hidden">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <header
+            class="sticky top-0 z-50 w-full border-b border-white/10 bg-brand-dark/95 backdrop-blur-md px-4 lg:px-10 py-3">
+            <div class="mx-auto flex max-w-7xl items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 text-white">
+                    <div class="flex items-center">
+                        <img alt="World Travel Consortium Logo" class="h-10 w-auto object-contain"
+                            src="/logo-white.png" />
+                    </div>
+                    <div class="flex flex-col -space-y-1">
+                        <h2 class="text-white text-lg font-bold leading-none tracking-tight uppercase">World Travel</h2>
+                        <span class="text-xs text-neutral-400 font-light tracking-[0.2em] lowercase">Consortium</span>
+                    </div>
+                </a>
+                <div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+                    <nav class="flex items-center gap-9">
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
+                            href="index.html">
+                            <span class="material-symbols-outlined text-[18px]">explore</span>
+                            Destinations
+                        </a>
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
+                            href="services.html">
+                            <span class="material-symbols-outlined text-[18px]">design_services</span>
+                            Services
+                        </a>
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
+                            href="about.html">
+                            <span class="material-symbols-outlined text-[18px]">groups</span>
+                            About Us
+                        </a>
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
+                            href="contact.html">
+                            <span class="material-symbols-outlined text-[18px]">contact_support</span>
+                            Contact
+                        </a>
+                    </nav>
+                    <a href="quote.html"
+                        class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-brand-gradient hover:opacity-90 transition-all text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 gap-2">
+                        <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                        <span class="truncate">Obtain quote</span>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+            <!-- Mobile Menu Overlay -->
+            <nav id="mobile-menu"
+                class="hidden lg:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-brand-dark/98 backdrop-blur-xl p-8 flex flex-col gap-6 z-[60]">
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+                    href="index.html">
+                    <span class="material-symbols-outlined">explore</span> Destinations
+                </a>
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+                    href="services.html">
+                    <span class="material-symbols-outlined">design_services</span> Services
+                </a>
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+                    href="about.html">
+                    <span class="material-symbols-outlined">groups</span> About Us
+                </a>
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+                    href="contact.html">
+                    <span class="material-symbols-outlined">contact_support</span> Contact
+                </a>
+                <a href="quote.html"
+                    class="mt-4 h-14 bg-brand-gradient text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">calendar_month</span> Obtain quote
+                </a>
+            </nav>
+        </header>
+
+        <main class="flex-1 w-full flex flex-col items-center justify-center bg-neutral-50 py-20 px-4">
+            <div class="max-w-xl w-full text-center flex flex-col items-center gap-6">
+                <div class="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center text-green-600 mb-2">
+                    <span class="material-symbols-outlined text-6xl">check_circle</span>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-neutral-800">Thank You!</h1>
+                <p class="text-neutral-600 text-lg">
+                    Your quote request has been received. Our team will review your requirements and get back to you
+                    shortly with a personalized itinerary.
+                </p>
+                <div class="mt-8">
+                    <a href="index.html"
+                        class="inline-flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-blue-600 transition-colors text-white text-base font-bold shadow-lg gap-2">
+                        <span class="material-symbols-outlined">home</span>
+                        Return to Home
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="w-full bg-brand-dark border-t border-white/10 pt-16 pb-8 px-4 lg:px-10 text-white">
+            <div class="max-w-7xl mx-auto flex flex-col gap-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
+                        <div class="flex items-center gap-2">
+                            <img alt="World Travel Consortium Logo" class="h-8 w-auto object-contain"
+                                src="/logo-white.png" />
+                            <div class="flex flex-col -space-y-1">
+                                <span class="text-sm font-bold uppercase leading-none">World Travel</span>
+                                <span
+                                    class="text-[10px] text-neutral-400 font-light tracking-widest lowercase">Consortium</span>
+                            </div>
+                        </div>
+                        <p class="text-neutral-400 text-sm">
+                            Corporate travel agency specializing in extreme sports and spiritual retreats.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold text-primary-accent flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">business</span>
+                            Company
+                        </h4>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="about.html">About Us</a>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="#">Careers</a>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="#">Press</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold text-primary-accent flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">flight</span>
+                            Services
+                        </h4>
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="#">
+                            <span class="material-symbols-outlined text-[14px]">terrain</span> Extreme Retreats
+                        </a>
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="#">
+                            <span class="material-symbols-outlined text-[14px]">self_improvement</span> Spiritual
+                            Retreats
+                        </a>
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="#">
+                            <span class="material-symbols-outlined text-[14px]">edit_calendar</span> Custom Itineraries
+                        </a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold text-primary-accent flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">contact_phone</span>
+                            Contact
+                        </h4>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="#">support@worldtravel.com</a>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="#">+1 (555) 123-4567</a>
+                        <div class="flex gap-4 mt-2">
+                            <span
+                                class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-6 h-6 flex items-center justify-center text-sm font-bold border border-neutral-600 rounded-full">X</span>
+                            <span
+                                class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-6 h-6 flex items-center justify-center text-sm font-bold border border-neutral-600 rounded-full">in</span>
+                            <span
+                                class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-6 h-6 flex items-center justify-center text-sm font-bold border border-neutral-600 rounded-full">ig</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-neutral-500 text-sm">© 2023 World Travel Consortium. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a class="text-neutral-500 hover:text-white text-sm" href="#">Privacy Policy</a>
+                        <a class="text-neutral-500 hover:text-white text-sm" href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

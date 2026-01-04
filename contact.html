@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>World Travel Consortium | Contact Us</title>
+    <link rel="icon" type="image/png" href="/logo-icon.png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script type="module" src="/src/js/main.js"></script>
+</head>
+
+<body class="bg-neutral-50 font-display text-neutral-800 overflow-x-hidden">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <header
+            class="sticky top-0 z-50 w-full border-b border-white/10 bg-brand-dark/95 backdrop-blur-md px-4 lg:px-10 py-3">
+            <div class="mx-auto flex max-w-7xl items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 text-white">
+                    <div class="flex items-center">
+                        <img alt="World Travel Consortium Logo" class="h-10 w-auto object-contain"
+                            src="/logo-white.png" />
+                    </div>
+                    <div class="flex flex-col -space-y-1">
+                        <h2 class="text-white text-lg font-bold leading-none tracking-tight uppercase">World Travel</h2>
+                        <span class="text-xs text-neutral-400 font-light tracking-[0.2em] lowercase">Consortium</span>
+                    </div>
+                </a>
+                <div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+                    <nav class="flex items-center gap-9">
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
+                            href="index.html">
+                            <span class="material-symbols-outlined text-[18px]">explore</span>
+                            Destinations
+                        </a>
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
+                            href="services.html">
+                            <span class="material-symbols-outlined text-[18px]">design_services</span>
+                            Services
+                        </a>
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
+                            href="about.html">
+                            <span class="material-symbols-outlined text-[18px]">groups</span>
+                            About Us
+                        </a>
+                        <a class="text-primary-accent text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
+                            href="contact.html">
+                            <span class="material-symbols-outlined text-[18px]">contact_support</span>
+                            Contact
+                        </a>
+                    </nav>
+                    <a href="quote.html"
+                        class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-brand-gradient hover:opacity-90 transition-all text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 gap-2">
+                        <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                        <span class="truncate">Obtain quote</span>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+            <!-- Mobile Menu Overlay -->
+            <nav id="mobile-menu"
+                class="hidden lg:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-brand-dark/98 backdrop-blur-xl p-8 flex flex-col gap-6 z-[60]">
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+                    href="index.html">
+                    <span class="material-symbols-outlined">explore</span> Destinations
+                </a>
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+                    href="services.html">
+                    <span class="material-symbols-outlined">design_services</span> Services
+                </a>
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+                    href="about.html">
+                    <span class="material-symbols-outlined">groups</span> About Us
+                </a>
+                <a class="text-primary-accent text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+                    href="contact.html">
+                    <span class="material-symbols-outlined">contact_support</span> Contact
+                </a>
+                <a href="quote.html"
+                    class="mt-4 h-14 bg-brand-gradient text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">calendar_month</span> Obtain quote
+                </a>
+            </nav>
+        </header>
+
+        <main class="flex-1 flex flex-col">
+            <!-- Hero / Heading -->
+            <section class="relative bg-white dark:bg-background-dark py-12 md:py-20 px-4 md:px-10">
+                <div class="mx-auto max-w-[1200px] text-center">
+                    <h1
+                        class="text-[#111418] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] mb-4">
+                        Let's Plan Your Next Corporate Retreat
+                    </h1>
+                    <p
+                        class="text-slate-500 dark:text-gray-400 text-lg md:text-xl font-normal leading-normal max-w-2xl mx-auto">
+                        Reach out to our travel experts to customize an unforgettable experience for your team. We
+                        handle the logistics so you can focus on the bonding.
+                    </p>
+                </div>
+            </section>
+            <!-- Split Content Section -->
+            <div class="mx-auto w-full max-w-[1200px] px-4 md:px-10 pb-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20">
+                    <!-- Left Column: Contact Info -->
+                    <div class="flex flex-col gap-8">
+                        <div>
+                            <h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight mb-3">Contact
+                                Information</h2>
+                            <p class="text-slate-500 dark:text-gray-400 text-base">
+                                Direct channels for urgent inquiries or partnership proposals. Our team is available
+                                Mon-Fri, 9am - 6pm PST.
+                            </p>
+                        </div>
+                        <div class="grid gap-4">
+                            <!-- Email Card -->
+                            <div
+                                class="flex gap-4 rounded-xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-gray-800 p-5 shadow-sm hover:border-primary/50 transition-colors cursor-pointer group">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">mail</span>
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <h3 class="text-[#111418] dark:text-white text-base font-bold">Email Us</h3>
+                                    <p class="text-slate-500 dark:text-gray-400 text-sm">support@worldtravel.com</p>
+                                </div>
+                            </div>
+                            <!-- Phone Card -->
+                            <div
+                                class="flex gap-4 rounded-xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-gray-800 p-5 shadow-sm hover:border-primary/50 transition-colors cursor-pointer group">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">call</span>
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <h3 class="text-[#111418] dark:text-white text-base font-bold">Call Us</h3>
+                                    <p class="text-slate-500 dark:text-gray-400 text-sm">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <!-- Address Card -->
+                            <div
+                                class="flex gap-4 rounded-xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-gray-800 p-5 shadow-sm hover:border-primary/50 transition-colors cursor-pointer group">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <h3 class="text-[#111418] dark:text-white text-base font-bold">Visit HQ</h3>
+                                    <p class="text-slate-500 dark:text-gray-400 text-sm">123 Business Blvd, Suite 400,
+                                        San Francisco, CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Map -->
+                        <div
+                            class="h-64 w-full rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700 relative group">
+                            <div
+                                class="absolute inset-0 bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-400">
+                                <img alt="Map of San Francisco location"
+                                    class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                                    data-alt="Overhead map view of San Francisco city streets"
+                                    data-location="San Francisco"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGzE7meZQ1v8tpBCaWD09oIX-zi1xAVCIMyOZy9w77JCCsoRemF_dTQuzcPlyDyN0ccAbQihu-2Za74CMB3zyTKuSXb8B1MGfbF7pbEF3DzXqmeb9_pF7K6osB5tqh_W781--jwi3RU2wsJACSN5MLfE5Nh0zKKNS4SKNgma69-f1lNHqw_PqNe7ac-VCiUC9p7GLt6rGkyknu-oO7nw_EKvn5MTAWtfcLkr_uSDm5NNWquL6P8JREvlrC__6A_N9wIgbkW8ocbtUq" />
+                                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                    <div class="bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg text-primary">
+                                        <span class="material-symbols-outlined text-3xl">location_on</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column: Form -->
+                    <div class="flex flex-col">
+                        <div
+                            class="rounded-2xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-gray-800 p-6 md:p-8 shadow-sm">
+                            <h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight mb-6">Send us a
+                                message</h2>
+                            <form class="flex flex-col gap-5">
+                                <div class="flex flex-col md:flex-row gap-5">
+                                    <label class="flex flex-col flex-1 gap-2">
+                                        <span class="text-[#111418] dark:text-gray-200 text-sm font-semibold">Full
+                                            Name</span>
+                                        <input
+                                            class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3 text-[#111418] dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                            placeholder="Jane Doe" type="text" />
+                                    </label>
+                                    <label class="flex flex-col flex-1 gap-2">
+                                        <span class="text-[#111418] dark:text-gray-200 text-sm font-semibold">Company
+                                            Name</span>
+                                        <input
+                                            class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3 text-[#111418] dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                            placeholder="Acme Corp" type="text" />
+                                    </label>
+                                </div>
+                                <label class="flex flex-col gap-2">
+                                    <span class="text-[#111418] dark:text-gray-200 text-sm font-semibold">Work
+                                        Email</span>
+                                    <input
+                                        class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3 text-[#111418] dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                        placeholder="jane@acmecorp.com" type="email" />
+                                </label>
+                                <div class="flex flex-col md:flex-row gap-5">
+                                    <label class="flex flex-col flex-1 gap-2">
+                                        <span class="text-[#111418] dark:text-gray-200 text-sm font-semibold">Phone
+                                            Number</span>
+                                        <input
+                                            class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3 text-[#111418] dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                            placeholder="+1 (555) 000-0000" type="tel" />
+                                    </label>
+                                    <label class="flex flex-col flex-1 gap-2">
+                                        <span class="text-[#111418] dark:text-gray-200 text-sm font-semibold">Group
+                                            Size</span>
+                                        <select
+                                            class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3 text-[#111418] dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all appearance-none">
+                                            <option>10-20 People</option>
+                                            <option>21-50 People</option>
+                                            <option>51-100 People</option>
+                                            <option>100+ People</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <label class="flex flex-col gap-2">
+                                    <span class="text-[#111418] dark:text-gray-200 text-sm font-semibold">How can we
+                                        help?</span>
+                                    <textarea
+                                        class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3 text-[#111418] dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
+                                        placeholder="Tell us about your ideal retreat, dates, and budget..."
+                                        rows="4"></textarea>
+                                </label>
+                                <button
+                                    class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary py-3 px-6 text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors shadow-md"
+                                    type="button">
+                                    Send Inquiry
+                                </button>
+                                <p class="text-center text-xs text-slate-500 dark:text-gray-400 mt-2">
+                                    By submitting this form, you agree to our <a class="underline hover:text-primary"
+                                        href="#">Privacy Policy</a>.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Trust Signals -->
+                <div class="border-t border-slate-200 dark:border-slate-700 pt-12">
+                    <p
+                        class="text-center text-sm font-semibold text-slate-500 dark:text-gray-400 mb-8 uppercase tracking-wider">
+                        Trusted by innovative teams worldwide</p>
+                    <div
+                        class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                        <div class="h-8 flex items-center gap-2 font-bold text-xl text-[#111418] dark:text-white"><span
+                                class="material-symbols-outlined">diamond</span> Acme Inc.</div>
+                        <div class="h-8 flex items-center gap-2 font-bold text-xl text-[#111418] dark:text-white"><span
+                                class="material-symbols-outlined">rocket_launch</span> StarTech</div>
+                        <div class="h-8 flex items-center gap-2 font-bold text-xl text-[#111418] dark:text-white"><span
+                                class="material-symbols-outlined">verified</span> GlobalFlow</div>
+                        <div class="h-8 flex items-center gap-2 font-bold text-xl text-[#111418] dark:text-white"><span
+                                class="material-symbols-outlined">bolt</span> EnergyCo</div>
+                    </div>
+                </div>
+                <!-- FAQ Section -->
+                <div class="mt-20 max-w-[800px] mx-auto">
+                    <h2
+                        class="text-[#111418] dark:text-white text-2xl md:text-3xl font-bold leading-tight mb-8 text-center">
+                        Frequently Asked Questions</h2>
+                    <div class="flex flex-col gap-4">
+                        <details
+                            class="group rounded-xl bg-white dark:bg-gray-800 border border-slate-200 dark:border-slate-700 p-4 [&amp;_summary::-webkit-details-marker]:hidden">
+                            <summary
+                                class="flex cursor-pointer items-center justify-between gap-1.5 text-[#111418] dark:text-white font-bold">
+                                <h3 class="text-lg">What is the typical lead time for planning a retreat?</h3>
+                                <div class="text-[#111418] dark:text-white group-open:-rotate-180 transition-transform">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </div>
+                            </summary>
+                            <p class="mt-4 leading-relaxed text-slate-500 dark:text-gray-400">
+                                We recommend starting the planning process at least 3-4 months in advance, especially
+                                for groups larger than 50 people. However, we can accommodate expedited timelines
+                                depending on the destination.
+                            </p>
+                        </details>
+                        <details
+                            class="group rounded-xl bg-white dark:bg-gray-800 border border-slate-200 dark:border-slate-700 p-4 [&amp;_summary::-webkit-details-marker]:hidden">
+                            <summary
+                                class="flex cursor-pointer items-center justify-between gap-1.5 text-[#111418] dark:text-white font-bold">
+                                <h3 class="text-lg">Do you handle international retreats?</h3>
+                                <div class="text-[#111418] dark:text-white group-open:-rotate-180 transition-transform">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </div>
+                            </summary>
+                            <p class="mt-4 leading-relaxed text-slate-500 dark:text-gray-400">
+                                Absolutely. We have partnerships with venues in over 30 countries. We handle all
+                                logistics including flights, visas assistance, and local transportation.
+                            </p>
+                        </details>
+                        <details
+                            class="group rounded-xl bg-white dark:bg-gray-800 border border-slate-200 dark:border-slate-700 p-4 [&amp;_summary::-webkit-details-marker]:hidden">
+                            <summary
+                                class="flex cursor-pointer items-center justify-between gap-1.5 text-[#111418] dark:text-white font-bold">
+                                <h3 class="text-lg">Is there a minimum group size?</h3>
+                                <div class="text-[#111418] dark:text-white group-open:-rotate-180 transition-transform">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </div>
+                            </summary>
+                            <p class="mt-4 leading-relaxed text-slate-500 dark:text-gray-400">
+                                Our services are optimized for groups of 10 or more. For smaller executive teams, we
+                                offer specialized "Micro-Retreat" packages.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="w-full bg-brand-dark border-t border-white/10 pt-16 pb-8 px-4 lg:px-10 text-white">
+            <div class="max-w-7xl mx-auto flex flex-col gap-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
+                        <div class="flex items-center gap-2">
+                            <img alt="World Travel Consortium Logo" class="h-8 w-auto object-contain"
+                                src="/logo-white.png" />
+                            <div class="flex flex-col -space-y-1">
+                                <span class="text-sm font-bold uppercase leading-none">World Travel</span>
+                                <span
+                                    class="text-[10px] text-neutral-400 font-light tracking-widest lowercase">Consortium</span>
+                            </div>
+                        </div>
+                        <p class="text-neutral-400 text-sm">
+                            Corporate travel agency specializing in extreme sports and spiritual retreats.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold text-primary-accent flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">business</span>
+                            Company
+                        </h4>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="about.html">About Us</a>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="#">Careers</a>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="#">Press</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold text-primary-accent flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">flight</span>
+                            Services
+                        </h4>
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
+                            href="services.html">
+                            <span class="material-symbols-outlined text-[14px]">terrain</span> Extreme Retreats
+                        </a>
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
+                            href="services.html">
+                            <span class="material-symbols-outlined text-[14px]">self_improvement</span> Spiritual
+                            Retreats
+                        </a>
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
+                            href="services.html">
+                            <span class="material-symbols-outlined text-[14px]">edit_calendar</span> Custom Itineraries
+                        </a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold text-primary-accent flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">contact_phone</span>
+                            Contact
+                        </h4>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="#">support@worldtravel.com</a>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="#">+1 (555) 123-4567</a>
+                        <div class="flex gap-4 mt-2">
+                            <span
+                                class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-6 h-6 flex items-center justify-center text-sm font-bold border border-neutral-600 rounded-full">X</span>
+                            <span
+                                class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-6 h-6 flex items-center justify-center text-sm font-bold border border-neutral-600 rounded-full">in</span>
+                            <span
+                                class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-6 h-6 flex items-center justify-center text-sm font-bold border border-neutral-600 rounded-full">ig</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-neutral-500 text-sm">© 2023 World Travel Consortium. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a class="text-neutral-500 hover:text-white text-sm" href="#">Privacy Policy</a>
+                        <a class="text-neutral-500 hover:text-white text-sm" href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

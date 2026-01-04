@@ -21,39 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Consultation Modal ---
-    const bookBtns = [
-        document.getElementById('book-consultation-btn'),
-        document.getElementById('hero-cta-btn'),
-        document.getElementById('mobile-book-btn')
-    ];
+    const bookBtns = [];
     const bookingModal = document.getElementById('booking-modal');
     const closeModalBtn = document.getElementById('close-modal-btn');
     const bookingForm = document.getElementById('booking-form');
 
-    const toggleModal = (show) => {
-        if (bookingModal) {
-            bookingModal.classList.toggle('hidden', !show);
-            if (show) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
-        }
-    };
-
-    bookBtns.forEach(btn => {
-        if (btn) btn.addEventListener('click', () => toggleModal(true));
-    });
-
-    if (closeModalBtn) {
-        closeModalBtn.addEventListener('click', () => toggleModal(false));
-    }
-
-    if (bookingModal) {
-        bookingModal.addEventListener('click', (e) => {
-            if (e.target === bookingModal) toggleModal(false);
-        });
-    }
+    // Modal logic removed
 
     // --- Form Validation ---
     if (bookingForm) {
