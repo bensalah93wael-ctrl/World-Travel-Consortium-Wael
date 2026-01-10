@@ -11,6 +11,8 @@ export default defineConfig({
                 thank_you: resolve(__dirname, 'thank_you.html'),
                 services: resolve(__dirname, 'services.html'),
                 contact: resolve(__dirname, 'contact.html'),
+                packages: resolve(__dirname, 'packages.html'),
+                destinations: resolve(__dirname, 'destinations.html'),
             },
         },
     },

@@ -35,7 +35,7 @@
                 <div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
                     <nav class="flex items-center gap-9">
                         <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
-                            href="index.html">
+                            href="destinations.html">
                             <span class="material-symbols-outlined text-[18px]">explore</span>
                             Destinations
                         </a>
@@ -69,7 +69,7 @@
             <nav id="mobile-menu"
                 class="hidden lg:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-brand-dark/98 backdrop-blur-xl p-8 flex flex-col gap-6 z-[60]">
                 <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="index.html">
+                    href="destinations.html">
                     <span class="material-symbols-outlined">explore</span> Destinations
                 </a>
                 <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
@@ -93,7 +93,8 @@
 
         <main class="flex-1 flex flex-col">
             <!-- Hero / Heading -->
-            <section class="relative bg-white dark:bg-background-dark py-12 md:py-20 px-4 md:px-10">
+            <section
+                class="relative bg-gradient-to-b from-white to-slate-50 dark:from-background-dark dark:to-slate-900 py-12 md:py-20 px-4 md:px-10">
                 <div class="mx-auto max-w-[1200px] text-center">
                     <h1
                         class="text-[#111418] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] mb-4">
@@ -160,7 +161,7 @@
                         </div>
                         <!-- Map -->
                         <div
-                            class="h-64 w-full rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700 relative group">
+                            class="h-64 w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700 relative group">
                             <div
                                 class="absolute inset-0 bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-400">
                                 <img alt="Map of San Francisco location"
@@ -179,7 +180,7 @@
                     <!-- Right Column: Form -->
                     <div class="flex flex-col">
                         <div
-                            class="rounded-2xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-gray-800 p-6 md:p-8 shadow-sm">
+                            class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-gray-800 p-6 md:p-8 shadow-sm">
                             <h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight mb-6">Send us a
                                 message</h2>
                             <form class="flex flex-col gap-5">
@@ -188,14 +189,14 @@
                                         <span class="text-[#111418] dark:text-gray-200 text-sm font-semibold">Full
                                             Name</span>
                                         <input
-                                            class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3 text-[#111418] dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                            class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3.5 text-[#111418] dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                                             placeholder="Jane Doe" type="text" />
                                     </label>
                                     <label class="flex flex-col flex-1 gap-2">
                                         <span class="text-[#111418] dark:text-gray-200 text-sm font-semibold">Company
                                             Name</span>
                                         <input
-                                            class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3 text-[#111418] dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                            class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3.5 text-[#111418] dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                                             placeholder="Acme Corp" type="text" />
                                     </label>
                                 </div>
@@ -211,14 +212,14 @@
                                         <span class="text-[#111418] dark:text-gray-200 text-sm font-semibold">Phone
                                             Number</span>
                                         <input
-                                            class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3 text-[#111418] dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                            class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3.5 text-[#111418] dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                                             placeholder="+1 (555) 000-0000" type="tel" />
                                     </label>
                                     <label class="flex flex-col flex-1 gap-2">
                                         <span class="text-[#111418] dark:text-gray-200 text-sm font-semibold">Group
                                             Size</span>
                                         <select
-                                            class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3 text-[#111418] dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all appearance-none">
+                                            class="w-full rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-gray-700 px-4 py-3 text-[#111418] dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all appearance-none cursor-pointer">
                                             <option>10-20 People</option>
                                             <option>21-50 People</option>
                                             <option>51-100 People</option>
@@ -248,7 +249,7 @@
                     </div>
                 </div>
                 <!-- Trust Signals -->
-                <div class="border-t border-slate-200 dark:border-slate-700 pt-12">
+                <div class="border-t border-slate-200 dark:border-slate-700 pt-16">
                     <p
                         class="text-center text-sm font-semibold text-slate-500 dark:text-gray-400 mb-8 uppercase tracking-wider">
                         Trusted by innovative teams worldwide</p>
@@ -265,7 +266,7 @@
                     </div>
                 </div>
                 <!-- FAQ Section -->
-                <div class="mt-20 max-w-[800px] mx-auto">
+                <div class="mt-48 max-w-[800px] mx-auto">
                     <h2
                         class="text-[#111418] dark:text-white text-2xl md:text-3xl font-bold leading-tight mb-8 text-center">
                         Frequently Asked Questions</h2>
@@ -361,6 +362,10 @@
                         <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
                             href="services.html">
                             <span class="material-symbols-outlined text-[14px]">edit_calendar</span> Custom Itineraries
+                        </a>
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
+                            href="packages.html">
+                            <span class="material-symbols-outlined text-[14px]">inventory_2</span> All Packages
                         </a>
                     </div>
                     <div class="flex flex-col gap-4">
