@@ -57,7 +57,7 @@
                             Contact
                         </a>
                     </nav>
-                    <div class="relative group ml-4 h-full flex items-center pr-4 border-r border-white/10">
+                    <div class="relative group h-full flex items-center pr-4 border-r border-white/10">
                         <button
                             class="flex items-center gap-1.5 text-white/70 hover:text-white transition-all text-xs font-bold py-2 px-3 hover:bg-white/5 rounded-lg border border-transparent hover:border-white/10">
                             <span class="material-symbols-outlined text-[16px] text-primary-accent">language</span>
@@ -65,17 +65,17 @@
                             <span class="material-symbols-outlined text-[16px] opacity-50">expand_more</span>
                         </button>
                         <div
-                            class="absolute right-4 top-full mt-1 w-32 bg-brand-dark/98 border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[70] backdrop-blur-xl translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                            class="absolute right-0 top-full mt-1 w-36 bg-brand-dark border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[70] translate-y-2 group-hover:translate-y-0 overflow-hidden">
                             <div class="p-1.5 flex flex-col gap-1">
                                 <button
-                                    class="lang-btn w-full flex items-center justify-between px-3 py-2 text-[11px] font-bold rounded-lg hover:bg-white/10 transition-all"
+                                    class="lang-btn w-full text-left px-3 py-2.5 text-xs font-semibold rounded-lg hover:bg-white/10 transition-all text-white/70"
                                     data-lang="en">
-                                    ENGLISH
+                                    English
                                 </button>
                                 <button
-                                    class="lang-btn w-full flex items-center justify-between px-3 py-2 text-[11px] font-bold rounded-lg hover:bg-white/10 transition-all"
+                                    class="lang-btn w-full text-left px-3 py-2.5 text-xs font-semibold rounded-lg hover:bg-white/10 transition-all text-white/70"
                                     data-lang="fr">
-                                    FRANÇAIS
+                                    Français
                                 </button>
                             </div>
                         </div>
@@ -97,10 +97,10 @@
                 <div class="flex items-center gap-3 mb-6 pb-6 border-b border-white/10">
                     <button
                         class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
-                        data-lang="en">ENGLISH</button>
+                        data-lang="en">English</button>
                     <button
                         class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
-                        data-lang="fr">FRANÇAIS</button>
+                        data-lang="fr">Français</button>
                 </div>
                 <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
                     href="destinations.html" data-i18n="nav-destinations">
@@ -284,8 +284,8 @@
                     </a>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div
-                        class="group relative overflow-hidden rounded-xl bg-white border border-neutral-200 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-lg">
+                    <a href="package-detail.html"
+                        class="group relative overflow-hidden rounded-xl bg-white border border-neutral-200 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-lg block">
                         <div class="aspect-video w-full overflow-hidden relative">
                             <div class="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-105"
                                 data-alt="Base camp tents at mount everest with snow peaks in background"
@@ -316,9 +316,9 @@
                                 <span class="material-symbols-outlined text-base">groups</span> Max 12 Pax
                             </div>
                         </div>
-                    </div>
-                    <div
-                        class="group relative overflow-hidden rounded-xl bg-white border border-neutral-200 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-lg">
+                    </a>
+                    <a href="package-detail.html"
+                        class="group relative overflow-hidden rounded-xl bg-white border border-neutral-200 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-lg block">
                         <div class="aspect-video w-full overflow-hidden relative">
                             <div class="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-105"
                                 data-alt="Traditional Kyoto temple surrounded by cherry blossoms and calm water"
@@ -349,7 +349,7 @@
                                 <span class="material-symbols-outlined text-base">groups</span> Max 8 Pax
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </section>
             <section class="w-full bg-brand-dark py-16">

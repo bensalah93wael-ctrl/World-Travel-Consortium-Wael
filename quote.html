@@ -34,29 +34,6 @@
                 </div>
                 <div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
                     <nav class="flex items-center gap-9">
-                        <div class="relative group ml-4 h-full flex items-center pr-4 border-r border-white/10">
-                            <button
-                                class="flex items-center gap-1.5 text-white/70 hover:text-white transition-all text-xs font-bold py-2 px-3 hover:bg-white/5 rounded-lg border border-transparent hover:border-white/10">
-                                <span class="material-symbols-outlined text-[16px] text-primary-accent">language</span>
-                                <span class="current-lang-text uppercase">EN</span>
-                                <span class="material-symbols-outlined text-[16px] opacity-50">expand_more</span>
-                            </button>
-                            <div
-                                class="absolute right-4 top-full mt-1 w-32 bg-brand-dark/98 border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[70] backdrop-blur-xl translate-y-2 group-hover:translate-y-0 overflow-hidden">
-                                <div class="p-1.5 flex flex-col gap-1">
-                                    <button
-                                        class="lang-btn w-full flex items-center justify-between px-3 py-2 text-[11px] font-bold rounded-lg hover:bg-white/10 transition-all text-white/70 hover:text-white"
-                                        data-lang="en">
-                                        ENGLISH
-                                    </button>
-                                    <button
-                                        class="lang-btn w-full flex items-center justify-between px-3 py-2 text-[11px] font-bold rounded-lg hover:bg-white/10 transition-all text-white/70 hover:text-white"
-                                        data-lang="fr">
-                                        FRANÇAIS
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
                         <a data-i18n="nav-destinations"
                             class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
                             href="destinations.html">
@@ -82,411 +59,433 @@
                             Contact
                         </a>
                     </nav>
-                    <a href="quote.html" id="book-consultation-btn" data-i18n="nav-quote"
-                        class="group/btn flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-brand-gradient hover:opacity-90 transition-all text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 gap-2">
-                        <span
-                            class="material-symbols-outlined text-[18px] group-hover/btn:rotate-12 transition-transform">calendar_month</span>
-                        <span class="truncate">Obtain quote</span>
-                    </a>
-                </div>
-                <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
-                    <span class="material-symbols-outlined">menu</span>
-                </button>
-            </div>
-            <!-- Mobile Menu Overlay -->
-            <nav id="mobile-menu"
-                class="hidden lg:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-brand-dark backdrop-blur-xl p-8 flex flex-col gap-6 z-[60]">
-                <div class="flex items-center gap-3 mb-6 pb-6 border-b border-white/10">
-                    <button
-                        class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
-                        data-lang="en">ENGLISH</button>
-                    <button
-                        class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
-                        data-lang="fr">FRANÇAIS</button>
-                </div>
-                <a data-i18n="nav-destinations"
-                    class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="destinations.html">
-                    <span class="material-symbols-outlined">explore</span> Destinations
-                </a>
-                <a data-i18n="nav-services"
-                    class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="services.html">
-                    <span class="material-symbols-outlined">design_services</span> Services
-                </a>
-                <a data-i18n="nav-about"
-                    class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="about.html">
-                    <span class="material-symbols-outlined">groups</span> About Us
-                </a>
-                <a data-i18n="nav-contact"
-                    class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="contact.html">
-                    <span class="material-symbols-outlined">contact_support</span> Contact
-                </a>
-                <a href="quote.html" id="mobile-book-btn"
-                    class="mt-4 h-14 bg-brand-gradient text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2">
-                    <span class="material-symbols-outlined">calendar_month</span> <span data-i18n="nav-quote">Obtain
-                        quote</span>
-                </a>
-            </nav>
-        </header>
-
-        <main class="flex-1 w-full flex flex-col items-center">
-            <section class="w-full bg-white pb-8 pt-10 px-4 sm:px-10">
-                <div class="max-w-[960px] mx-auto text-center flex flex-col gap-4">
-                    <h1 data-i18n="quote-hero-title"
-                        class="text-neutral-800 text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl">
-                        Request a Custom Quote
-                    </h1>
-                    <p class="text-neutral-600 text-lg font-normal leading-normal max-w-2xl mx-auto"
-                        data-i18n="quote-hero-subtitle">
-                        Tell us about your ideal corporate retreat. Fill out the form below, and our specialists will
-                        craft
-                        a personalized proposal tailored to your team's needs.
-                    </p>
-                </div>
-            </section>
-
-            <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pb-20">
-                <div class="flex flex-col lg:flex-row gap-8">
-                    <div class="flex-1 flex flex-col gap-6">
-                        <div class="bg-white rounded-xl border border-neutral-200 p-6 shadow-sm">
-                            <div class="flex items-center gap-3 mb-6">
-                                <span
-                                    class="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary font-bold text-sm">1</span>
-                                <h2 class="text-neutral-800 text-xl font-bold" data-i18n="quote-section-contact">Contact
-                                    Information</h2>
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <label class="flex flex-col gap-1.5 w-full">
-                                    <span class="text-neutral-800 text-sm font-semibold"
-                                        data-i18n="quote-company-name">Company Name</span>
-                                    <input data-i18n="quote-company-placeholder"
-                                        class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
-                                        placeholder="e.g. Acme Corp" type="text" />
-                                </label>
-                                <label class="flex flex-col gap-1.5 w-full">
-                                    <span class="text-neutral-800 text-sm font-semibold"
-                                        data-i18n="quote-contact-name">Contact Person Name</span>
-                                    <input data-i18n="quote-contact-placeholder"
-                                        class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
-                                        placeholder="Full Name" type="text" />
-                                </label>
-                                <label class="flex flex-col gap-1.5 w-full">
-                                    <span class="text-neutral-800 text-sm font-semibold"
-                                        data-i18n="quote-work-email">Work Email</span>
-                                    <input data-i18n="quote-work-email-placeholder"
-                                        class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
-                                        placeholder="name@company.com" type="email" />
-                                </label>
-                                <label class="flex flex-col gap-1.5 w-full">
-                                    <span class="text-neutral-800 text-sm font-semibold" data-i18n="quote-phone">Phone
-                                        Number</span>
-                                    <input data-i18n="quote-phone-placeholder"
-                                        class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
-                                        placeholder="+1 (555) 000-0000" type="tel" />
-                                </label>
+                    <div class="relative group h-full flex items-center pr-4 border-r border-white/10">
+                        <button
+                            class="flex items-center gap-1.5 text-white/70 hover:text-white transition-all text-xs font-bold py-2 px-3 hover:bg-white/5 rounded-lg border border-transparent hover:border-white/10">
+                            <span class="material-symbols-outlined text-[16px] text-primary-accent">language</span>
+                            <span class="current-lang-text uppercase">EN</span>
+                            <span class="material-symbols-outlined text-[16px] opacity-50">expand_more</span>
+                        </button>
+                        <div
+                            class="absolute right-0 top-full mt-1 w-36 bg-brand-dark border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[70] translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                            <div class="p-1.5 flex flex-col gap-1">
+                                <button
+                                    class="lang-btn w-full text-left px-3 py-2.5 text-xs font-semibold rounded-lg hover:bg-white/10 transition-all text-white/70"
+                                    data-lang="en">
+                                    English
+                                </button>
+                                <button
+                                    class="lang-btn w-full text-left px-3 py-2.5 text-xs font-semibold rounded-lg hover:bg-white/10 transition-all text-white/70"
+                                    data-lang="fr">
+                                    Français
+                                </button>
                             </div>
                         </div>
-                        <div class="bg-white rounded-xl border border-neutral-200 p-6 shadow-sm">
-                            <div class="flex items-center gap-3 mb-6">
-                                <span
-                                    class="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary font-bold text-sm">2</span>
-                                <h2 class="text-neutral-800 text-xl font-bold" data-i18n="quote-section-trip">Trip
-                                    Details</h2>
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                                <label class="flex flex-col gap-1.5 w-full">
-                                    <span class="text-neutral-800 text-sm font-semibold"
-                                        data-i18n="quote-destination">Desired Destination(s)</span>
-                                    <div class="relative">
-                                        <span
-                                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-lg">public</span>
-                                        <input data-i18n="quote-destination-placeholder"
-                                            class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 pl-10 pr-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
-                                            placeholder="e.g. Lisbon, Bali, or 'Open to suggestions'" type="text" />
-                                    </div>
-                                </label>
-                                <label class="flex flex-col gap-1.5 w-full">
-                                    <span class="text-neutral-800 text-sm font-semibold"
-                                        data-i18n="quote-travelers">Number of Travelers</span>
-                                    <div class="relative">
-                                        <span
-                                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-lg">groups</span>
-                                        <input data-i18n="quote-travelers-placeholder"
-                                            class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 pl-10 pr-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
-                                            placeholder="e.g. 25" type="number" />
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                                <label class="flex flex-col gap-1.5 w-full">
-                                    <span class="text-neutral-800 text-sm font-semibold"
-                                        data-i18n="quote-start-date">Preferred Start Date</span>
-                                    <input
-                                        class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm text-neutral-800 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
-                                        type="date" />
-                                </label>
-                                <label class="flex flex-col gap-1.5 w-full">
-                                    <span class="text-neutral-800 text-sm font-semibold"
-                                        data-i18n="quote-end-date">Preferred End Date</span>
-                                    <input
-                                        class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm text-neutral-800 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
-                                        type="date" />
-                                </label>
-                            </div>
+                    </div>
+                </div>
+                <a href="quote.html" id="book-consultation-btn" data-i18n="nav-quote"
+                    class="group/btn flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-brand-gradient hover:opacity-90 transition-all text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 gap-2">
+                    <span
+                        class="material-symbols-outlined text-[18px] group-hover/btn:rotate-12 transition-transform">calendar_month</span>
+                    <span class="truncate">Obtain quote</span>
+                </a>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+    </div>
+    <!-- Mobile Menu Overlay -->
+    <nav id="mobile-menu"
+        class="hidden lg:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-brand-dark backdrop-blur-xl p-8 flex flex-col gap-6 z-[60]">
+        <div class="flex items-center gap-3 mb-6 pb-6 border-b border-white/10">
+            <button class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
+                data-lang="en">English</button>
+            <button class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
+                data-lang="fr">Français</button>
+        </div>
+        <a data-i18n="nav-destinations"
+            class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+            href="destinations.html">
+            <span class="material-symbols-outlined">explore</span> Destinations
+        </a>
+        <a data-i18n="nav-services"
+            class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+            href="services.html">
+            <span class="material-symbols-outlined">design_services</span> Services
+        </a>
+        <a data-i18n="nav-about"
+            class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+            href="about.html">
+            <span class="material-symbols-outlined">groups</span> About Us
+        </a>
+        <a data-i18n="nav-contact"
+            class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+            href="contact.html">
+            <span class="material-symbols-outlined">contact_support</span> Contact
+        </a>
+        <a href="quote.html" id="mobile-book-btn"
+            class="mt-4 h-14 bg-brand-gradient text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined">calendar_month</span> <span data-i18n="nav-quote">Obtain
+                quote</span>
+        </a>
+    </nav>
+    </header>
+
+    <main class="flex-1 w-full flex flex-col items-center">
+        <section class="w-full bg-white pb-8 pt-10 px-4 sm:px-10">
+            <div class="max-w-[960px] mx-auto text-center flex flex-col gap-4">
+                <h1 data-i18n="quote-hero-title"
+                    class="text-neutral-800 text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl">
+                    Request a Custom Quote
+                </h1>
+                <p class="text-neutral-600 text-lg font-normal leading-normal max-w-2xl mx-auto"
+                    data-i18n="quote-hero-subtitle">
+                    Tell us about your ideal corporate retreat. Fill out the form below, and our specialists will
+                    craft
+                    a personalized proposal tailored to your team's needs.
+                </p>
+            </div>
+        </section>
+
+        <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pb-20">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="flex-1 flex flex-col gap-6">
+                    <div class="bg-white rounded-xl border border-neutral-200 p-6 shadow-sm">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span
+                                class="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary font-bold text-sm">1</span>
+                            <h2 class="text-neutral-800 text-xl font-bold" data-i18n="quote-section-contact">Contact
+                                Information</h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <label class="flex flex-col gap-1.5 w-full">
-                                <span class="text-neutral-800 text-sm font-semibold" data-i18n="quote-service-type">Type
-                                    of Service</span>
+                                <span class="text-neutral-800 text-sm font-semibold"
+                                    data-i18n="quote-company-name">Company Name</span>
+                                <input data-i18n="quote-company-placeholder"
+                                    class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                    placeholder="e.g. Acme Corp" type="text" />
+                            </label>
+                            <label class="flex flex-col gap-1.5 w-full">
+                                <span class="text-neutral-800 text-sm font-semibold"
+                                    data-i18n="quote-contact-name">Contact Person Name</span>
+                                <input data-i18n="quote-contact-placeholder"
+                                    class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                    placeholder="Full Name" type="text" />
+                            </label>
+                            <label class="flex flex-col gap-1.5 w-full">
+                                <span class="text-neutral-800 text-sm font-semibold" data-i18n="quote-work-email">Work
+                                    Email</span>
+                                <input data-i18n="quote-work-email-placeholder"
+                                    class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                    placeholder="name@company.com" type="email" />
+                            </label>
+                            <label class="flex flex-col gap-1.5 w-full">
+                                <span class="text-neutral-800 text-sm font-semibold" data-i18n="quote-phone">Phone
+                                    Number</span>
+                                <input data-i18n="quote-phone-placeholder"
+                                    class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                    placeholder="+1 (555) 000-0000" type="tel" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl border border-neutral-200 p-6 shadow-sm">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span
+                                class="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary font-bold text-sm">2</span>
+                            <h2 class="text-neutral-800 text-xl font-bold" data-i18n="quote-section-trip">Trip
+                                Details</h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <label class="flex flex-col gap-1.5 w-full">
+                                <span class="text-neutral-800 text-sm font-semibold"
+                                    data-i18n="quote-destination">Desired Destination(s)</span>
                                 <div class="relative">
                                     <span
-                                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-lg">category</span>
-                                    <select
-                                        class="form-select w-full rounded-lg border border-neutral-200 bg-white h-11 pl-10 pr-8 text-sm text-neutral-800 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors cursor-pointer">
-                                        <option disabled="" selected="" value="" data-i18n="quote-service-select">Select
-                                            the primary focus of your trip
-                                        </option>
-                                        <option value="Corporate Retreat" data-i18n="quote-service-retreat">Corporate
-                                            Retreat</option>
-                                        <option value="Cultural Tour" data-i18n="quote-service-culture">Cultural Tour
-                                        </option>
-                                        <option value="Extreme Sport" data-i18n="quote-service-extreme">Extreme Sport
-                                        </option>
-                                        <option value="Religious Tourism" data-i18n="quote-service-religious">Religious
-                                            Tourism</option>
-                                        <option value="Other" data-i18n="quote-service-other">Other / Custom Mix
-                                        </option>
-                                    </select>
+                                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-lg">public</span>
+                                    <input data-i18n="quote-destination-placeholder"
+                                        class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 pl-10 pr-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                        placeholder="e.g. Lisbon, Bali, or 'Open to suggestions'" type="text" />
+                                </div>
+                            </label>
+                            <label class="flex flex-col gap-1.5 w-full">
+                                <span class="text-neutral-800 text-sm font-semibold" data-i18n="quote-travelers">Number
+                                    of Travelers</span>
+                                <div class="relative">
+                                    <span
+                                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-lg">groups</span>
+                                    <input data-i18n="quote-travelers-placeholder"
+                                        class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 pl-10 pr-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                        placeholder="e.g. 25" type="number" />
                                 </div>
                             </label>
                         </div>
-                        <div class="bg-white rounded-xl border border-neutral-200 p-6 shadow-sm">
-                            <div class="flex items-center gap-3 mb-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <label class="flex flex-col gap-1.5 w-full">
+                                <span class="text-neutral-800 text-sm font-semibold"
+                                    data-i18n="quote-start-date">Preferred Start Date</span>
+                                <input
+                                    class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm text-neutral-800 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                    type="date" />
+                            </label>
+                            <label class="flex flex-col gap-1.5 w-full">
+                                <span class="text-neutral-800 text-sm font-semibold"
+                                    data-i18n="quote-end-date">Preferred End Date</span>
+                                <input
+                                    class="form-input w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm text-neutral-800 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
+                                    type="date" />
+                            </label>
+                        </div>
+                        <label class="flex flex-col gap-1.5 w-full">
+                            <span class="text-neutral-800 text-sm font-semibold" data-i18n="quote-service-type">Type
+                                of Service</span>
+                            <div class="relative">
                                 <span
-                                    class="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary font-bold text-sm">3</span>
-                                <h2 class="text-neutral-800 text-xl font-bold" data-i18n="quote-section-budget">
-                                    Preferences &amp; Budget</h2>
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-lg">category</span>
+                                <select
+                                    class="form-select w-full rounded-lg border border-neutral-200 bg-white h-11 pl-10 pr-8 text-sm text-neutral-800 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors cursor-pointer">
+                                    <option disabled="" selected="" value="" data-i18n="quote-service-select">Select
+                                        the primary focus of your trip
+                                    </option>
+                                    <option value="Corporate Retreat" data-i18n="quote-service-retreat">Corporate
+                                        Retreat</option>
+                                    <option value="Cultural Tour" data-i18n="quote-service-culture">Cultural Tour
+                                    </option>
+                                    <option value="Extreme Sport" data-i18n="quote-service-extreme">Extreme Sport
+                                    </option>
+                                    <option value="Religious Tourism" data-i18n="quote-service-religious">Religious
+                                        Tourism</option>
+                                    <option value="Other" data-i18n="quote-service-other">Other / Custom Mix
+                                    </option>
+                                </select>
                             </div>
-                            <div class="mb-6">
-                                <label class="flex flex-col gap-1.5 w-full">
-                                    <span class="text-neutral-800 text-sm font-semibold"
-                                        data-i18n="quote-interests">Specific Interests /
-                                        Requirements</span>
-                                    <textarea data-i18n="quote-interests-placeholder"
-                                        class="form-textarea w-full rounded-lg border border-neutral-200 bg-white p-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors min-h-[120px]"
-                                        placeholder="Tell us more about what you need (e.g., dietary restrictions, need for large conference room, accessibility requirements, specific activities)..."></textarea>
-                                </label>
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <label class="flex flex-col gap-1.5 w-full">
-                                    <div class="flex justify-between">
-                                        <span class="text-neutral-800 text-sm font-semibold"
-                                            data-i18n="quote-budget">Budget Range
-                                            (Optional)</span>
-                                    </div>
-                                    <select
-                                        class="form-select w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm text-neutral-800 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors cursor-pointer">
-                                        <option selected="" value="" data-i18n="quote-budget-select">Select a range
-                                            (Total)</option>
-                                        <option value="&lt;10k" data-i18n="quote-budget-10k">Under $10,000</option>
-                                        <option value="10k-30k" data-i18n="quote-budget-30k">$10,000 - $30,000</option>
-                                        <option value="30k-50k" data-i18n="quote-budget-50k">$30,000 - $50,000</option>
-                                        <option value="50k-100k" data-i18n="quote-budget-100k">$50,000 - $100,000
-                                        </option>
-                                        <option value="100k+" data-i18n="quote-budget-more">$100,000+</option>
-                                    </select>
-                                </label>
-                                <label class="flex flex-col gap-1.5 w-full">
-                                    <span class="text-neutral-800 text-sm font-semibold"
-                                        data-i18n="quote-hear-about">How did you hear about
-                                        us?</span>
-                                    <select
-                                        class="form-select w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm text-neutral-800 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors cursor-pointer">
-                                        <option disabled="" selected="" value="" data-i18n="quote-hear-select">Select an
-                                            option</option>
-                                        <option value="Search Engine" data-i18n="quote-hear-search">Search Engine
-                                            (Google, Bing)</option>
-                                        <option value="Social Media" data-i18n="quote-hear-social">Social Media</option>
-                                        <option value="Referral" data-i18n="quote-hear-referral">Client Referral
-                                        </option>
-                                        <option value="Advertisement" data-i18n="quote-hear-ads">Online Advertisement
-                                        </option>
-                                        <option value="Event" data-i18n="quote-hear-event">Event or Conference</option>
-                                        <option value="Other" data-i18n="quote-hear-other">Other</option>
-                                    </select>
-                                </label>
-                            </div>
+                        </label>
+                    </div>
+                    <div class="bg-white rounded-xl border border-neutral-200 p-6 shadow-sm">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span
+                                class="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary font-bold text-sm">3</span>
+                            <h2 class="text-neutral-800 text-xl font-bold" data-i18n="quote-section-budget">
+                                Preferences &amp; Budget</h2>
+                        </div>
+                        <div class="mb-6">
+                            <label class="flex flex-col gap-1.5 w-full">
+                                <span class="text-neutral-800 text-sm font-semibold"
+                                    data-i18n="quote-interests">Specific Interests /
+                                    Requirements</span>
+                                <textarea data-i18n="quote-interests-placeholder"
+                                    class="form-textarea w-full rounded-lg border border-neutral-200 bg-white p-4 text-sm placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors min-h-[120px]"
+                                    placeholder="Tell us more about what you need (e.g., dietary restrictions, need for large conference room, accessibility requirements, specific activities)..."></textarea>
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <label class="flex flex-col gap-1.5 w-full">
+                                <div class="flex justify-between">
+                                    <span class="text-neutral-800 text-sm font-semibold" data-i18n="quote-budget">Budget
+                                        Range
+                                        (Optional)</span>
+                                </div>
+                                <select
+                                    class="form-select w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm text-neutral-800 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors cursor-pointer">
+                                    <option selected="" value="" data-i18n="quote-budget-select">Select a range
+                                        (Total)</option>
+                                    <option value="&lt;10k" data-i18n="quote-budget-10k">Under $10,000</option>
+                                    <option value="10k-30k" data-i18n="quote-budget-30k">$10,000 - $30,000</option>
+                                    <option value="30k-50k" data-i18n="quote-budget-50k">$30,000 - $50,000</option>
+                                    <option value="50k-100k" data-i18n="quote-budget-100k">$50,000 - $100,000
+                                    </option>
+                                    <option value="100k+" data-i18n="quote-budget-more">$100,000+</option>
+                                </select>
+                            </label>
+                            <label class="flex flex-col gap-1.5 w-full">
+                                <span class="text-neutral-800 text-sm font-semibold" data-i18n="quote-hear-about">How
+                                    did you hear about
+                                    us?</span>
+                                <select
+                                    class="form-select w-full rounded-lg border border-neutral-200 bg-white h-11 px-4 text-sm text-neutral-800 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors cursor-pointer">
+                                    <option disabled="" selected="" value="" data-i18n="quote-hear-select">Select an
+                                        option</option>
+                                    <option value="Search Engine" data-i18n="quote-hear-search">Search Engine
+                                        (Google, Bing)</option>
+                                    <option value="Social Media" data-i18n="quote-hear-social">Social Media</option>
+                                    <option value="Referral" data-i18n="quote-hear-referral">Client Referral
+                                    </option>
+                                    <option value="Advertisement" data-i18n="quote-hear-ads">Online Advertisement
+                                    </option>
+                                    <option value="Event" data-i18n="quote-hear-event">Event or Conference</option>
+                                    <option value="Other" data-i18n="quote-hear-other">Other</option>
+                                </select>
+                            </label>
                         </div>
                     </div>
-                    <div class="w-full lg:w-[380px] shrink-0">
-                        <div class="sticky top-24 flex flex-col gap-6">
-                            <div class="bg-white rounded-xl border border-neutral-200 shadow-lg overflow-hidden">
-                                <div class="h-32 bg-cover bg-center relative"
-                                    data-alt="Abstract map pattern background indicating travel planning"
-                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXr5TZd5vaLxCjAajUqazO1gg45ZCGVH7mN7QA751n1lMS760pBevTqKC4sGECPsP7SnjZTPjjQ0MycTfBxw2yu5_lRpU5BmfMjlCXM5se_1UOGAyVsqC4TDDPVlFUup_8ABOGLv31YDfF61buPhcDj2EwxJXHtDuoCihsRj1cke6O-6ul14BBpV6qWmDh2ySwvz8pTzQ0Nhkxl13WRKhJZ6T24b_fw_GzIx3MxsqnZNbQWHZQaygt-6KVp6hO7urcFmb3Ji2woyE9');">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                    <div class="absolute bottom-4 left-4 text-white">
-                                        <p class="text-xs font-bold uppercase tracking-wider opacity-80"
-                                            data-i18n="quote-process">Quote Process
-                                        </p>
-                                        <h3 class="text-xl font-bold" data-i18n="quote-next-title">What happens next?
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="p-6 flex flex-col gap-6">
-                                    <div class="relative pl-2">
-                                        <div class="absolute left-0 top-2 bottom-2 w-0.5 bg-neutral-100"></div>
-                                        <div class="flex gap-4 items-start mb-6 relative">
-                                            <div
-                                                class="w-2.5 h-2.5 rounded-full bg-primary mt-1.5 -ml-[5px] ring-4 ring-white">
-                                            </div>
-                                            <div>
-                                                <p class="text-sm font-bold text-neutral-800"
-                                                    data-i18n="quote-step1-title">1. Request Submission</p>
-                                                <p class="text-xs text-neutral-500 mt-0.5" data-i18n="quote-step1-desc">
-                                                    We receive your details and
-                                                    match
-                                                    you with a dedicated travel specialist.</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex gap-4 items-start mb-6 relative">
-                                            <div
-                                                class="w-2.5 h-2.5 rounded-full bg-neutral-300 mt-1.5 -ml-[5px] ring-4 ring-white">
-                                            </div>
-                                            <div>
-                                                <p class="text-sm font-bold text-neutral-800"
-                                                    data-i18n="quote-step2-title">2. Initial Consultation
-                                                </p>
-                                                <p class="text-xs text-neutral-500 mt-0.5" data-i18n="quote-step2-desc">
-                                                    We may contact you to clarify
-                                                    requirements or offer immediate suggestions.</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex gap-4 items-start relative">
-                                            <div
-                                                class="w-2.5 h-2.5 rounded-full bg-neutral-300 mt-1.5 -ml-[5px] ring-4 ring-white">
-                                            </div>
-                                            <div>
-                                                <p class="text-sm font-bold text-neutral-800"
-                                                    data-i18n="quote-step3-title">3. Detailed Proposal</p>
-                                                <p class="text-xs text-neutral-500 mt-0.5" data-i18n="quote-step3-desc">
-                                                    You'll receive a
-                                                    comprehensive PDF
-                                                    quote with options within 24-48 hours.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col gap-3 pt-2">
-                                        <button id="submit-request-btn"
-                                            class="w-full h-12 flex items-center justify-center rounded-lg bg-primary text-white text-base font-bold hover:bg-blue-600 transition-colors shadow-md"
-                                            data-i18n="quote-submit">
-                                            Submit Request for Quote
-                                        </button>
-                                        <p class="text-[10px] text-center text-neutral-400 leading-tight px-4"
-                                            data-i18n="quote-privacy-footer">
-                                            Your privacy is important to us. Your data is secure and will only be used
-                                            for
-                                            this quote.
-                                        </p>
-                                    </div>
+                </div>
+                <div class="w-full lg:w-[380px] shrink-0">
+                    <div class="sticky top-24 flex flex-col gap-6">
+                        <div class="bg-white rounded-xl border border-neutral-200 shadow-lg overflow-hidden">
+                            <div class="h-32 bg-cover bg-center relative"
+                                data-alt="Abstract map pattern background indicating travel planning"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXr5TZd5vaLxCjAajUqazO1gg45ZCGVH7mN7QA751n1lMS760pBevTqKC4sGECPsP7SnjZTPjjQ0MycTfBxw2yu5_lRpU5BmfMjlCXM5se_1UOGAyVsqC4TDDPVlFUup_8ABOGLv31YDfF61buPhcDj2EwxJXHtDuoCihsRj1cke6O-6ul14BBpV6qWmDh2ySwvz8pTzQ0Nhkxl13WRKhJZ6T24b_fw_GzIx3MxsqnZNbQWHZQaygt-6KVp6hO7urcFmb3Ji2woyE9');">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                <div class="absolute bottom-4 left-4 text-white">
+                                    <p class="text-xs font-bold uppercase tracking-wider opacity-80"
+                                        data-i18n="quote-process">Quote Process
+                                    </p>
+                                    <h3 class="text-xl font-bold" data-i18n="quote-next-title">What happens next?
+                                    </h3>
                                 </div>
                             </div>
-                            <div class="bg-neutral-100 rounded-xl p-6 text-center">
-                                <div
-                                    class="size-10 bg-white rounded-full flex items-center justify-center text-primary mx-auto mb-3 shadow-sm">
-                                    <span class="material-symbols-outlined">support_agent</span>
+                            <div class="p-6 flex flex-col gap-6">
+                                <div class="relative pl-2">
+                                    <div class="absolute left-0 top-2 bottom-2 w-0.5 bg-neutral-100"></div>
+                                    <div class="flex gap-4 items-start mb-6 relative">
+                                        <div
+                                            class="w-2.5 h-2.5 rounded-full bg-primary mt-1.5 -ml-[5px] ring-4 ring-white">
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-bold text-neutral-800" data-i18n="quote-step1-title">
+                                                1. Request Submission</p>
+                                            <p class="text-xs text-neutral-500 mt-0.5" data-i18n="quote-step1-desc">
+                                                We receive your details and
+                                                match
+                                                you with a dedicated travel specialist.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4 items-start mb-6 relative">
+                                        <div
+                                            class="w-2.5 h-2.5 rounded-full bg-neutral-300 mt-1.5 -ml-[5px] ring-4 ring-white">
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-bold text-neutral-800" data-i18n="quote-step2-title">
+                                                2. Initial Consultation
+                                            </p>
+                                            <p class="text-xs text-neutral-500 mt-0.5" data-i18n="quote-step2-desc">
+                                                We may contact you to clarify
+                                                requirements or offer immediate suggestions.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4 items-start relative">
+                                        <div
+                                            class="w-2.5 h-2.5 rounded-full bg-neutral-300 mt-1.5 -ml-[5px] ring-4 ring-white">
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-bold text-neutral-800" data-i18n="quote-step3-title">
+                                                3. Detailed Proposal</p>
+                                            <p class="text-xs text-neutral-500 mt-0.5" data-i18n="quote-step3-desc">
+                                                You'll receive a
+                                                comprehensive PDF
+                                                quote with options within 24-48 hours.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h4 class="font-bold text-sm mb-1" data-i18n="quote-help-title">Need immediate help?
-                                </h4>
-                                <p class="text-xs text-neutral-500 mb-3" data-i18n="quote-help-desc">Our corporate
-                                    travel team is available 24/7.
-                                </p>
-                                <p class="font-bold text-primary">+1 (800) 123-4567</p>
+                                <div class="flex flex-col gap-3 pt-2">
+                                    <button id="submit-request-btn"
+                                        class="w-full h-12 flex items-center justify-center rounded-lg bg-primary text-white text-base font-bold hover:bg-blue-600 transition-colors shadow-md"
+                                        data-i18n="quote-submit">
+                                        Submit Request for Quote
+                                    </button>
+                                    <p class="text-[10px] text-center text-neutral-400 leading-tight px-4"
+                                        data-i18n="quote-privacy-footer">
+                                        Your privacy is important to us. Your data is secure and will only be used
+                                        for
+                                        this quote.
+                                    </p>
+                                </div>
                             </div>
+                        </div>
+                        <div class="bg-neutral-100 rounded-xl p-6 text-center">
                             <div
-                                class="flex items-center justify-center gap-4 py-2 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                                <div class="h-6 w-16 bg-neutral-300 rounded" data-alt="Client logo placeholder 1"></div>
-                                <div class="h-6 w-16 bg-neutral-300 rounded" data-alt="Client logo placeholder 2"></div>
-                                <div class="h-6 w-16 bg-neutral-300 rounded" data-alt="Client logo placeholder 3"></div>
+                                class="size-10 bg-white rounded-full flex items-center justify-center text-primary mx-auto mb-3 shadow-sm">
+                                <span class="material-symbols-outlined">support_agent</span>
                             </div>
+                            <h4 class="font-bold text-sm mb-1" data-i18n="quote-help-title">Need immediate help?
+                            </h4>
+                            <p class="text-xs text-neutral-500 mb-3" data-i18n="quote-help-desc">Our corporate
+                                travel team is available 24/7.
+                            </p>
+                            <p class="font-bold text-primary">+1 (800) 123-4567</p>
                         </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="bg-slate-950 text-white pt-24 pb-12 border-t border-white/5">
-            <div class="max-w-[1280px] mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                    <div class="flex flex-col gap-6">
-                        <div class="flex items-center gap-3">
-                            <div class="size-10 bg-brand-gradient rounded-xl flex items-center justify-center">
-                                <span class="material-symbols-outlined text-white">travel_explore</span>
-                            </div>
-                            <span class="text-2xl font-black tracking-tighter font-display">WORLD TRAVEL</span>
+                        <div
+                            class="flex items-center justify-center gap-4 py-2 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                            <div class="h-6 w-16 bg-neutral-300 rounded" data-alt="Client logo placeholder 1"></div>
+                            <div class="h-6 w-16 bg-neutral-300 rounded" data-alt="Client logo placeholder 2"></div>
+                            <div class="h-6 w-16 bg-neutral-300 rounded" data-alt="Client logo placeholder 3"></div>
                         </div>
-                        <p class="text-neutral-400 text-sm leading-relaxed" data-i18n="footer-desc">
-                            Corporate travel agency specializing in extreme sports and spiritual retreats.
-                        </p>
-                    </div>
-                    <div class="flex flex-col gap-4">
-                        <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-company">
-                            <span class="material-symbols-outlined text-sm">business</span>
-                            Company
-                        </h4>
-                        <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="about.html"
-                            data-i18n="nav-about">About Us</a>
-                        <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="#"
-                            data-i18n="footer-careers">Careers</a>
-                        <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="#"
-                            data-i18n="footer-press">Press</a>
-                    </div>
-                    <div class="flex flex-col gap-4">
-                        <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-services">
-                            <span class="material-symbols-outlined text-sm">explore</span>
-                            Services
-                        </h4>
-                        <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="#"
-                            data-i18n="footer-extreme">Extreme Retreats</a>
-                        <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="#"
-                            data-i18n="footer-spiritual">Spiritual Retreats</a>
-                        <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="#"
-                            data-i18n="footer-custom">Custom Itineraries</a>
-                        <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="packages.html"
-                            data-i18n="footer-all-packages">All Packages</a>
-                    </div>
-                    <div class="flex flex-col gap-4">
-                        <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-contact">
-                            <span class="material-symbols-outlined text-sm">contact_phone</span>
-                            Contact
-                        </h4>
-                        <a class="text-neutral-400 hover:text-white text-sm transition-colors"
-                            href="#">support@worldtravel.com</a>
-                        <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="#">+1 (555)
-                            123-4567</a>
-                        <div class="flex gap-4 mt-2">
-                            <span
-                                class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-8 h-8 flex items-center justify-center text-sm font-bold border border-neutral-800 rounded-full">X</span>
-                            <span
-                                class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-8 h-8 flex items-center justify-center text-sm font-bold border border-neutral-800 rounded-full">in</span>
-                            <span
-                                class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-8 h-8 flex items-center justify-center text-sm font-bold border border-neutral-800 rounded-full">ig</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-neutral-500 text-sm" data-i18n="footer-rights">© 2023 World Travel Consortium. All
-                        rights reserved.</p>
-                    <div class="flex gap-8">
-                        <a class="text-neutral-500 hover:text-white text-sm transition-colors" href="#"
-                            data-i18n="footer-privacy">Privacy Policy</a>
-                        <a class="text-neutral-500 hover:text-white text-sm transition-colors" href="#"
-                            data-i18n="footer-terms">Terms of Service</a>
                     </div>
                 </div>
             </div>
-        </footer>
+        </section>
+    </main>
+
+    <footer class="bg-slate-950 text-white pt-24 pb-12 border-t border-white/5">
+        <div class="max-w-[1280px] mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="size-10 bg-brand-gradient rounded-xl flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white">travel_explore</span>
+                        </div>
+                        <span class="text-2xl font-black tracking-tighter font-display">WORLD TRAVEL</span>
+                    </div>
+                    <p class="text-neutral-400 text-sm leading-relaxed" data-i18n="footer-desc">
+                        Corporate travel agency specializing in extreme sports and spiritual retreats.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-company">
+                        <span class="material-symbols-outlined text-sm">business</span>
+                        Company
+                    </h4>
+                    <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="about.html"
+                        data-i18n="nav-about">About Us</a>
+                    <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="#"
+                        data-i18n="footer-careers">Careers</a>
+                    <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="#"
+                        data-i18n="footer-press">Press</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-services">
+                        <span class="material-symbols-outlined text-sm">explore</span>
+                        Services
+                    </h4>
+                    <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="#"
+                        data-i18n="footer-extreme">Extreme Retreats</a>
+                    <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="#"
+                        data-i18n="footer-spiritual">Spiritual Retreats</a>
+                    <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="#"
+                        data-i18n="footer-custom">Custom Itineraries</a>
+                    <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="packages.html"
+                        data-i18n="footer-all-packages">All Packages</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-contact">
+                        <span class="material-symbols-outlined text-sm">contact_phone</span>
+                        Contact
+                    </h4>
+                    <a class="text-neutral-400 hover:text-white text-sm transition-colors"
+                        href="#">support@worldtravel.com</a>
+                    <a class="text-neutral-400 hover:text-white text-sm transition-colors" href="#">+1 (555)
+                        123-4567</a>
+                    <div class="flex gap-4 mt-2">
+                        <span
+                            class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-8 h-8 flex items-center justify-center text-sm font-bold border border-neutral-800 rounded-full">X</span>
+                        <span
+                            class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-8 h-8 flex items-center justify-center text-sm font-bold border border-neutral-800 rounded-full">in</span>
+                        <span
+                            class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-8 h-8 flex items-center justify-center text-sm font-bold border border-neutral-800 rounded-full">ig</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-neutral-500 text-sm" data-i18n="footer-rights">© 2023 World Travel Consortium. All
+                    rights reserved.</p>
+                <div class="flex gap-8">
+                    <a class="text-neutral-500 hover:text-white text-sm transition-colors" href="#"
+                        data-i18n="footer-privacy">Privacy Policy</a>
+                    <a class="text-neutral-500 hover:text-white text-sm transition-colors" href="#"
+                        data-i18n="footer-terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {

@@ -55,7 +55,7 @@
                             Contact
                         </a>
                     </nav>
-                    <div class="relative group ml-4 h-full flex items-center pr-4 border-r border-white/10">
+                    <div class="relative group h-full flex items-center pr-4 border-r border-white/10">
                         <button
                             class="flex items-center gap-1.5 text-white/70 hover:text-white transition-all text-xs font-bold py-2 px-3 hover:bg-white/5 rounded-lg border border-transparent hover:border-white/10">
                             <span class="material-symbols-outlined text-[16px] text-primary-accent">language</span>
@@ -63,438 +63,435 @@
                             <span class="material-symbols-outlined text-[16px] opacity-50">expand_more</span>
                         </button>
                         <div
-                            class="absolute right-4 top-full mt-1 w-32 bg-brand-dark/98 border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[70] backdrop-blur-xl translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                            class="absolute right-0 top-full mt-1 w-36 bg-brand-dark border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[70] translate-y-2 group-hover:translate-y-0 overflow-hidden">
                             <div class="p-1.5 flex flex-col gap-1">
                                 <button
-                                    class="lang-btn w-full flex items-center justify-between px-3 py-2 text-[11px] font-bold rounded-lg hover:bg-white/10 transition-all text-white/70 hover:text-white"
+                                    class="lang-btn w-full text-left px-3 py-2.5 text-xs font-semibold rounded-lg hover:bg-white/10 transition-all text-white/70"
                                     data-lang="en">
-                                    ENGLISH
+                                    English
                                 </button>
                                 <button
-                                    class="lang-btn w-full flex items-center justify-between px-3 py-2 text-[11px] font-bold rounded-lg hover:bg-white/10 transition-all text-white/70 hover:text-white"
+                                    class="lang-btn w-full text-left px-3 py-2.5 text-xs font-semibold rounded-lg hover:bg-white/10 transition-all text-white/70"
                                     data-lang="fr">
-                                    FRANÇAIS
+                                    Français
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <a href="quote.html" data-i18n="nav-quote"
-                        class="group/btn flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-brand-gradient hover:opacity-90 transition-all text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 gap-2">
-                        <span
-                            class="material-symbols-outlined text-[18px] group-hover/btn:rotate-12 transition-transform">calendar_month</span>
-                        <span class="truncate">Obtain quote</span>
-                    </a>
                 </div>
-                <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
-                    <span class="material-symbols-outlined">menu</span>
-                </button>
-            </div>
-            <!-- Mobile Menu Overlay -->
-            <nav id="mobile-menu"
-                class="hidden lg:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-brand-dark backdrop-blur-xl p-8 flex flex-col gap-6 z-[60]">
-                <div class="flex items-center gap-3 mb-6 pb-6 border-b border-white/10">
-                    <button
-                        class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
-                        data-lang="en">ENGLISH</button>
-                    <button
-                        class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
-                        data-lang="fr">FRANÇAIS</button>
-                </div>
-                <a class="text-primary-accent text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="destinations.html" data-i18n="nav-destinations">
-                    <span class="material-symbols-outlined">explore</span> Destinations
-                </a>
-                <a class="text-primary-accent text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="services.html" data-i18n="nav-services">
-                    <span class="material-symbols-outlined">design_services</span> Services
-                </a>
-                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="about.html" data-i18n="nav-about">
-                    <span class="material-symbols-outlined">groups</span> About Us
-                </a>
-                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="contact.html" data-i18n="nav-contact">
-                    <span class="material-symbols-outlined">contact_support</span> Contact
-                </a>
                 <a href="quote.html" data-i18n="nav-quote"
-                    class="mt-4 h-14 bg-brand-gradient text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2">
-                    <span class="material-symbols-outlined">calendar_month</span> Obtain quote
+                    class="group/btn flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-brand-gradient hover:opacity-90 transition-all text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 gap-2">
+                    <span
+                        class="material-symbols-outlined text-[18px] group-hover/btn:rotate-12 transition-transform">calendar_month</span>
+                    <span class="truncate">Obtain quote</span>
                 </a>
-            </nav>
-        </header>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+    </div>
+    <!-- Mobile Menu Overlay -->
+    <nav id="mobile-menu"
+        class="hidden lg:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-brand-dark backdrop-blur-xl p-8 flex flex-col gap-6 z-[60]">
+        <div class="flex items-center gap-3 mb-6 pb-6 border-b border-white/10">
+            <button class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
+                data-lang="en">English</button>
+            <button class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
+                data-lang="fr">Français</button>
+        </div>
+        <a class="text-primary-accent text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+            href="destinations.html" data-i18n="nav-destinations">
+            <span class="material-symbols-outlined">explore</span> Destinations
+        </a>
+        <a class="text-primary-accent text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+            href="services.html" data-i18n="nav-services">
+            <span class="material-symbols-outlined">design_services</span> Services
+        </a>
+        <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+            href="about.html" data-i18n="nav-about">
+            <span class="material-symbols-outlined">groups</span> About Us
+        </a>
+        <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+            href="contact.html" data-i18n="nav-contact">
+            <span class="material-symbols-outlined">contact_support</span> Contact
+        </a>
+        <a href="quote.html" data-i18n="nav-quote"
+            class="mt-4 h-14 bg-brand-gradient text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined">calendar_month</span> Obtain quote
+        </a>
+    </nav>
+    </header>
 
-        <main class="flex-1 w-full flex flex-col items-center">
-            <!-- Hero Section -->
-            <section class="w-full bg-white dark:bg-background-dark py-12 px-4 md:px-10 flex justify-center">
-                <div class="layout-content-container flex flex-col max-w-7xl flex-1">
-                    <div class="@container">
-                        <div class="w-full">
-                            <div class="flex min-h-[600px] lg:min-h-[800px] flex-col gap-6 bg-cover bg-center bg-no-repeat sm:gap-8 rounded-xl items-center justify-center p-8 text-center"
-                                data-alt="Group of business people looking at mountains during a retreat"
-                                style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDD6KSYUCIHlfKLqNb7VaO6fWgQM_ODCZtqY1c8r773ZIvxJ3T-8ybnFX0QnZg-n3mUBhONXYMcEAmh-GvoYJFLK3P5eJ4WTUPMsnipYp5VvllAsXzf6edY7DnakvuaLHpkJ4w4UuPeCkERWQjTG99RIrQco9MmVIZcbb3aOgy-vb3lmEY6TRfZteoaGqLzzurgmNGhwnFPYDHNSvWdBM7jmdwX9sqXbWaoyFqKzNteTS4Pl4fkcl66ejd93uHAeQL5AC56D8sHYnlO");'>
-                                <div class="flex flex-col gap-2 text-center max-w-[800px]">
-                                    <h1 data-i18n="services-hero-title"
-                                        class="text-white text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em]">
-                                        Curated Experiences for Corporate Growth
-                                    </h1>
-                                    <h2 data-i18n="services-hero-subtitle"
-                                        class="text-white/90 text-lg font-normal leading-normal sm:text-xl mt-4">
-                                        We design travel solutions that inspire teams, foster leadership, and create
-                                        lasting bonds.
-                                    </h2>
-                                </div>
-                                <div class="flex gap-4 flex-wrap justify-center">
-                                    <a href="#" data-i18n="services-hero-cta"
-                                        class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-blue-600 transition-colors text-white text-base font-bold shadow-lg gap-2">
-                                        <span class="material-symbols-outlined">download</span>
-                                        Download Brochure
-                                    </a>
-                                </div>
+    <main class="flex-1 w-full flex flex-col items-center">
+        <!-- Hero Section -->
+        <section class="w-full bg-white dark:bg-background-dark py-12 px-4 md:px-10 flex justify-center">
+            <div class="layout-content-container flex flex-col max-w-7xl flex-1">
+                <div class="@container">
+                    <div class="w-full">
+                        <div class="flex min-h-[600px] lg:min-h-[800px] flex-col gap-6 bg-cover bg-center bg-no-repeat sm:gap-8 rounded-xl items-center justify-center p-8 text-center"
+                            data-alt="Group of business people looking at mountains during a retreat"
+                            style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDD6KSYUCIHlfKLqNb7VaO6fWgQM_ODCZtqY1c8r773ZIvxJ3T-8ybnFX0QnZg-n3mUBhONXYMcEAmh-GvoYJFLK3P5eJ4WTUPMsnipYp5VvllAsXzf6edY7DnakvuaLHpkJ4w4UuPeCkERWQjTG99RIrQco9MmVIZcbb3aOgy-vb3lmEY6TRfZteoaGqLzzurgmNGhwnFPYDHNSvWdBM7jmdwX9sqXbWaoyFqKzNteTS4Pl4fkcl66ejd93uHAeQL5AC56D8sHYnlO");'>
+                            <div class="flex flex-col gap-2 text-center max-w-[800px]">
+                                <h1 data-i18n="services-hero-title"
+                                    class="text-white text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em]">
+                                    Curated Experiences for Corporate Growth
+                                </h1>
+                                <h2 data-i18n="services-hero-subtitle"
+                                    class="text-white/90 text-lg font-normal leading-normal sm:text-xl mt-4">
+                                    We design travel solutions that inspire teams, foster leadership, and create
+                                    lasting bonds.
+                                </h2>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Features Grid -->
-            <section class="w-full px-4 md:px-10 py-20 bg-background-light dark:bg-background-dark flex justify-center">
-                <div class="layout-content-container flex flex-col max-w-7xl flex-1">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-                        <div
-                            class="flex flex-col gap-3 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
-                            <div
-                                class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
-                                <span class="material-symbols-outlined text-3xl">support_agent</span>
-                            </div>
-                            <h3 class="text-[#111418] dark:text-white text-lg font-bold"
-                                data-i18n="services-feature-support">24/7 Global Support</h3>
-                            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed"
-                                data-i18n="services-feature-support-desc">Round-the-clock
-                                assistance for your team, no matter the time zone.</p>
-                        </div>
-                        <div
-                            class="flex flex-col gap-3 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
-                            <div
-                                class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
-                                <span class="material-symbols-outlined text-3xl">verified</span>
-                            </div>
-                            <h3 class="text-[#111418] dark:text-white text-lg font-bold"
-                                data-i18n="services-feature-safety">Safety Certified</h3>
-                            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed"
-                                data-i18n="services-feature-safety-desc">Strict adherence to
-                                international safety standards and insurance protocols.</p>
-                        </div>
-                        <div
-                            class="flex flex-col gap-3 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
-                            <div
-                                class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
-                                <span class="material-symbols-outlined text-3xl">hub</span>
-                            </div>
-                            <h3 class="text-[#111418] dark:text-white text-lg font-bold"
-                                data-i18n="services-feature-logistics">End-to-End Logistics</h3>
-                            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed"
-                                data-i18n="services-feature-logistics-desc">Flights,
-                                accommodation, visas, and local transport managed centrally.</p>
-                        </div>
-                        <div
-                            class="flex flex-col gap-3 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
-                            <div
-                                class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
-                                <span class="material-symbols-outlined text-3xl">currency_exchange</span>
-                            </div>
-                            <h3 class="text-[#111418] dark:text-white text-lg font-bold"
-                                data-i18n="services-feature-billing">Transparent Billing</h3>
-                            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed"
-                                data-i18n="services-feature-billing-desc">Consolidated
-                                invoicing and clear cost breakdowns for corporate finance.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Services List -->
-            <section class="w-full bg-white dark:bg-background-dark py-20 px-4 md:px-10 flex justify-center">
-                <div class="layout-content-container flex flex-col max-w-7xl flex-1">
-                    <div class="flex flex-col gap-4 px-4 mb-10">
-                        <h2 class="text-[#111418] dark:text-white text-3xl md:text-4xl font-bold leading-tight"
-                            data-i18n="services-list-title">Our Core
-                            Services</h2>
-                        <p class="text-slate-500 dark:text-slate-400 text-base font-normal max-w-[720px]"
-                            data-i18n="services-list-desc">
-                            From adrenaline-pumping adventures to culturally immersive journeys, we handle all logistics
-                            so you can focus on your team.
-                        </p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-                        <div
-                            class="group flex flex-col rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-lg transition-shadow duration-300">
-                            <div class="w-full h-64 bg-cover bg-center relative"
-                                data-alt="Team putting hands together in a circle outdoors"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUWtFW86-2WKI6dKDIKVLXKswhC-wRnlImjJXLpamYw83HzEFmrEt5iv-aUStLDqlDH9NLScd6M0brTCj6WZOAoqqGJlfAKhNHi0c9oUjuGSDRTQ7OAvXcgL0FYTeWnpukPBGpyYsgTYjF94FjtjhFvhZqwkdF6CpEEBs4D68rq8r1l0NuOBmp-HkTmwJ7HpTtoKxKG00QmLECaw2i9S8AZ6bnD63PQc2ixZJPfuKdzzvwtzh9Ol_ELpH9sZFegVupbS3tBd9fKa9K");'>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
-                                    <span class="material-symbols-outlined">diversity_3</span>
-                                    <span class="font-bold text-sm uppercase tracking-wider">Corporate</span>
-                                </div>
-                            </div>
-                            <div class="p-6 flex flex-col flex-1">
-                                <h3 class="text-[#111418] dark:text-white text-xl font-bold mb-2"
-                                    data-i18n="services-item-team-title">Corporate Team
-                                    Building</h3>
-                                <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1"
-                                    data-i18n="services-item-team-desc">
-                                    Structured leadership workshops, problem-solving challenges, and bonding exercises
-                                    facilitated by expert coaches. Designed to improve communication and morale.
-                                </p>
-                                <a href="packages.html" data-i18n="ready-packages"
-                                    class="w-full mt-auto cursor-pointer flex items-center justify-between rounded-lg px-4 py-3 bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-sm font-bold text-primary dark:text-blue-300 transition-colors">
-                                    <span>View Packages</span>
-                                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                            <div class="flex gap-4 flex-wrap justify-center">
+                                <a href="#" data-i18n="services-hero-cta"
+                                    class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-blue-600 transition-colors text-white text-base font-bold shadow-lg gap-2">
+                                    <span class="material-symbols-outlined">download</span>
+                                    Download Brochure
                                 </a>
                             </div>
                         </div>
-                        <div
-                            class="group flex flex-col rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-lg transition-shadow duration-300">
-                            <div class="w-full h-64 bg-cover bg-center relative"
-                                data-alt="Ancient temple architecture with warm sunset lighting"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAz8CCYYdctVgFcNWYpgsPYqRDJTbuIyz5brXr69TZ9rxg5ktjXv5_Qk2evgIstZAAdOpLo2EY2PMaZNgO69VDZUgmsfK_2AHluBEwitxc2STY_RNqmr7YkRXeJ8lT17rrkwtKrvYDurvvtMlp1HooqNbMEErZL6qW0TfbEbiuRwpi4UP8hjH-N28-_U3aZCpEeSYr8FlLhaTPZ7RsgbgShywOusFt_ubprDQPl4RaRsi29lvck8eQAFmqdcAlasCttj7OXRaOpuf09");'>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
-                                    <span class="material-symbols-outlined">temple_buddhist</span>
-                                    <span class="font-bold text-sm uppercase tracking-wider">Cultural</span>
-                                </div>
-                            </div>
-                            <div class="p-6 flex flex-col flex-1">
-                                <h3 class="text-[#111418] dark:text-white text-xl font-bold mb-2"
-                                    data-i18n="services-item-culture-title">Cultural &amp;
-                                    Religious Tours</h3>
-                                <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1"
-                                    data-i18n="services-item-culture-desc">
-                                    Guided historical walks, local cuisine immersion, and visits to significant heritage
-                                    sites. Perfect for teams looking to broaden their horizons and understanding.
-                                </p>
-                                <button data-i18n="ready-packages"
-                                    class="w-full mt-auto cursor-pointer flex items-center justify-between rounded-lg px-4 py-3 bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-sm font-bold text-primary dark:text-blue-300 transition-colors">
-                                    <span>View Packages</span>
-                                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div
-                            class="group flex flex-col rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-lg transition-shadow duration-300">
-                            <div class="w-full h-64 bg-cover bg-center relative"
-                                data-alt="Person whitewater rafting in a river"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwoDNU19oLTlTig_S-X6MOvPHkNX3k-tpi3sRHfAAbYUrD-I7IAUF9ldt-pkIgeWCgYXtB7v9i874y2181BO5yqgk7bRzoGfYGCR4K4cygcHE6b6tWObi2kNPPk48jMmw6Yrzy7S0DsNL-WvG-l1n-auaFobo2koVyUzp5VDh3-35Sd6TCunvjHj8zikSDliDO7tXYSzG9kSjx0A82vN9qMoBnKjK40LCkMzbNIpQF14WBfT2kFv6h6i4Dfwqnw9MVbP-wua12EwHm");'>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
-                                    <span class="material-symbols-outlined">kayaking</span>
-                                    <span class="font-bold text-sm uppercase tracking-wider">Adventure</span>
-                                </div>
-                            </div>
-                            <div class="p-6 flex flex-col flex-1">
-                                <h3 class="text-[#111418] dark:text-white text-xl font-bold mb-2"
-                                    data-i18n="services-item-extreme-title">Extreme Sports &amp;
-                                    Adventure</h3>
-                                <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1"
-                                    data-i18n="services-item-extreme-desc">
-                                    High-energy activities including hiking, white-water rafting, zip-lining, and
-                                    mountain biking. Ideal for dynamic teams seeking adrenaline and resilience building.
-                                </p>
-                                <button data-i18n="ready-packages"
-                                    class="w-full mt-auto cursor-pointer flex items-center justify-between rounded-lg px-4 py-3 bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-sm font-bold text-primary dark:text-blue-300 transition-colors">
-                                    <span>View Packages</span>
-                                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div
-                            class="group flex flex-col rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-lg transition-shadow duration-300">
-                            <div class="w-full h-64 bg-cover bg-center relative"
-                                data-alt="Luxury infinity pool overlooking the ocean"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCYEKP7d3PDTCE_dcZiIWXwzeczz0bzA5PP-kcxhxb8SpXu0BKCwVLncflHsBuW2wYLjrvyz5lUcqdUVy5crE-OCid_m8PraCARqLAxhB_wulVWk0YSkcGnRWI_fcCjEwjcU-UPY5JEeS7PrD25m9BhRKLezSlebcQQa0HJYrTCZgmllui1sU2tZZWU1fahP6s-sHRaGEw9eZm_EajIc8UofLRy_B2c3f1kCoY37V3aFS7V9Bqev773lzPiWlpGBmTId0IgigTZ3JM");'>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
-                                    <span class="material-symbols-outlined">star</span>
-                                    <span class="font-bold text-sm uppercase tracking-wider">Luxury</span>
-                                </div>
-                            </div>
-                            <div class="p-6 flex flex-col flex-1">
-                                <h3 class="text-[#111418] dark:text-white text-xl font-bold mb-2"
-                                    data-i18n="services-item-luxury-title">Executive Luxury
-                                    Retreats</h3>
-                                <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1"
-                                    data-i18n="services-item-luxury-desc">
-                                    Exclusive resorts, private chartered transport, and high-end amenities. Tailored for
-                                    C-suite planning sessions, board meetings, and reward trips.
-                                </p>
-                                <button data-i18n="ready-packages"
-                                    class="w-full mt-auto cursor-pointer flex items-center justify-between rounded-lg px-4 py-3 bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-sm font-bold text-primary dark:text-blue-300 transition-colors">
-                                    <span>View Packages</span>
-                                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Testimonials -->
-            <section class="w-full bg-background-light dark:bg-slate-900 py-24 px-4 md:px-10 flex justify-center">
-                <div class="layout-content-container flex flex-col max-w-[960px] w-full items-center">
-                    <div class="flex flex-col items-center text-center gap-2 mb-10">
-                        <h3 class="text-primary font-bold text-sm uppercase tracking-wide"
-                            data-i18n="services-testimonials-subtitle">Testimonials</h3>
-                        <h2 class="text-[#111418] dark:text-white text-2xl md:text-3xl font-bold"
-                            data-i18n="services-testimonials-title">Trusted by Industry
-                            Leaders</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                        <div
-                            class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 relative">
-                            <span
-                                class="material-symbols-outlined text-6xl text-slate-100 dark:text-slate-700 absolute top-4 right-4 rotate-180">format_quote</span>
-                            <p class="text-[#111418] dark:text-gray-200 text-lg font-medium italic mb-6 relative z-10">
-                                "The team building retreat in Bali was flawless. Every detail from logistics to the
-                                workshops was handled perfectly. Our team came back more united than ever."
-                            </p>
-                            <div class="flex items-center gap-4">
-                                <div class="size-10 rounded-full bg-slate-300 bg-cover bg-center"
-                                    data-alt="Portrait of Sarah Jenkins"
-                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcZMNC3E7_8_UBVNCluFB0JqO66pPHnl29c7EUgMa8tQkrHKFG4X5MO-KuAL9X6ECqZOzoJ1R54qSkekpjMzNFT6XS7DnBzRx6PMo6fSMoVZlpuSntFzhR9eIFdA1uJv6afMm5wdAVKSwPTiWD8uUzpR4AmHtE2tb3FyUePtObNxpvCgHp-i4-phE67e61sU85JBhbni6nHft9VLBN9rNCvX_qgO-ly4TcjM_eIx1AcCeU_DGJaC0QvDAOH265txe5lKWAzXWnnmmy");'>
-                                </div>
-                                <div>
-                                    <p class="text-sm font-bold text-[#111418] dark:text-white">Sarah Jenkins</p>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">HR Director, TechFlow Inc.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 relative">
-                            <span
-                                class="material-symbols-outlined text-6xl text-slate-100 dark:text-slate-700 absolute top-4 right-4 rotate-180">format_quote</span>
-                            <p class="text-[#111418] dark:text-gray-200 text-lg font-medium italic mb-6 relative z-10">
-                                "TravelAgency B2B organized our executive summit with such precision. The luxury options
-                                they provided were top-tier and exactly what our stakeholders expected."
-                            </p>
-                            <div class="flex items-center gap-4">
-                                <div class="size-10 rounded-full bg-slate-300 bg-cover bg-center"
-                                    data-alt="Portrait of Michael Ross"
-                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDavAGtBtFvrd2-2CWA3izzNcPLPAVxkCrs48UwDhMrbGQw2HuKXT_CS458avmegYqg0PM6l5Rznnsk_89Ez0-dNSPfkdcVcwK80WFqDjFdYQt7k5vGL9pou_IROeYVGHaldloc22K0SMsLYx2kMqz_rOUxGNMma_B8sje5J242F3xSTQ7SNRhdWmEYdYMQMGIrndE1QJO2Y_O2IZS0DVzu_glJDdw2bIYBUJTjC5D8cVHIzbKKSRzjVO_kxoNwC_JvH0Xam14y-RZL");'>
-                                </div>
-                                <div>
-                                    <p class="text-sm font-bold text-[#111418] dark:text-white">Michael Ross</p>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400">VP Operations, GlobalCorp</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Call to Action -->
-            <section class="w-full py-20 px-4 bg-neutral-50">
-                <div
-                    class="max-w-4xl mx-auto rounded-2xl bg-brand-gradient border border-white/20 p-8 md:p-12 text-center relative overflow-hidden shadow-2xl shadow-primary/20">
-                    <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
-                    </div>
-                    <div
-                        class="absolute bottom-0 left-0 w-64 h-64 bg-primary-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
-                    </div>
-                    <h2 data-i18n="services-quote-title"
-                        class="relative z-10 text-white text-3xl md:text-5xl font-bold mb-6 tracking-tight flex flex-col items-center gap-3">
-                        <span class="material-symbols-outlined text-5xl opacity-80 mb-2">diamond</span>
-                        Ready to Plan Your Next Retreat?
-                    </h2>
-                    <p class="relative z-10 text-white/90 text-lg mb-8 max-w-2xl mx-auto"
-                        data-i18n="services-quote-desc">
-                        Speak with our corporate travel specialists today to get a custom itinerary designed for
-                        your team's specific goals.
-                    </p>
-                    <div class="relative z-10 flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="quote.html" data-i18n="services-quote-cta"
-                            class="flex items-center justify-center rounded-lg h-12 px-8 bg-white text-primary hover:bg-neutral-100 transition-colors text-base font-bold shadow-lg gap-2">
-                            <span class="material-symbols-outlined">rocket_launch</span>
-                            Generate Quote
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="w-full bg-brand-dark border-t border-white/10 pt-16 pb-8 px-4 lg:px-10 text-white">
-            <div class="max-w-7xl mx-auto flex flex-col gap-12">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
-                        <div class="flex items-center gap-2">
-                            <img alt="World Travel Consortium Logo" class="h-8 w-auto object-contain"
-                                src="/logo-white.png" />
-                            <div class="flex flex-col -space-y-1">
-                                <span class="text-sm font-bold uppercase leading-none">World Travel</span>
-                                <span
-                                    class="text-[10px] text-neutral-400 font-light tracking-widest lowercase">Consortium</span>
-                            </div>
-                        </div>
-                        <p class="text-neutral-400 text-sm" data-i18n="footer-desc">
-                            Corporate travel agency specializing in extreme sports and spiritual retreats.
-                        </p>
-                    </div>
-                    <div class="flex flex-col gap-4">
-                        <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-company">
-                            <span class="material-symbols-outlined text-sm">business</span>
-                            Company
-                        </h4>
-                        <a class="text-neutral-400 hover:text-white text-sm" href="about.html"
-                            data-i18n="nav-about">About Us</a>
-                        <a class="text-neutral-400 hover:text-white text-sm" href="#"
-                            data-i18n="footer-careers">Careers</a>
-                        <a class="text-neutral-400 hover:text-white text-sm" href="#" data-i18n="footer-press">Press</a>
-                    </div>
-                    <div class="flex flex-col gap-4">
-                        <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-services">
-                            <span class="material-symbols-outlined text-sm">flight</span>
-                            Services
-                        </h4>
-                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
-                            href="services.html" data-i18n="footer-extreme">
-                            <span class="material-symbols-outlined text-[14px]">terrain</span> Extreme Retreats
-                        </a>
-                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
-                            href="services.html" data-i18n="footer-spiritual">
-                            <span class="material-symbols-outlined text-[14px]">self_improvement</span> Spiritual
-                            Retreats
-                        </a>
-                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
-                            href="services.html" data-i18n="footer-custom">
-                            <span class="material-symbols-outlined text-[14px]">edit_calendar</span> Custom Itineraries
-                        </a>
-                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
-                            href="packages.html" data-i18n="footer-all-packages">
-                            <span class="material-symbols-outlined text-[14px]">inventory_2</span> All Packages
-                        </a>
-                    </div>
-                    <div class="flex flex-col gap-4">
-                        <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-company">
-                            <span class="material-symbols-outlined text-sm">contact_phone</span>
-                            Contact
-                        </h4>
-                        <a class="text-neutral-400 hover:text-white text-sm" href="#">support@worldtravel.com</a>
-                        <a class="text-neutral-400 hover:text-white text-sm" href="#">+1 (555) 123-4567</a>
-                    </div>
-                </div>
-                <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-neutral-500 text-sm" data-i18n="footer-rights">© 2023 World Travel Consortium. All
-                        rights reserved.</p>
-                    <div class="flex gap-6">
-                        <a class="text-neutral-500 hover:text-white text-sm" href="#" data-i18n="footer-privacy">Privacy
-                            Policy</a>
-                        <a class="text-neutral-500 hover:text-white text-sm" href="#" data-i18n="footer-terms">Terms of
-                            Service</a>
                     </div>
                 </div>
             </div>
-        </footer>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="w-full px-4 md:px-10 py-20 bg-background-light dark:bg-background-dark flex justify-center">
+            <div class="layout-content-container flex flex-col max-w-7xl flex-1">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+                    <div
+                        class="flex flex-col gap-3 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
+                        <div
+                            class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined text-3xl">support_agent</span>
+                        </div>
+                        <h3 class="text-[#111418] dark:text-white text-lg font-bold"
+                            data-i18n="services-feature-support">24/7 Global Support</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed"
+                            data-i18n="services-feature-support-desc">Round-the-clock
+                            assistance for your team, no matter the time zone.</p>
+                    </div>
+                    <div
+                        class="flex flex-col gap-3 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
+                        <div
+                            class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined text-3xl">verified</span>
+                        </div>
+                        <h3 class="text-[#111418] dark:text-white text-lg font-bold"
+                            data-i18n="services-feature-safety">Safety Certified</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed"
+                            data-i18n="services-feature-safety-desc">Strict adherence to
+                            international safety standards and insurance protocols.</p>
+                    </div>
+                    <div
+                        class="flex flex-col gap-3 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
+                        <div
+                            class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined text-3xl">hub</span>
+                        </div>
+                        <h3 class="text-[#111418] dark:text-white text-lg font-bold"
+                            data-i18n="services-feature-logistics">End-to-End Logistics</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed"
+                            data-i18n="services-feature-logistics-desc">Flights,
+                            accommodation, visas, and local transport managed centrally.</p>
+                    </div>
+                    <div
+                        class="flex flex-col gap-3 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
+                        <div
+                            class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                            <span class="material-symbols-outlined text-3xl">currency_exchange</span>
+                        </div>
+                        <h3 class="text-[#111418] dark:text-white text-lg font-bold"
+                            data-i18n="services-feature-billing">Transparent Billing</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed"
+                            data-i18n="services-feature-billing-desc">Consolidated
+                            invoicing and clear cost breakdowns for corporate finance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services List -->
+        <section class="w-full bg-white dark:bg-background-dark py-20 px-4 md:px-10 flex justify-center">
+            <div class="layout-content-container flex flex-col max-w-7xl flex-1">
+                <div class="flex flex-col gap-4 px-4 mb-10">
+                    <h2 class="text-[#111418] dark:text-white text-3xl md:text-4xl font-bold leading-tight"
+                        data-i18n="services-list-title">Our Core
+                        Services</h2>
+                    <p class="text-slate-500 dark:text-slate-400 text-base font-normal max-w-[720px]"
+                        data-i18n="services-list-desc">
+                        From adrenaline-pumping adventures to culturally immersive journeys, we handle all logistics
+                        so you can focus on your team.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                    <div
+                        class="group flex flex-col rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-full h-64 bg-cover bg-center relative"
+                            data-alt="Team putting hands together in a circle outdoors"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUWtFW86-2WKI6dKDIKVLXKswhC-wRnlImjJXLpamYw83HzEFmrEt5iv-aUStLDqlDH9NLScd6M0brTCj6WZOAoqqGJlfAKhNHi0c9oUjuGSDRTQ7OAvXcgL0FYTeWnpukPBGpyYsgTYjF94FjtjhFvhZqwkdF6CpEEBs4D68rq8r1l0NuOBmp-HkTmwJ7HpTtoKxKG00QmLECaw2i9S8AZ6bnD63PQc2ixZJPfuKdzzvwtzh9Ol_ELpH9sZFegVupbS3tBd9fKa9K");'>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
+                                <span class="material-symbols-outlined">diversity_3</span>
+                                <span class="font-bold text-sm uppercase tracking-wider">Corporate</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-[#111418] dark:text-white text-xl font-bold mb-2"
+                                data-i18n="services-item-team-title">Corporate Team
+                                Building</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1"
+                                data-i18n="services-item-team-desc">
+                                Structured leadership workshops, problem-solving challenges, and bonding exercises
+                                facilitated by expert coaches. Designed to improve communication and morale.
+                            </p>
+                            <a href="packages.html" data-i18n="ready-packages"
+                                class="w-full mt-auto cursor-pointer flex items-center justify-between rounded-lg px-4 py-3 bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-sm font-bold text-primary dark:text-blue-300 transition-colors">
+                                <span>View Packages</span>
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex flex-col rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-full h-64 bg-cover bg-center relative"
+                            data-alt="Ancient temple architecture with warm sunset lighting"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAz8CCYYdctVgFcNWYpgsPYqRDJTbuIyz5brXr69TZ9rxg5ktjXv5_Qk2evgIstZAAdOpLo2EY2PMaZNgO69VDZUgmsfK_2AHluBEwitxc2STY_RNqmr7YkRXeJ8lT17rrkwtKrvYDurvvtMlp1HooqNbMEErZL6qW0TfbEbiuRwpi4UP8hjH-N28-_U3aZCpEeSYr8FlLhaTPZ7RsgbgShywOusFt_ubprDQPl4RaRsi29lvck8eQAFmqdcAlasCttj7OXRaOpuf09");'>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
+                                <span class="material-symbols-outlined">temple_buddhist</span>
+                                <span class="font-bold text-sm uppercase tracking-wider">Cultural</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-[#111418] dark:text-white text-xl font-bold mb-2"
+                                data-i18n="services-item-culture-title">Cultural &amp;
+                                Religious Tours</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1"
+                                data-i18n="services-item-culture-desc">
+                                Guided historical walks, local cuisine immersion, and visits to significant heritage
+                                sites. Perfect for teams looking to broaden their horizons and understanding.
+                            </p>
+                            <button data-i18n="ready-packages"
+                                class="w-full mt-auto cursor-pointer flex items-center justify-between rounded-lg px-4 py-3 bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-sm font-bold text-primary dark:text-blue-300 transition-colors">
+                                <span>View Packages</span>
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex flex-col rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-full h-64 bg-cover bg-center relative"
+                            data-alt="Person whitewater rafting in a river"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwoDNU19oLTlTig_S-X6MOvPHkNX3k-tpi3sRHfAAbYUrD-I7IAUF9ldt-pkIgeWCgYXtB7v9i874y2181BO5yqgk7bRzoGfYGCR4K4cygcHE6b6tWObi2kNPPk48jMmw6Yrzy7S0DsNL-WvG-l1n-auaFobo2koVyUzp5VDh3-35Sd6TCunvjHj8zikSDliDO7tXYSzG9kSjx0A82vN9qMoBnKjK40LCkMzbNIpQF14WBfT2kFv6h6i4Dfwqnw9MVbP-wua12EwHm");'>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
+                                <span class="material-symbols-outlined">kayaking</span>
+                                <span class="font-bold text-sm uppercase tracking-wider">Adventure</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-[#111418] dark:text-white text-xl font-bold mb-2"
+                                data-i18n="services-item-extreme-title">Extreme Sports &amp;
+                                Adventure</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1"
+                                data-i18n="services-item-extreme-desc">
+                                High-energy activities including hiking, white-water rafting, zip-lining, and
+                                mountain biking. Ideal for dynamic teams seeking adrenaline and resilience building.
+                            </p>
+                            <button data-i18n="ready-packages"
+                                class="w-full mt-auto cursor-pointer flex items-center justify-between rounded-lg px-4 py-3 bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-sm font-bold text-primary dark:text-blue-300 transition-colors">
+                                <span>View Packages</span>
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex flex-col rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-full h-64 bg-cover bg-center relative"
+                            data-alt="Luxury infinity pool overlooking the ocean"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCYEKP7d3PDTCE_dcZiIWXwzeczz0bzA5PP-kcxhxb8SpXu0BKCwVLncflHsBuW2wYLjrvyz5lUcqdUVy5crE-OCid_m8PraCARqLAxhB_wulVWk0YSkcGnRWI_fcCjEwjcU-UPY5JEeS7PrD25m9BhRKLezSlebcQQa0HJYrTCZgmllui1sU2tZZWU1fahP6s-sHRaGEw9eZm_EajIc8UofLRy_B2c3f1kCoY37V3aFS7V9Bqev773lzPiWlpGBmTId0IgigTZ3JM");'>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white flex items-center gap-2">
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="font-bold text-sm uppercase tracking-wider">Luxury</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-[#111418] dark:text-white text-xl font-bold mb-2"
+                                data-i18n="services-item-luxury-title">Executive Luxury
+                                Retreats</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1"
+                                data-i18n="services-item-luxury-desc">
+                                Exclusive resorts, private chartered transport, and high-end amenities. Tailored for
+                                C-suite planning sessions, board meetings, and reward trips.
+                            </p>
+                            <button data-i18n="ready-packages"
+                                class="w-full mt-auto cursor-pointer flex items-center justify-between rounded-lg px-4 py-3 bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-sm font-bold text-primary dark:text-blue-300 transition-colors">
+                                <span>View Packages</span>
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="w-full bg-background-light dark:bg-slate-900 py-24 px-4 md:px-10 flex justify-center">
+            <div class="layout-content-container flex flex-col max-w-[960px] w-full items-center">
+                <div class="flex flex-col items-center text-center gap-2 mb-10">
+                    <h3 class="text-primary font-bold text-sm uppercase tracking-wide"
+                        data-i18n="services-testimonials-subtitle">Testimonials</h3>
+                    <h2 class="text-[#111418] dark:text-white text-2xl md:text-3xl font-bold"
+                        data-i18n="services-testimonials-title">Trusted by Industry
+                        Leaders</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 relative">
+                        <span
+                            class="material-symbols-outlined text-6xl text-slate-100 dark:text-slate-700 absolute top-4 right-4 rotate-180">format_quote</span>
+                        <p class="text-[#111418] dark:text-gray-200 text-lg font-medium italic mb-6 relative z-10">
+                            "The team building retreat in Bali was flawless. Every detail from logistics to the
+                            workshops was handled perfectly. Our team came back more united than ever."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="size-10 rounded-full bg-slate-300 bg-cover bg-center"
+                                data-alt="Portrait of Sarah Jenkins"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcZMNC3E7_8_UBVNCluFB0JqO66pPHnl29c7EUgMa8tQkrHKFG4X5MO-KuAL9X6ECqZOzoJ1R54qSkekpjMzNFT6XS7DnBzRx6PMo6fSMoVZlpuSntFzhR9eIFdA1uJv6afMm5wdAVKSwPTiWD8uUzpR4AmHtE2tb3FyUePtObNxpvCgHp-i4-phE67e61sU85JBhbni6nHft9VLBN9rNCvX_qgO-ly4TcjM_eIx1AcCeU_DGJaC0QvDAOH265txe5lKWAzXWnnmmy");'>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-[#111418] dark:text-white">Sarah Jenkins</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">HR Director, TechFlow Inc.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 relative">
+                        <span
+                            class="material-symbols-outlined text-6xl text-slate-100 dark:text-slate-700 absolute top-4 right-4 rotate-180">format_quote</span>
+                        <p class="text-[#111418] dark:text-gray-200 text-lg font-medium italic mb-6 relative z-10">
+                            "TravelAgency B2B organized our executive summit with such precision. The luxury options
+                            they provided were top-tier and exactly what our stakeholders expected."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="size-10 rounded-full bg-slate-300 bg-cover bg-center"
+                                data-alt="Portrait of Michael Ross"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDavAGtBtFvrd2-2CWA3izzNcPLPAVxkCrs48UwDhMrbGQw2HuKXT_CS458avmegYqg0PM6l5Rznnsk_89Ez0-dNSPfkdcVcwK80WFqDjFdYQt7k5vGL9pou_IROeYVGHaldloc22K0SMsLYx2kMqz_rOUxGNMma_B8sje5J242F3xSTQ7SNRhdWmEYdYMQMGIrndE1QJO2Y_O2IZS0DVzu_glJDdw2bIYBUJTjC5D8cVHIzbKKSRzjVO_kxoNwC_JvH0Xam14y-RZL");'>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-[#111418] dark:text-white">Michael Ross</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">VP Operations, GlobalCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="w-full py-20 px-4 bg-neutral-50">
+            <div
+                class="max-w-4xl mx-auto rounded-2xl bg-brand-gradient border border-white/20 p-8 md:p-12 text-center relative overflow-hidden shadow-2xl shadow-primary/20">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-64 h-64 bg-primary-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
+                </div>
+                <h2 data-i18n="services-quote-title"
+                    class="relative z-10 text-white text-3xl md:text-5xl font-bold mb-6 tracking-tight flex flex-col items-center gap-3">
+                    <span class="material-symbols-outlined text-5xl opacity-80 mb-2">diamond</span>
+                    Ready to Plan Your Next Retreat?
+                </h2>
+                <p class="relative z-10 text-white/90 text-lg mb-8 max-w-2xl mx-auto" data-i18n="services-quote-desc">
+                    Speak with our corporate travel specialists today to get a custom itinerary designed for
+                    your team's specific goals.
+                </p>
+                <div class="relative z-10 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="quote.html" data-i18n="services-quote-cta"
+                        class="flex items-center justify-center rounded-lg h-12 px-8 bg-white text-primary hover:bg-neutral-100 transition-colors text-base font-bold shadow-lg gap-2">
+                        <span class="material-symbols-outlined">rocket_launch</span>
+                        Generate Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full bg-brand-dark border-t border-white/10 pt-16 pb-8 px-4 lg:px-10 text-white">
+        <div class="max-w-7xl mx-auto flex flex-col gap-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
+                    <div class="flex items-center gap-2">
+                        <img alt="World Travel Consortium Logo" class="h-8 w-auto object-contain"
+                            src="/logo-white.png" />
+                        <div class="flex flex-col -space-y-1">
+                            <span class="text-sm font-bold uppercase leading-none">World Travel</span>
+                            <span
+                                class="text-[10px] text-neutral-400 font-light tracking-widest lowercase">Consortium</span>
+                        </div>
+                    </div>
+                    <p class="text-neutral-400 text-sm" data-i18n="footer-desc">
+                        Corporate travel agency specializing in extreme sports and spiritual retreats.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-company">
+                        <span class="material-symbols-outlined text-sm">business</span>
+                        Company
+                    </h4>
+                    <a class="text-neutral-400 hover:text-white text-sm" href="about.html" data-i18n="nav-about">About
+                        Us</a>
+                    <a class="text-neutral-400 hover:text-white text-sm" href="#" data-i18n="footer-careers">Careers</a>
+                    <a class="text-neutral-400 hover:text-white text-sm" href="#" data-i18n="footer-press">Press</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-services">
+                        <span class="material-symbols-outlined text-sm">flight</span>
+                        Services
+                    </h4>
+                    <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="services.html"
+                        data-i18n="footer-extreme">
+                        <span class="material-symbols-outlined text-[14px]">terrain</span> Extreme Retreats
+                    </a>
+                    <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="services.html"
+                        data-i18n="footer-spiritual">
+                        <span class="material-symbols-outlined text-[14px]">self_improvement</span> Spiritual
+                        Retreats
+                    </a>
+                    <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="services.html"
+                        data-i18n="footer-custom">
+                        <span class="material-symbols-outlined text-[14px]">edit_calendar</span> Custom Itineraries
+                    </a>
+                    <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="packages.html"
+                        data-i18n="footer-all-packages">
+                        <span class="material-symbols-outlined text-[14px]">inventory_2</span> All Packages
+                    </a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-company">
+                        <span class="material-symbols-outlined text-sm">contact_phone</span>
+                        Contact
+                    </h4>
+                    <a class="text-neutral-400 hover:text-white text-sm" href="#">support@worldtravel.com</a>
+                    <a class="text-neutral-400 hover:text-white text-sm" href="#">+1 (555) 123-4567</a>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-neutral-500 text-sm" data-i18n="footer-rights">© 2023 World Travel Consortium. All
+                    rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="text-neutral-500 hover:text-white text-sm" href="#" data-i18n="footer-privacy">Privacy
+                        Policy</a>
+                    <a class="text-neutral-500 hover:text-white text-sm" href="#" data-i18n="footer-terms">Terms of
+                        Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     </div>
 </body>
 

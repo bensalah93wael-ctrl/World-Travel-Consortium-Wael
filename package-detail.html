@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Everest Base Camp Helicopter Tour | World Travel Consortium</title>
+    <link rel="icon" type="image/png" href="/logo-icon.png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script type="module" src="/src/js/main.js"></script>
+</head>
+
+<body class="bg-neutral-50 font-display text-neutral-800 overflow-x-hidden">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <!-- Header -->
+        <header
+            class="sticky top-0 z-50 w-full border-b border-white/10 bg-brand-dark/95 backdrop-blur-md px-4 lg:px-10 py-3">
+            <div class="mx-auto flex max-w-7xl items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 text-white">
+                    <div class="flex items-center">
+                        <img alt="World Travel Consortium Logo" class="h-10 w-auto object-contain"
+                            src="/logo-white.png" />
+                    </div>
+                    <div class="flex flex-col -space-y-1">
+                        <h2 class="text-white text-lg font-bold leading-none tracking-tight uppercase">World Travel</h2>
+                        <span class="text-xs text-neutral-400 font-light tracking-[0.2em] lowercase">Consortium</span>
+                    </div>
+                </a>
+                <div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+                    <nav class="flex items-center gap-9">
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
+                            href="destinations.html" data-i18n="nav-destinations">
+                            <span class="material-symbols-outlined text-[18px]">explore</span>
+                            Destinations
+                        </a>
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
+                            href="services.html" data-i18n="nav-services">
+                            <span class="material-symbols-outlined text-[18px]">design_services</span>
+                            Services
+                        </a>
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
+                            href="about.html" data-i18n="nav-about">
+                            <span class="material-symbols-outlined text-[18px]">groups</span>
+                            About Us
+                        </a>
+                        <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
+                            href="contact.html" data-i18n="nav-contact">
+                            <span class="material-symbols-outlined text-[18px]">contact_support</span>
+                            Contact
+                        </a>
+                    </nav>
+                    <div class="relative group h-full flex items-center pr-4 border-r border-white/10">
+                        <button
+                            class="flex items-center gap-1.5 text-white/70 hover:text-white transition-all text-xs font-bold py-2 px-3 hover:bg-white/5 rounded-lg border border-transparent hover:border-white/10">
+                            <span class="material-symbols-outlined text-[16px] text-primary-accent">language</span>
+                            <span class="current-lang-text uppercase">EN</span>
+                            <span class="material-symbols-outlined text-[16px] opacity-50">expand_more</span>
+                        </button>
+                        <div
+                            class="absolute right-0 top-full mt-1 w-36 bg-brand-dark border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[70] translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                            <div class="p-1.5 flex flex-col gap-1">
+                                <button
+                                    class="lang-btn w-full text-left px-3 py-2.5 text-xs font-semibold rounded-lg hover:bg-white/10 transition-all text-white/70"
+                                    data-lang="en">
+                                    English
+                                </button>
+                                <button
+                                    class="lang-btn w-full text-left px-3 py-2.5 text-xs font-semibold rounded-lg hover:bg-white/10 transition-all text-white/70"
+                                    data-lang="fr">
+                                    Français
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="quote.html" data-i18n="nav-quote"
+                        class="group/btn flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-brand-gradient hover:opacity-90 transition-all text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 gap-2">
+                        <span
+                            class="material-symbols-outlined text-[18px] group-hover/btn:rotate-12 transition-transform">calendar_month</span>
+                        <span class="truncate">Obtain quote</span>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+            <!-- Mobile Menu Overlay -->
+            <nav id="mobile-menu"
+                class="hidden lg:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-brand-dark backdrop-blur-xl p-8 flex flex-col gap-6 z-[60]">
+                <div class="flex items-center gap-3 mb-6 pb-6 border-b border-white/10">
+                    <button
+                        class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
+                        data-lang="en">English</button>
+                    <button
+                        class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
+                        data-lang="fr">Français</button>
+                </div>
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+                    href="destinations.html" data-i18n="nav-destinations">
+                    <span class="material-symbols-outlined">explore</span> Destinations
+                </a>
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+                    href="services.html" data-i18n="nav-services">
+                    <span class="material-symbols-outlined">design_services</span> Services
+                </a>
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+                    href="about.html" data-i18n="nav-about">
+                    <span class="material-symbols-outlined">groups</span> About Us
+                </a>
+                <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
+                    href="contact.html" data-i18n="nav-contact">
+                    <span class="material-symbols-outlined">contact_support</span> Contact
+                </a>
+                <a href="quote.html" data-i18n="nav-quote"
+                    class="mt-4 h-14 bg-brand-gradient text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">calendar_month</span> Obtain quote
+                </a>
+            </nav>
+        </header>
+
+        <main class="flex flex-col items-center w-full pb-20">
+            <!-- Breadcrumb -->
+            <div class="w-full max-w-[1200px] px-4 lg:px-8 py-4">
+                <div class="flex flex-wrap gap-2 text-sm">
+                    <a class="text-gray-500 font-medium hover:text-primary transition-colors" href="index.html"
+                        data-i18n="package-breadcrumb-home">Home</a>
+                    <span class="text-gray-400">/</span>
+                    <a class="text-gray-500 font-medium hover:text-primary transition-colors" href="destinations.html"
+                        data-i18n="package-breadcrumb-region">Asia</a>
+                    <span class="text-gray-400">/</span>
+                    <a class="text-gray-500 font-medium hover:text-primary transition-colors" href="#"
+                        data-i18n="package-breadcrumb-country">Nepal</a>
+                    <span class="text-gray-400">/</span>
+                    <span class="text-neutral-800 font-medium" data-i18n="package-breadcrumb-current">Everest
+                        Region</span>
+                </div>
+            </div>
+
+            <!-- Title Section -->
+            <div class="w-full max-w-[1200px] px-4 lg:px-8 pb-6">
+                <h1 class="text-neutral-800 text-3xl lg:text-5xl font-extrabold leading-tight tracking-tight mb-3"
+                    data-i18n="package-title">
+                    Everest Base Camp Helicopter Tour
+                </h1>
+                <div class="flex flex-wrap items-center gap-4 text-sm">
+                    <div class="flex items-center gap-1">
+                        <div class="flex text-amber-400">
+                            <span class="material-symbols-outlined filled text-[18px]">star</span>
+                            <span class="material-symbols-outlined filled text-[18px]">star</span>
+                            <span class="material-symbols-outlined filled text-[18px]">star</span>
+                            <span class="material-symbols-outlined filled text-[18px]">star</span>
+                            <span class="material-symbols-outlined filled text-[18px]">star</span>
+                        </div>
+                        <span class="font-bold text-neutral-800 ml-1">4.9</span>
+                        <span class="text-gray-500 underline decoration-gray-300 ml-1 cursor-pointer"
+                            data-i18n="package-reviews">(245 reviews)</span>
+                    </div>
+                    <span class="text-gray-300">|</span>
+                    <span class="text-gray-600 font-medium" data-i18n="package-location">Kathmandu, Nepal</span>
+                </div>
+            </div>
+
+            <!-- Image Gallery -->
+            <div class="w-full max-w-[1200px] px-4 lg:px-8 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-2 h-auto md:h-[480px] rounded-xl overflow-hidden">
+                    <div class="md:col-span-2 md:row-span-2 relative group cursor-pointer overflow-hidden">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNKt1dlvYG7MMT-j2oZw9oz4nbEOmK-qQ07QQfXnvVzG2QLhUd0qB4fzmFUE3z6vIrw7qeO_SHrCTJD3hbzDAFnuvwDeMV3OsCxstNPNsfxVk8TC-X9UgUi-AOa7vhfFDn7DBuvtwZ4q9XOHHQOHq1J6ijE-_WMAp5soLcYJb1O0hPwhwRh6o74fYJyL4ByBizaXZW1EOOD_G1tnFCP7Ea8b41ylgN67ybT4rUe_gYuUfHHpcGTvmiFcDppfGO5penxOwOqAUvQw');">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded text-xs font-bold uppercase tracking-wider text-primary">
+                            <span data-i18n="package-badge">Himalayan View</span>
+                        </div>
+                    </div>
+                    <div class="relative group cursor-pointer overflow-hidden">
+                        <div class="w-full h-64 md:h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOpeplKWQwPx2BJ_kNk5nrTg7I04oE6LtOcmo-CMMSq4IO2p7igdYTSo2H0nO7OPy7t4sf3o8-OkzWti946beIMR0pWrXp2w0vpbfoOMa25qP8n7VeBGASs3xPBQ8UqWIs_xP-IhvMn5ZunvZXA0qwZwHgsFWu28M11Vg_6RiHY6jLEZXrn0laUMwbZnQwkn8VeEu_M-A1NrgMk7T1cO-gUaYLlZaqV3sSZW_Zyhl6I6_HHtyq0UY5FuWItEaFnb5QlybWCf954Q');">
+                        </div>
+                    </div>
+                    <div class="relative group cursor-pointer overflow-hidden">
+                        <div class="w-full h-64 md:h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCT1_zYWJ_3U2PNsnJOp_kbYnYGwZFfAI_lcdj0CH37j0XssezW0qacQzN_NnCvfCnxoHqKD28o49eL2peInJoP67G1FPhFKYJMwq6x8cagZziamAJa13kIesLi5en7dAOLH0IDJrMGpd7kPrIACIH8VQAt-dGQdx670mz9fxeS5YWVX7hY1DQjdmhabZ94R51YUKBFkLLhQSjk17yYqpQVoa6rBq8LiOYzB98RwuPEtkBmXhMUGggmTT0kmlwSz28y_4lKzaCJMQ');">
+                        </div>
+                    </div>
+                    <div class="relative group cursor-pointer overflow-hidden">
+                        <div class="w-full h-64 md:h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDIS1KEh_wKKDm1FJPUouv2AByKFJuVqpFPwEexHMky5X2VsYYA6hLr1-6y8euYpgSnqI7TwMu_74y8Mcw4tkSbAz8hj5BpLfNtr92ATPk__TKY9AKc3quIhJsK-g54bsSU0EP30Zy0Q6LFicS0J9nPfyC23TS2Qig41_jOjf3bLZGNgnmWkAwCSl6S-ncNHiiKTBfHXbVQ0cDk4uWl6yiMotWiamDZDSd0vcMLikukx6msW2vw6Egt7wSFeyMhnvK76xtC1HqI_Q');">
+                        </div>
+                    </div>
+                    <div class="relative group cursor-pointer overflow-hidden">
+                        <div class="w-full h-64 md:h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCItNbsBpz9O-LHfMaCUPC_SCl5VN6LrT_5ox7BtXH4Qb0pVSOIEHqhR-wv5vpxwXuOIE9C6gRttZUgt5V-3Dyg42KksFs1iKF4IciXQ50IAwbC0tYRluQAv25cGHLrDnvuERuXz3BBXBDjc3Ie5GPU1Z7iOt1ezY-QyfcJPh1C4zhr5_G5pfBwDIVGDCTR09vCsdsd3TVqorzW-KyYJnNBqKTi6a8059w1UBukGTUUNSuEn79T50A3dvUtudmASqBr2OtfYnkRdw');">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span
+                                class="text-white font-bold text-sm bg-black/50 px-3 py-2 rounded-lg border border-white/20"
+                                data-i18n="package-view-photos">View All Photos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="w-full max-w-[1200px] px-4 lg:px-8 flex flex-col lg:flex-row gap-10">
+                <!-- Left Column - Package Details -->
+                <div class="flex-1 min-w-0">
+                    <!-- Quick Info Bar -->
+                    <div class="border-y border-gray-200 py-4 mb-8 flex flex-wrap gap-y-4 gap-x-8">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">schedule</span>
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-500 font-semibold uppercase"
+                                    data-i18n="package-duration-label">Duration</span>
+                                <span class="text-sm font-bold text-neutral-800" data-i18n="package-duration-value">4
+                                    Hours</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">confirmation_number</span>
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-500 font-semibold uppercase"
+                                    data-i18n="package-ticket-label">Mobile Ticket</span>
+                                <span class="text-sm font-bold text-neutral-800"
+                                    data-i18n="package-ticket-value">Accepted</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">translate</span>
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-500 font-semibold uppercase"
+                                    data-i18n="package-language-label">Language</span>
+                                <span class="text-sm font-bold text-neutral-800"
+                                    data-i18n="package-language-value">English, French</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">group</span>
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-500 font-semibold uppercase"
+                                    data-i18n="package-group-label">Group Size</span>
+                                <span class="text-sm font-bold text-neutral-800" data-i18n="package-group-value">Up to
+                                    5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Overview -->
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-bold text-neutral-800 mb-4" data-i18n="package-overview-title">
+                            Overview</h3>
+                        <p class="text-base leading-relaxed text-gray-600 mb-4" data-i18n="package-overview-p1">
+                            Experience the ultimate adrenaline rush and spiritual awakening with our private Everest
+                            Base Camp Helicopter Tour. Bypass the grueling weeks of trekking and soar directly into the
+                            heart of the Khumbu region, witnessing panoramic views of four of the world's six tallest
+                            peaks.
+                        </p>
+                        <p class="text-base leading-relaxed text-gray-600" data-i18n="package-overview-p2">
+                            Designed for corporate retreats and high-end travelers, this extreme logistics package
+                            ensures seamless transfers, oxygen availability at high altitudes, and a champagne breakfast
+                            at the Hotel Everest View—the highest placed hotel in the world.
+                        </p>
+                    </div>
+
+                    <!-- What's Included -->
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-bold text-neutral-800 mb-6" data-i18n="package-included-title">What's
+                            Included</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-8">
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined filled text-green-600 text-[20px] mt-0.5">check_circle</span>
+                                <span class="text-gray-700" data-i18n="package-included-1">Private Helicopter Charter
+                                    (H125/B3e Series)</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined filled text-green-600 text-[20px] mt-0.5">check_circle</span>
+                                <span class="text-gray-700" data-i18n="package-included-2">Oxygen Cylinder for
+                                    emergency use</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined filled text-green-600 text-[20px] mt-0.5">check_circle</span>
+                                <span class="text-gray-700" data-i18n="package-included-3">Hotel Pickup and Drop-off in
+                                    Kathmandu</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined filled text-green-600 text-[20px] mt-0.5">check_circle</span>
+                                <span class="text-gray-700" data-i18n="package-included-4">Sagarmatha National Park
+                                    Permit Fees</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined filled text-green-600 text-[20px] mt-0.5">check_circle</span>
+                                <span class="text-gray-700" data-i18n="package-included-5">Breakfast at Hotel Everest
+                                    View</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined filled text-green-600 text-[20px] mt-0.5">check_circle</span>
+                                <span class="text-gray-700" data-i18n="package-included-6">English Speaking Captain &
+                                    Guide</span>
+                            </div>
+                            <div class="flex items-start gap-3 md:col-span-2 pt-4 border-t border-gray-100 mt-2">
+                                <span class="material-symbols-outlined text-red-500 text-[20px] mt-0.5">cancel</span>
+                                <span class="text-gray-500" data-i18n="package-notincluded-1">Gratuities
+                                    (Optional)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Departure & Return -->
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-bold text-neutral-800 mb-6" data-i18n="package-departure-title">
+                            Departure & Return</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <div class="mb-6">
+                                    <h4 class="font-bold text-lg mb-2 text-neutral-800"
+                                        data-i18n="package-departure-point">Departure Point</h4>
+                                    <p class="text-gray-600" data-i18n="package-departure-location">Tribhuvan
+                                        International Airport (Domestic Terminal)</p>
+                                    <p class="text-gray-500 text-sm" data-i18n="package-departure-address">Ring Road,
+                                        Kathmandu 44600, Nepal</p>
+                                    <div class="mt-2 text-primary font-medium text-sm cursor-pointer hover:underline"
+                                        data-i18n="package-maps">Open in Google Maps</div>
+                                </div>
+                                <div class="mb-6">
+                                    <h4 class="font-bold text-lg mb-2 text-neutral-800"
+                                        data-i18n="package-pickup-title">Pickup Details</h4>
+                                    <p class="text-gray-600" data-i18n="package-pickup-desc">We pick up from all hotels
+                                        within the Kathmandu Valley ring road. Please be ready in the lobby 30 minutes
+                                        prior.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2 text-neutral-800" data-i18n="package-time-title">
+                                        Departure Time</h4>
+                                    <p class="text-gray-600 font-medium" data-i18n="package-time-value">6:30 AM</p>
+                                    <p class="text-gray-500 text-sm" data-i18n="package-time-note">Times are subject to
+                                        weather conditions.</p>
+                                </div>
+                            </div>
+                            <div class="h-64 rounded-xl overflow-hidden relative bg-gray-100">
+                                <div class="w-full h-full bg-cover bg-center"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKgkdxcGKLjhJzo-h729YhzPRssAPynSIF8eT6JSQ57h5UagAVRMwE06rmfcWs1vUq234UJ8Y72MVRL98_cjq1Hghp9OnerXnGrjEmH810S3TShNRwjfR2IC8JaSID9IUxlrzvhPpGm4a3ATx4giba509ZHsxmTdNokbe3OBuEBfSGsZcdwG1uOamCjXmFOMdOxzilDb7dpF_1WYdSWU4h-NWSvkft06dXV0tpw-vUjaOZor5aLEchxJn57o895kgRnzcohwXoYQ'); opacity: 0.8;">
+                                </div>
+                                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                    <div class="bg-white p-3 rounded-full shadow-lg">
+                                        <span
+                                            class="material-symbols-outlined filled text-primary text-3xl">location_on</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Itinerary -->
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-bold text-neutral-800 mb-6" data-i18n="package-itinerary-title">
+                            Itinerary</h3>
+                        <div class="relative pl-8 border-l-2 border-dashed border-gray-200 ml-3 space-y-10">
+                            <div class="relative">
+                                <span
+                                    class="absolute -left-[41px] top-0 flex items-center justify-center size-5 rounded-full bg-primary ring-4 ring-white"></span>
+                                <h4 class="font-bold text-lg text-neutral-800" data-i18n="package-itinerary-1-title">
+                                    Kathmandu to Lukla (Refueling)</h4>
+                                <p class="text-gray-500 text-sm mb-2" data-i18n="package-itinerary-1-duration">45
+                                    Minutes</p>
+                                <p class="text-gray-600" data-i18n="package-itinerary-1-desc">Scenic flight over the
+                                    hills and landing at Tenzing-Hillary Airport.</p>
+                            </div>
+                            <div class="relative">
+                                <span
+                                    class="absolute -left-[41px] top-0 flex items-center justify-center size-5 rounded-full bg-primary ring-4 ring-white"></span>
+                                <h4 class="font-bold text-lg text-neutral-800" data-i18n="package-itinerary-2-title">
+                                    Fly over Everest Base Camp & Kala Patthar</h4>
+                                <p class="text-gray-500 text-sm mb-2" data-i18n="package-itinerary-2-duration">20
+                                    Minutes</p>
+                                <p class="text-gray-600" data-i18n="package-itinerary-2-desc">Close-up views of Mt.
+                                    Everest, Lhotse, and Nuptse. Landing at Kala Patthar (5,644m) for photos/video (max
+                                    10 mins due to altitude).</p>
+                            </div>
+                            <div class="relative">
+                                <span
+                                    class="absolute -left-[41px] top-0 flex items-center justify-center size-5 rounded-full bg-primary ring-4 ring-white"></span>
+                                <h4 class="font-bold text-lg text-neutral-800" data-i18n="package-itinerary-3-title">
+                                    Breakfast at Hotel Everest View</h4>
+                                <p class="text-gray-500 text-sm mb-2" data-i18n="package-itinerary-3-duration">1 Hour
+                                </p>
+                                <p class="text-gray-600" data-i18n="package-itinerary-3-desc">Enjoy a champagne
+                                    breakfast with a direct view of Mt. Everest from the terrace.</p>
+                            </div>
+                            <div class="relative">
+                                <span
+                                    class="absolute -left-[41px] top-0 flex items-center justify-center size-5 rounded-full bg-primary ring-4 ring-white"></span>
+                                <h4 class="font-bold text-lg text-neutral-800" data-i18n="package-itinerary-4-title">
+                                    Return to Kathmandu</h4>
+                                <p class="text-gray-500 text-sm mb-2" data-i18n="package-itinerary-4-duration">50
+                                    Minutes</p>
+                                <p class="text-gray-600" data-i18n="package-itinerary-4-desc">Flight back and transfer
+                                    to your hotel.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tailor This Experience -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold text-neutral-800 mb-6" data-i18n="package-tailor-title">Tailor
+                            This Experience</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div
+                                class="bg-white border border-gray-200 rounded-xl p-6 hover:border-primary transition-colors group">
+                                <div
+                                    class="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+                                    <span class="material-symbols-outlined">tune</span>
+                                </div>
+                                <h4 class="font-bold text-lg text-neutral-800 mb-2" data-i18n="package-tailor-1-title">
+                                    Adjust Intensity</h4>
+                                <p class="text-sm text-gray-600" data-i18n="package-tailor-1-desc">Modify landing
+                                    altitudes or flight paths to suit group comfort levels.</p>
+                            </div>
+                            <div
+                                class="bg-white border border-gray-200 rounded-xl p-6 hover:border-primary transition-colors group">
+                                <div
+                                    class="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+                                    <span class="material-symbols-outlined">school</span>
+                                </div>
+                                <h4 class="font-bold text-lg text-neutral-800 mb-2" data-i18n="package-tailor-2-title">
+                                    Private Workshop</h4>
+                                <p class="text-sm text-gray-600" data-i18n="package-tailor-2-desc">Integrate leadership
+                                    seminars or mindfulness sessions at Everest View.</p>
+                            </div>
+                            <div
+                                class="bg-white border border-gray-200 rounded-xl p-6 hover:border-primary transition-colors group">
+                                <div
+                                    class="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+                                    <span class="material-symbols-outlined">edit_calendar</span>
+                                </div>
+                                <h4 class="font-bold text-lg text-neutral-800 mb-2" data-i18n="package-tailor-3-title">
+                                    Bespoke Itinerary</h4>
+                                <p class="text-sm text-gray-600" data-i18n="package-tailor-3-desc">Extend the duration,
+                                    add multi-day stops, or combine with other regions.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-8 bg-gradient-to-r from-brand-dark to-slate-800 border border-gray-700 rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2" data-i18n="package-custom-title">Need
+                                    something specific?</h4>
+                                <p class="text-gray-300" data-i18n="package-custom-desc">Our logistics consultants
+                                    specialize in crafting impossible itineraries.</p>
+                            </div>
+                            <a href="contact.html"
+                                class="whitespace-nowrap px-6 py-3 rounded-lg border-2 border-primary bg-transparent text-white hover:bg-primary font-bold transition-all"
+                                data-i18n="package-custom-cta">
+                                Speak with a Consultant
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold text-neutral-800 mb-6" data-i18n="package-addinfo-title">
+                            Additional Info</h3>
+                        <div class="space-y-4">
+                            <details
+                                class="group bg-white rounded-lg border border-gray-200 open:ring-1 open:ring-primary/20">
+                                <summary
+                                    class="flex justify-between items-center font-medium cursor-pointer list-none p-4">
+                                    <span class="text-neutral-800"
+                                        data-i18n="package-addinfo-accessibility-title">Accessibility</span>
+                                    <span class="transition group-open:rotate-180">
+                                        <span class="material-symbols-outlined text-gray-500">expand_more</span>
+                                    </span>
+                                </summary>
+                                <div class="text-gray-600 mt-0 px-4 pb-4"
+                                    data-i18n="package-addinfo-accessibility-desc">
+                                    Not wheelchair accessible. Infants must sit on laps. Not recommended for travelers
+                                    with back problems or heart conditions.
+                                </div>
+                            </details>
+                            <details
+                                class="group bg-white rounded-lg border border-gray-200 open:ring-1 open:ring-primary/20">
+                                <summary
+                                    class="flex justify-between items-center font-medium cursor-pointer list-none p-4">
+                                    <span class="text-neutral-800" data-i18n="package-addinfo-cancel-title">Cancellation
+                                        Policy</span>
+                                    <span class="transition group-open:rotate-180">
+                                        <span class="material-symbols-outlined text-gray-500">expand_more</span>
+                                    </span>
+                                </summary>
+                                <div class="text-gray-600 mt-0 px-4 pb-4" data-i18n="package-addinfo-cancel-desc">
+                                    You can cancel up to 24 hours in advance of the experience for a full refund. For a
+                                    full refund, you must cancel at least 24 hours before the experience's start time.
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Reviews -->
+                    <div class="pt-8 border-t border-gray-200">
+                        <h3 class="text-2xl font-bold text-neutral-800 mb-6" data-i18n="package-reviews-title">Reviews
+                        </h3>
+                        <div class="flex flex-wrap gap-x-12 gap-y-6">
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-baseline gap-2">
+                                    <p class="text-neutral-800 text-5xl font-black leading-tight">4.9</p>
+                                    <p class="text-gray-500">/ 5</p>
+                                </div>
+                                <div class="flex gap-1">
+                                    <span class="material-symbols-outlined filled text-primary">star</span>
+                                    <span class="material-symbols-outlined filled text-primary">star</span>
+                                    <span class="material-symbols-outlined filled text-primary">star</span>
+                                    <span class="material-symbols-outlined filled text-primary">star</span>
+                                    <span class="material-symbols-outlined filled text-primary">star</span>
+                                </div>
+                                <p class="text-neutral-800 text-base font-medium" data-i18n="package-reviews-based">
+                                    Based on 245 reviews</p>
+                            </div>
+                            <div
+                                class="flex-1 min-w-[280px] max-w-[500px] grid grid-cols-[20px_1fr_40px] items-center gap-y-2 gap-x-3">
+                                <p class="text-neutral-800 text-sm font-medium">5</p>
+                                <div class="flex h-2.5 flex-1 overflow-hidden rounded-full bg-gray-200">
+                                    <div class="rounded-full bg-primary" style="width: 88%;"></div>
+                                </div>
+                                <p class="text-gray-500 text-sm text-right">88%</p>
+                                <p class="text-neutral-800 text-sm font-medium">4</p>
+                                <div class="flex h-2.5 flex-1 overflow-hidden rounded-full bg-gray-200">
+                                    <div class="rounded-full bg-primary" style="width: 8%;"></div>
+                                </div>
+                                <p class="text-gray-500 text-sm text-right">8%</p>
+                                <p class="text-neutral-800 text-sm font-medium">3</p>
+                                <div class="flex h-2.5 flex-1 overflow-hidden rounded-full bg-gray-200">
+                                    <div class="rounded-full bg-primary" style="width: 2%;"></div>
+                                </div>
+                                <p class="text-gray-500 text-sm text-right">2%</p>
+                                <p class="text-neutral-800 text-sm font-medium">2</p>
+                                <div class="flex h-2.5 flex-1 overflow-hidden rounded-full bg-gray-200">
+                                    <div class="rounded-full bg-primary" style="width: 1%;"></div>
+                                </div>
+                                <p class="text-gray-500 text-sm text-right">1%</p>
+                                <p class="text-neutral-800 text-sm font-medium">1</p>
+                                <div class="flex h-2.5 flex-1 overflow-hidden rounded-full bg-gray-200">
+                                    <div class="rounded-full bg-primary" style="width: 1%;"></div>
+                                </div>
+                                <p class="text-gray-500 text-sm text-right">1%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Booking Sidebar -->
+                <div class="lg:w-[360px] relative">
+                    <div class="sticky top-24 rounded-2xl border border-gray-200 bg-white shadow-xl overflow-hidden">
+                        <div class="bg-primary text-white text-center py-2 text-sm font-bold tracking-wide uppercase"
+                            data-i18n="package-sidebar-title">
+                            Request a Corporate Quote
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-neutral-800 mb-4" data-i18n="package-sidebar-heading">
+                                Custom Pricing Inquiry</h3>
+                            <p class="text-sm text-gray-600 mb-6 leading-relaxed" data-i18n="package-sidebar-desc">
+                                Tailored logistics for executive teams and corporate retreats. Receive a custom proposal
+                                within 24 hours.
+                            </p>
+                            <form class="space-y-5 mb-6">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-gray-500 mb-2"
+                                        data-i18n="package-form-company">Company Name</label>
+                                    <input
+                                        class="w-full rounded-lg border-gray-300 bg-white text-neutral-800 placeholder:text-gray-400 focus:ring-primary focus:border-primary"
+                                        data-i18n="package-form-company-placeholder" placeholder="Enter company name"
+                                        type="text" />
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-gray-500 mb-2"
+                                        data-i18n="package-form-groupsize">Estimated Group Size</label>
+                                    <select
+                                        class="w-full rounded-lg border-gray-300 bg-white text-neutral-800 focus:ring-primary focus:border-primary">
+                                        <option data-i18n="package-form-size-1">1-5 Executives</option>
+                                        <option data-i18n="package-form-size-2">6-10 Team Members</option>
+                                        <option data-i18n="package-form-size-3">11-20 Large Group</option>
+                                        <option data-i18n="package-form-size-4">20+ Custom Event</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-gray-500 mb-2"
+                                        data-i18n="package-form-dates">Projected Dates (Optional)</label>
+                                    <div class="relative">
+                                        <input
+                                            class="w-full rounded-lg border-gray-300 bg-white text-neutral-800 placeholder:text-gray-400 focus:ring-primary focus:border-primary"
+                                            data-i18n="package-form-dates-placeholder" placeholder="Approximate dates"
+                                            type="text" />
+                                        <span
+                                            class="material-symbols-outlined absolute right-3 top-2.5 text-gray-400 pointer-events-none text-lg">calendar_month</span>
+                                    </div>
+                                </div>
+                            </form>
+                            <button
+                                class="w-full bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-white font-bold text-lg py-4 rounded-xl transition-all mb-4 shadow-lg shadow-primary/30"
+                                data-i18n="package-form-submit">
+                                Inquire for Custom Pricing
+                            </button>
+                            <div class="flex flex-col gap-2 text-sm text-gray-500 text-center">
+                                <div class="flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-[18px]">verified_user</span>
+                                    <span data-i18n="package-sidebar-nda">NDAs available upon request</span>
+                                </div>
+                                <div class="flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-[18px]">lock</span>
+                                    <span data-i18n="package-sidebar-secure">Secure corporate processing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 px-6 py-4 border-t border-gray-100">
+                            <p class="text-xs text-center text-gray-500">
+                                <strong data-i18n="package-sidebar-assistance">Need immediate assistance?</strong><br />
+                                <a class="text-primary hover:underline font-bold" href="tel:+15551234567">+1 (555)
+                                    123-4567</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full bg-brand-dark border-t border-white/10 pt-16 pb-8 px-4 lg:px-10 text-white">
+            <div class="max-w-7xl mx-auto flex flex-col gap-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
+                        <div class="flex items-center gap-2">
+                            <img alt="World Travel Consortium Logo" class="h-8 w-auto object-contain"
+                                src="/logo-white.png" />
+                            <div class="flex flex-col -space-y-1">
+                                <span class="text-sm font-bold uppercase leading-none">World Travel</span>
+                                <span
+                                    class="text-[10px] text-neutral-400 font-light tracking-widest lowercase">Consortium</span>
+                            </div>
+                        </div>
+                        <p class="text-neutral-400 text-sm" data-i18n="footer-desc">
+                            Corporate travel agency specializing in extreme sports and spiritual retreats.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-company">
+                            <span class="material-symbols-outlined text-sm">business</span>
+                            Company
+                        </h4>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="about.html"
+                            data-i18n="nav-about">About Us</a>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="#"
+                            data-i18n="footer-careers">Careers</a>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="#" data-i18n="footer-press">Press</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-services">
+                            <span class="material-symbols-outlined text-sm">flight</span>
+                            Services
+                        </h4>
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
+                            href="services.html" data-i18n="footer-extreme">
+                            <span class="material-symbols-outlined text-[14px]">terrain</span> Extreme Retreats
+                        </a>
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
+                            href="services.html" data-i18n="footer-spiritual">
+                            <span class="material-symbols-outlined text-[14px]">self_improvement</span> Spiritual
+                            Retreats
+                        </a>
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
+                            href="services.html" data-i18n="footer-custom">
+                            <span class="material-symbols-outlined text-[14px]">edit_calendar</span> Custom Itineraries
+                        </a>
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
+                            href="packages.html" data-i18n="footer-all-packages">
+                            <span class="material-symbols-outlined text-[14px]">inventory_2</span> All Packages
+                        </a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-contact">
+                            <span class="material-symbols-outlined text-sm">contact_phone</span>
+                            Contact
+                        </h4>
+                        <a class="text-neutral-400 hover:text-white text-sm"
+                            href="mailto:support@worldtravel.com">support@worldtravel.com</a>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="tel:+15551234567">+1 (555)
+                            123-4567</a>
+                    </div>
+                </div>
+                <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-neutral-500 text-sm" data-i18n="footer-rights">© 2023 World Travel Consortium. All
+                        rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a class="text-neutral-500 hover:text-white text-sm" href="#" data-i18n="footer-privacy">Privacy
+                            Policy</a>
+                        <a class="text-neutral-500 hover:text-white text-sm" href="#" data-i18n="footer-terms">Terms of
+                            Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
