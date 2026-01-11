@@ -16,10 +16,29 @@
         rel="stylesheet" />
     <script type="module" src="/src/js/main.js"></script>
 
+    <style>
+        .feature-card-enter {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
 
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-neutral-50 font-display text-neutral-800 overflow-x-hidden">
+    <!-- Preview Banner -->
+    <div id="preview-banner"
+        class="hidden w-full bg-blue-600 text-white text-center py-2 text-sm font-bold sticky top-0 z-[100]">
+        PREVIEW MODE: Viewing Draft Content
+    </div>
+
     <div class="relative flex min-h-screen w-full flex-col">
         <header
             class="sticky top-0 z-50 w-full border-b border-white/10 bg-brand-dark/95 backdrop-blur-md px-4 lg:px-10 py-3">
@@ -136,15 +155,14 @@
                                     <span class="material-symbols-outlined text-[16px]">flight_takeoff</span>
                                     Corporate Travel Reimagined
                                 </span>
-                                <h1 data-i18n="hero-title"
+                                <h1 id="hero-title"
                                     class="text-white text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em]">
                                     Redefining Corporate Retreats.<br />
                                 </h1>
-                                <span data-i18n="hero-subtitle"
+                                <span id="hero-subtitle"
                                     class="text-white text-2xl sm:text-4xl lg:text-5xl font-black opacity-90">From
                                     Adrenaline to Zen.</span>
-                                <p data-i18n="hero-desc"
-                                    class="text-white/80 text-lg font-normal leading-relaxed max-w-xl">
+                                <p id="hero-desc" class="text-white/80 text-lg font-normal leading-relaxed max-w-xl">
                                     Specialized travel logistics for teams seeking extreme challenges to build
                                     resilience, or spiritual grounding to find clarity.
                                 </p>
@@ -222,52 +240,12 @@
                             complex logistics of extreme
                             and remote travel so you can focus on the team experience.</p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div
-                            class="group flex flex-col gap-4 rounded-xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
-                            <div
-                                class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-brand-gradient group-hover:text-white transition-all duration-300">
-                                <span class="material-symbols-outlined">health_and_safety</span>
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <h3 data-i18n="feature-risk"
-                                    class="text-neutral-800 text-xl font-bold group-hover:text-primary transition-colors">
-                                    Risk Management</h3>
-                                <p class="text-neutral-600" data-i18n="feature-risk-desc">Safety-first protocols for
-                                    high-adrenaline activities with
-                                    certified global guides.</p>
-                            </div>
-                        </div>
-                        <div
-                            class="group flex flex-col gap-4 rounded-xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
-                            <div
-                                class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-brand-gradient group-hover:text-white transition-all duration-300">
-                                <span class="material-symbols-outlined">temple_hindu</span>
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <h3 data-i18n="feature-culture"
-                                    class="text-neutral-800 text-xl font-bold group-hover:text-primary transition-colors">
-                                    Cultural Immersion</h3>
-                                <p class="text-neutral-600" data-i18n="feature-culture-desc">Authentic connections with
-                                    local traditions, monks, and
-                                    spiritual leaders.</p>
-                            </div>
-                        </div>
-                        <div
-                            class="group flex flex-col gap-4 rounded-xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
-                            <div
-                                class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-brand-gradient group-hover:text-white transition-all duration-300">
-                                <span class="material-symbols-outlined">satellite_alt</span>
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <h3 data-i18n="feature-logistics"
-                                    class="text-neutral-800 text-xl font-bold group-hover:text-primary transition-colors">
-                                    Corporate Logistics</h3>
-                                <p class="text-neutral-600" data-i18n="feature-logistics-desc">Seamless travel planning,
-                                    satellite connectivity, and
-                                    high-end accommodation for groups.</p>
-                            </div>
-                        </div>
+                    <!-- Features Container (Populated by JS) -->
+                    <div id="features-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Skeleton Loading -->
+                        <div class="animate-pulse bg-white p-6 rounded-xl h-48"></div>
+                        <div class="animate-pulse bg-white p-6 rounded-xl h-48"></div>
+                        <div class="animate-pulse bg-white p-6 rounded-xl h-48"></div>
                     </div>
                 </div>
             </section>
@@ -279,77 +257,15 @@
                             reflection.</p>
                     </div>
                     <a class="text-secondary-blue font-bold hover:text-primary transition-colors flex items-center gap-1"
-                        href="#">
+                        href="packages.html">
                         View all destinations <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <a href="package-detail.html"
-                        class="group relative overflow-hidden rounded-xl bg-white border border-neutral-200 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-lg block">
-                        <div class="aspect-video w-full overflow-hidden relative">
-                            <div class="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-105"
-                                data-alt="Base camp tents at mount everest with snow peaks in background"
-                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3tc95GzvlKf1aIZOVfkDYuC8ZmRVtmHmo_mj9SUjddSOIcVH0OSjC1JPY0D7-JI8jX8OKBCZ55uk-npCppsgAqjydnFb2Uv_yu6rC3GmDtKJLBbFLOsukx7MqNym-aG_AeH5YjI14Mp9RxKKxSiLAcQrClA8nLb3TFakl1vsvNHkZ8ori0ZVSwU64aJX8RE3MX6qtkSVjOKwx8trfBCt-g04dQWyAiFJjOAQE0RiZHcupciA-GhmBSaJVhy3fSyfAZeB4PQ_7oQ');">
-                            </div>
-                            <div
-                                class="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-full p-2 text-primary-accent shadow-md">
-                                <span class="material-symbols-outlined">landscape</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <p
-                                    class="text-secondary-blue text-sm font-bold tracking-wider uppercase flex items-center gap-1">
-                                    <span class="material-symbols-outlined text-sm">directions_run</span>
-                                    Executive Retreats
-                                </p>
-                            </div>
-                            <h3
-                                class="text-neutral-800 text-2xl font-bold leading-tight mb-2 group-hover:text-primary transition-colors">
-                                The Edge of Performance</h3>
-                            <p class="text-neutral-600 text-sm mb-4">Everest Base Camp, Nepal. Push your team's physical
-                                and mental limits in the world's most demanding environment.</p>
-                            <div
-                                class="flex items-center gap-2 text-neutral-500 text-sm font-medium border-t border-neutral-100 pt-4">
-                                <span class="material-symbols-outlined text-base">schedule</span> 14 Days
-                                <span class="mx-2 text-neutral-300">|</span>
-                                <span class="material-symbols-outlined text-base">groups</span> Max 12 Pax
-                            </div>
-                        </div>
-                    </a>
-                    <a href="package-detail.html"
-                        class="group relative overflow-hidden rounded-xl bg-white border border-neutral-200 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-lg block">
-                        <div class="aspect-video w-full overflow-hidden relative">
-                            <div class="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-105"
-                                data-alt="Traditional Kyoto temple surrounded by cherry blossoms and calm water"
-                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQDw8vQ0Kn4lnE0DgXgydjaDXhvRYvZQoywOrh9FPk8zD2eml5uvgfDb-RyfcGNCtSu5U323vjyAoZLQO_0geHwv3NE23hjxT8L9NbtaoUOGIsVVvDBkNGjrHFp_fFO4ppYBPpetJT_py1U2-0nDFX62BpgFZIY8xD0OFqOzx5Ja9h5uAo7gQtVU126JMYJVjYhbdMRVsk5v3JmKnQ6dFC0ZXS0pJ6m_u8iMBvsTdgIlElQsxQC4_pnM_qRBl5ITIDJGLdu6CDzA');">
-                            </div>
-                            <div
-                                class="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-full p-2 text-primary shadow-md">
-                                <span class="material-symbols-outlined">temple_buddhist</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <p
-                                    class="text-primary text-sm font-bold tracking-wider uppercase flex items-center gap-1">
-                                    <span class="material-symbols-outlined text-sm">psychology</span>
-                                    Spiritual Leadership
-                                </p>
-                            </div>
-                            <h3
-                                class="text-neutral-800 text-2xl font-bold leading-tight mb-2 group-hover:text-primary transition-colors">
-                                The Center of Focus</h3>
-                            <p class="text-neutral-600 text-sm mb-4">Kyoto Temples, Japan. Guided meditation and
-                                strategic silence to cultivate clarity and visionary thinking.</p>
-                            <div
-                                class="flex items-center gap-2 text-neutral-500 text-sm font-medium border-t border-neutral-100 pt-4">
-                                <span class="material-symbols-outlined text-base">schedule</span> 7 Days
-                                <span class="mx-2 text-neutral-300">|</span>
-                                <span class="material-symbols-outlined text-base">groups</span> Max 8 Pax
-                            </div>
-                        </div>
-                    </a>
+                <!-- Featured Packages Container (Populated by JS) -->
+                <div id="featured-packages-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Skeleton Loading -->
+                    <div class="animate-pulse bg-gray-100 rounded-xl h-64 w-full"></div>
+                    <div class="animate-pulse bg-gray-100 rounded-xl h-64 w-full"></div>
                 </div>
             </section>
             <section class="w-full bg-brand-dark py-16">
@@ -575,6 +491,121 @@
             </div>
         </footer>
     </div>
+
+    <!-- Supabase Dynamic Content -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = 'https://piiffvqqfecuejqyiqmf.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBpaWZmdnFxZmVjdWVqcXlpcW1mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgxNDkyNzAsImV4cCI6MjA4MzcyNTI3MH0.YYv6Ws3f9WjUvwc-Gl-_TEThQTYkC86ed3tjw176Huc';
+        // Renamed to avoid specific conflict with global window.supabase
+        const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+        // Check for Preview Mode
+        const urlParams = new URLSearchParams(window.location.search);
+        const isPreview = urlParams.get('preview') === 'true';
+
+        if (isPreview) {
+            const banner = document.getElementById('preview-banner');
+            if (banner) banner.classList.remove('hidden');
+        }
+
+        async function fetchHomeContent() {
+            try {
+                // 1. Fetch Page Content
+                // Select both columns to be safe, then pick the right one
+                const { data: pageData, error: pageError } = await supabaseClient
+                    .from('pages')
+                    .select('content, draft_content')
+                    .eq('slug', 'home')
+                    .single();
+
+                if (pageData) {
+                    // Check which content to use
+                    const content = isPreview && pageData.draft_content ? pageData.draft_content : pageData.content;
+
+                    if (content) {
+                        const { hero, features } = content;
+
+                        // Update Hero
+                        if (hero) {
+                            if (hero.title) document.getElementById('hero-title').innerHTML = hero.title;
+                            if (hero.subtitle) document.getElementById('hero-subtitle').innerText = hero.subtitle;
+                            if (hero.description) document.getElementById('hero-desc').innerText = hero.description;
+                        }
+
+                        // Update Features
+                        if (features && Array.isArray(features)) {
+                            const featureContainer = document.getElementById('features-container');
+                            featureContainer.innerHTML = '';
+                            features.forEach((feature, index) => {
+                                const featureHtml = `
+                                    <div class="group flex flex-col gap-4 rounded-xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-primary/30 transition-all feature-card-enter" style="animation-delay: ${index * 0.1}s">
+                                        <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-brand-gradient group-hover:text-white transition-all duration-300">
+                                            <span class="material-symbols-outlined">${feature.icon || 'star'}</span>
+                                        </div>
+                                        <div class="flex flex-col gap-2">
+                                            <h3 class="text-neutral-800 text-xl font-bold group-hover:text-primary transition-colors">${feature.title}</h3>
+                                            <p class="text-neutral-600">${feature.description}</p>
+                                        </div>
+                                    </div>
+                                `;
+                                featureContainer.insertAdjacentHTML('beforeend', featureHtml);
+                            });
+                        }
+                    }
+                }
+
+                // 2. Fetch Featured Packages
+                // Note: Packages don't currently have draft state, effectively always live for now
+                const { data: packages, error: pkgError } = await supabaseClient
+                    .from('packages')
+                    .select('title, slug, overview, duration, group_size, images')
+                    .eq('is_featured', true)
+                    .limit(2);
+
+                const packagesContainer = document.getElementById('featured-packages-container');
+                if (packages && packages.length > 0) {
+                    packagesContainer.innerHTML = '';
+                    packages.forEach(pkg => {
+                        const bgImage = pkg.images && pkg.images.length > 0 ? pkg.images[0] : 'https://placehold.co/600x400';
+                        const html = `
+                             <a href="package-detail.html?slug=${pkg.slug}"
+                                class="group relative overflow-hidden rounded-xl bg-white border border-neutral-200 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-lg block">
+                                <div class="aspect-video w-full overflow-hidden relative">
+                                    <div class="w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-105"
+                                        style="background-image: url('${bgImage}');">
+                                    </div>
+                                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-full p-2 text-primary shadow-md">
+                                        <span class="material-symbols-outlined">star</span>
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-neutral-800 text-2xl font-bold leading-tight mb-2 group-hover:text-primary transition-colors">
+                                        ${pkg.title}
+                                    </h3>
+                                    <p class="text-neutral-600 text-sm mb-4 line-clamp-2">${pkg.overview || 'Experience the extraordinary.'}</p>
+                                    <div class="flex items-center gap-2 text-neutral-500 text-sm font-medium border-t border-neutral-100 pt-4">
+                                        <span class="material-symbols-outlined text-base">schedule</span> ${pkg.duration || 'N/A'}
+                                        <span class="mx-2 text-neutral-300">|</span>
+                                        <span class="material-symbols-outlined text-base">groups</span> ${pkg.group_size || 'N/A'}
+                                    </div>
+                                </div>
+                            </a>
+                         `;
+                        packagesContainer.insertAdjacentHTML('beforeend', html);
+                    });
+                } else {
+                    // If no featured packages, keep container hidden or show empty state
+                    packagesContainer.innerHTML = '<p class="text-center col-span-2 text-gray-500">No featured packages available at the moment.</p>';
+                }
+
+            } catch (err) {
+                console.error("Error fetching home content:", err);
+            }
+        }
+
+        fetchHomeContent();
+    </script>
 </body>
 
 </html>

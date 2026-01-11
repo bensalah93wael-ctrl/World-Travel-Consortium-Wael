@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pages - World Travel Admin</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ea2a33",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211111",
+                        "surface-dark": "#1a0f0f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#1b0e0e] dark:text-white h-screen overflow-hidden flex font-display">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-surface-dark text-white flex flex-col h-full shrink-0 border-r border-[#332222]">
+        <div class="p-6">
+            <h1 class="text-xl font-bold tracking-tight">World Travel<br /><span class="text-primary">Consortium</span>
+            </h1>
+            <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Admin CMS</p>
+        </div>
+        <nav class="flex-1 px-4 py-4 flex flex-col gap-2 overflow-y-auto">
+            <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors"
+                href="dashboard.html">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span class="font-medium text-sm">Dashboard</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-3 rounded-lg bg-primary/10 text-primary group transition-colors"
+                href="home-settings.html">
+                <span class="material-symbols-outlined fill">article</span>
+                <span class="font-medium text-sm">Pages</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors"
+                href="packages.html">
+                <span class="material-symbols-outlined">inventory_2</span>
+                <span class="font-medium text-sm">Packages</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors"
+                href="inquiries.html">
+                <span class="material-symbols-outlined">chat_bubble</span>
+                <span class="font-medium text-sm">Inquiries</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors"
+                href="form-builder.html">
+                <span class="material-symbols-outlined">dynamic_form</span>
+                <span class="font-medium text-sm">Form Builder</span>
+            </a>
+            <div class="my-4 border-t border-white/10"></div>
+            <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors"
+                href="../index.html" target="_blank">
+                <span class="material-symbols-outlined">public</span>
+                <span class="font-medium text-sm">View Website</span>
+            </a>
+        </nav>
+        <div class="p-4 border-t border-white/10">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-gray-700 to-gray-600 flex items-center justify-center text-white text-sm font-bold shadow-inner"
+                    id="user-avatar">AD</div>
+                <div class="flex flex-col">
+                    <p class="text-sm font-medium text-white" id="user-email">Admin</p>
+                    <p class="text-xs text-gray-400">Super Admin</p>
+                </div>
+                <button class="ml-auto text-gray-400 hover:text-white" id="logout-btn">
+                    <span class="material-symbols-outlined text-[20px]">logout</span>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-full overflow-hidden relative">
+        <!-- Header -->
+        <header
+            class="h-20 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark flex items-center justify-between px-8 shrink-0">
+            <div class="flex flex-col">
+                <div class="flex items-center gap-2 text-sm text-gray-500 mb-1">
+                    <span class="hover:text-primary cursor-pointer transition-colors"
+                        onclick="window.location.href='dashboard.html'">Dashboard</span>
+                    <span class="material-symbols-outlined text-[12px]">chevron_right</span>
+                    <span class="font-medium text-gray-900 dark:text-gray-100">Pages</span>
+                </div>
+                <h2 class="text-xl font-bold text-[#1b0e0e] dark:text-white">Home Page Content</h2>
+            </div>
+            <div class="flex items-center gap-3">
+                <span id="save-status" class="text-xs font-medium text-gray-500 hidden mr-2">All changes saved</span>
+
+                <button onclick="window.open('../index.html?preview=true', '_blank')"
+                    class="h-10 px-4 rounded-lg bg-transparent border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-sm font-bold tracking-wide flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">visibility</span>
+                    Preview Draft
+                </button>
+
+                <div class="h-6 w-px bg-gray-300 dark:bg-gray-700 mx-1"></div>
+
+                <button id="save-draft-btn"
+                    class="flex items-center gap-2 h-10 px-4 bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 rounded-lg text-sm font-bold transition-all shadow-sm">
+                    <span class="material-symbols-outlined text-[20px]">save_as</span>
+                    <span>Save Draft</span>
+                </button>
+
+                <button id="publish-btn"
+                    class="flex items-center gap-2 h-10 px-6 bg-primary hover:bg-primary/90 text-white rounded-lg text-sm font-bold transition-all shadow-sm hover:shadow-md">
+                    <span class="material-symbols-outlined text-[20px]">publish</span>
+                    <span>Publish Live</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Scrollable Content -->
+        <div class="flex-1 overflow-y-auto p-8 bg-background-light dark:bg-background-dark">
+            <div class="max-w-4xl mx-auto space-y-8 pb-20">
+
+                <div
+                    class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 flex items-start gap-3">
+                    <span class="material-symbols-outlined text-blue-600 dark:text-blue-400 mt-0.5">info</span>
+                    <div>
+                        <h4 class="text-sm font-bold text-blue-800 dark:text-blue-300">Editing Mode</h4>
+                        <p class="text-sm text-blue-600 dark:text-blue-400 mt-1">
+                            You are editing the <strong>Draft Version</strong>. Changes made here will not be visible on
+                            the live site until you click <strong>Publish Live</strong>. Use <strong>Preview
+                                Draft</strong> to see your changes before publishing.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Hero Section Editor -->
+                <div
+                    class="bg-white dark:bg-[#2a2a2a] border border-gray-200 dark:border-gray-800 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100 dark:border-gray-800">
+                        <span class="p-2 bg-primary/10 rounded-lg text-primary">
+                            <span class="material-symbols-outlined">rocket_launch</span>
+                        </span>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Hero Section</h3>
+                            <p class="text-sm text-gray-500">Main headline and introduction text.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Main
+                                Heading</label>
+                            <input type="text" id="hero-title"
+                                class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-black/20 text-sm focus:border-primary focus:ring-primary"
+                                placeholder="Redefining Corporate Retreats.">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subtitle /
+                                Highlight</label>
+                            <input type="text" id="hero-subtitle"
+                                class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-black/20 text-sm focus:border-primary focus:ring-primary"
+                                placeholder="From Adrenaline to Zen.">
+                        </div>
+
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Description</label>
+                            <textarea id="hero-desc" rows="3"
+                                class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-black/20 text-sm focus:border-primary focus:ring-primary"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features Section Editor -->
+                <div
+                    class="bg-white dark:bg-[#2a2a2a] border border-gray-200 dark:border-gray-800 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100 dark:border-gray-800">
+                        <span class="p-2 bg-primary/10 rounded-lg text-primary">
+                            <span class="material-symbols-outlined">featured_play_list</span>
+                        </span>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Feature Cards</h3>
+                            <p class="text-sm text-gray-500">Define the 3 key value propositions.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6" id="features-container">
+                        <!-- Features will be injected here via JS -->
+                    </div>
+                </div>
+
+                <!-- Map Section Editor -->
+                <div
+                    class="bg-white dark:bg-[#2a2a2a] border border-gray-200 dark:border-gray-800 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100 dark:border-gray-800">
+                        <span class="p-2 bg-primary/10 rounded-lg text-primary">
+                            <span class="material-symbols-outlined">map</span>
+                        </span>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Map Integration</h3>
+                            <p class="text-sm text-gray-500">Location settings for the map module.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Latitude</label>
+                            <input type="text" id="map-lat"
+                                class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-black/20 text-sm focus:border-primary focus:ring-primary">
+                        </div>
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Longitude</label>
+                            <input type="text" id="map-lng"
+                                class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-black/20 text-sm focus:border-primary focus:ring-primary">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Supabase Integration -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = 'https://piiffvqqfecuejqyiqmf.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBpaWZmdnFxZmVjdWVqcXlpcW1mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgxNDkyNzAsImV4cCI6MjA4MzcyNTI3MH0.YYv6Ws3f9WjUvwc-Gl-_TEThQTYkC86ed3tjw176Huc';
+        const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+        let pageData = {};
+
+        // 1. Session Check
+        async function checkSession() {
+            const { data: { session } } = await supabaseClient.auth.getSession();
+            if (!session) {
+                window.location.href = 'index.html';
+                return;
+            }
+            if (session.user.email) {
+                document.getElementById('user-email').innerText = session.user.email;
+                document.getElementById('user-avatar').innerText = session.user.email.substring(0, 2).toUpperCase();
+            }
+            loadPageData();
+        }
+
+        // 2. Load Page Data (Draft preferred)
+        async function loadPageData() {
+            try {
+                // Select both columns
+                const { data, error } = await supabaseClient
+                    .from('pages')
+                    .select('content, draft_content')
+                    .eq('slug', 'home')
+                    .single();
+
+                if (error) {
+                    if (error.code === 'PGRST116') {
+                        console.warn("No data for home page.");
+                    } else {
+                        throw error;
+                    }
+                }
+
+                if (data) {
+                    // Prefer draft_content if it exists, otherwise fallback to content
+                    pageData = data.draft_content || data.content || {};
+                    populateForm(pageData);
+                }
+            } catch (err) {
+                console.error("Error loading page data:", err);
+                alert("Failed to load page content.");
+            }
+        }
+
+        // 3. Populate Form
+        function populateForm(content) {
+            // Hero
+            const hero = content.hero || {};
+            document.getElementById('hero-title').value = hero.title || '';
+            document.getElementById('hero-subtitle').value = hero.subtitle || '';
+            document.getElementById('hero-desc').value = hero.description || '';
+
+            // Features
+            const container = document.getElementById('features-container');
+            container.innerHTML = '';
+
+            // Ensure 3 feature cards exist even if data is missing
+            const features = content.features || [{}, {}, {}];
+            // Normalize to exactly 3 if possible or just use whatever is there if more
+            if (features.length < 3) {
+                while (features.length < 3) features.push({});
+            }
+
+            features.forEach((feature, index) => {
+                const html = `
+                <div class="p-4 border border-gray-200 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-black/10">
+                    <div class="font-bold text-xs text-gray-500 uppercase tracking-wider mb-2">Feature Card #${index + 1}</div>
+                    <div class="grid gap-3">
+                            <div class="flex gap-4">
+                            <div class="w-1/3">
+                                    <label class="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1">Icon Name (Material Symbols)</label>
+                                    <input type="text" class="feature-icon w-full rounded-md border-gray-300 dark:border-gray-700 text-xs py-1.5" value="${feature.icon || ''}" placeholder="e.g. star">
+                            </div>
+                            <div class="w-2/3">
+                                    <label class="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1">Title</label>
+                                    <input type="text" class="feature-title w-full rounded-md border-gray-300 dark:border-gray-700 text-xs py-1.5" value="${feature.title || ''}" placeholder="Card Title">
+                            </div>
+                            </div>
+                            <div>
+                            <label class="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1">Description</label>
+                            <input type="text" class="feature-desc w-full rounded-md border-gray-300 dark:border-gray-700 text-xs py-1.5" value="${feature.description || ''}" placeholder="Short description...">
+                            </div>
+                    </div>
+                </div>
+                `;
+                container.insertAdjacentHTML('beforeend', html);
+            });
+
+            // Map
+            const map = content.map || {};
+            document.getElementById('map-lat').value = map.lat || '';
+            document.getElementById('map-lng').value = map.lng || '';
+        }
+
+        function collectFormData() {
+            const currentHero = pageData.hero || {};
+
+            const newContent = {
+                ...pageData,
+                hero: {
+                    title: document.getElementById('hero-title').value,
+                    subtitle: document.getElementById('hero-subtitle').value,
+                    description: document.getElementById('hero-desc').value,
+                    cta_primary: currentHero.cta_primary || "Start Your Journey",
+                    cta_secondary: currentHero.cta_secondary || "Download Brochure"
+                },
+                features: [],
+                map: {
+                    active: true,
+                    lat: document.getElementById('map-lat').value,
+                    lng: document.getElementById('map-lng').value
+                }
+            };
+
+            const featureCards = document.querySelectorAll('#features-container > div');
+            featureCards.forEach(card => {
+                newContent.features.push({
+                    icon: card.querySelector('.feature-icon').value,
+                    title: card.querySelector('.feature-title').value,
+                    description: card.querySelector('.feature-desc').value
+                });
+            });
+
+            return newContent;
+        }
+
+        // 4. Save Draft
+        document.getElementById('save-draft-btn').addEventListener('click', async () => {
+            const btn = document.getElementById('save-draft-btn');
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<span>Saving...</span>';
+            btn.disabled = true;
+
+            const contentToSave = collectFormData();
+
+            try {
+                // Update only draft_content
+                const { error } = await supabaseClient
+                    .from('pages')
+                    .upsert({
+                        slug: 'home',
+                        draft_content: contentToSave,
+                        // Do NOT touch 'content' (published version)
+                        updated_at: new Date()
+                    }, { onConflict: 'slug' });
+
+                if (error) throw error;
+
+                // Success
+                btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span><span>Saved</span>';
+                document.getElementById('save-status').innerText = 'Draft saved ' + new Date().toLocaleTimeString();
+                document.getElementById('save-status').classList.remove('hidden');
+
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.disabled = false;
+                }, 2000);
+
+            } catch (err) {
+                console.error("Error saving draft:", err);
+                alert("Failed to save draft: " + err.message);
+                btn.innerHTML = originalHTML;
+                btn.disabled = false;
+            }
+        });
+
+        // 5. Publish Live
+        document.getElementById('publish-btn').addEventListener('click', async () => {
+            if (!confirm("Are you sure you want to publish these changes to the live website?")) return;
+
+            const btn = document.getElementById('publish-btn');
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<span>Publishing...</span>';
+            btn.disabled = true;
+
+            const contentToSave = collectFormData();
+
+            try {
+                // Update BOTH content and draft_content to ensure they are synced upon publish
+                const { error } = await supabaseClient
+                    .from('pages')
+                    .upsert({
+                        slug: 'home',
+                        content: contentToSave,
+                        draft_content: contentToSave,
+                        updated_at: new Date()
+                    }, { onConflict: 'slug' });
+
+                if (error) throw error;
+
+                // Success
+                btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span><span>Published!</span>';
+                btn.classList.replace('bg-primary', 'bg-green-600');
+                document.getElementById('save-status').innerText = 'Published Live ' + new Date().toLocaleTimeString();
+                document.getElementById('save-status').classList.remove('hidden');
+
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.classList.replace('bg-green-600', 'bg-primary');
+                    btn.disabled = false;
+                }, 2000);
+
+            } catch (err) {
+                console.error("Error publishing:", err);
+                alert("Failed to publish: " + err.message);
+                btn.innerHTML = originalHTML;
+                btn.disabled = false;
+            }
+        });
+
+        document.getElementById('logout-btn').addEventListener('click', async () => {
+            await supabaseClient.auth.signOut();
+            window.location.href = 'index.html';
+        });
+
+        checkSession();
+    </script>
+</body>
+
+</html>
