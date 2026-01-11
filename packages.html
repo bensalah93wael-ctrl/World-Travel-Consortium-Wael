@@ -35,29 +35,53 @@
                 <div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
                     <nav class="flex items-center gap-9">
                         <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
-                            href="destinations.html">
+                            href="destinations.html" data-i18n="nav-destinations">
                             <span class="material-symbols-outlined text-[18px]">explore</span>
                             Destinations
                         </a>
                         <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
-                            href="services.html">
+                            href="services.html" data-i18n="nav-services">
                             <span class="material-symbols-outlined text-[18px]">design_services</span>
                             Services
                         </a>
                         <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
-                            href="about.html">
+                            href="about.html" data-i18n="nav-about">
                             <span class="material-symbols-outlined text-[18px]">groups</span>
                             About Us
                         </a>
                         <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
-                            href="contact.html">
+                            href="contact.html" data-i18n="nav-contact">
                             <span class="material-symbols-outlined text-[18px]">contact_support</span>
                             Contact
                         </a>
                     </nav>
-                    <a href="quote.html"
-                        class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-brand-gradient hover:opacity-90 transition-all text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 gap-2">
-                        <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                    <div class="relative group ml-4 h-full flex items-center pr-4 border-r border-white/10">
+                        <button
+                            class="flex items-center gap-1.5 text-white/70 hover:text-white transition-all text-xs font-bold py-2 px-3 hover:bg-white/5 rounded-lg border border-transparent hover:border-white/10">
+                            <span class="material-symbols-outlined text-[16px] text-primary-accent">language</span>
+                            <span class="current-lang-text uppercase">EN</span>
+                            <span class="material-symbols-outlined text-[16px] opacity-50">expand_more</span>
+                        </button>
+                        <div
+                            class="absolute right-4 top-full mt-1 w-32 bg-brand-dark/98 border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[70] backdrop-blur-xl translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                            <div class="p-1.5 flex flex-col gap-1">
+                                <button
+                                    class="lang-btn w-full flex items-center justify-between px-3 py-2 text-[11px] font-bold rounded-lg hover:bg-white/10 transition-all text-white/70 hover:text-white"
+                                    data-lang="en">
+                                    ENGLISH
+                                </button>
+                                <button
+                                    class="lang-btn w-full flex items-center justify-between px-3 py-2 text-[11px] font-bold rounded-lg hover:bg-white/10 transition-all text-white/70 hover:text-white"
+                                    data-lang="fr">
+                                    FRANÇAIS
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="quote.html" data-i18n="nav-quote"
+                        class="group/btn flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-brand-gradient hover:opacity-90 transition-all text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 gap-2">
+                        <span
+                            class="material-symbols-outlined text-[18px] group-hover/btn:rotate-12 transition-transform">calendar_month</span>
                         <span class="truncate">Obtain quote</span>
                     </a>
                 </div>
@@ -67,24 +91,32 @@
             </div>
             <!-- Mobile Menu Overlay -->
             <nav id="mobile-menu"
-                class="hidden lg:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-brand-dark/98 backdrop-blur-xl p-8 flex flex-col gap-6 z-[60]">
+                class="hidden lg:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-brand-dark backdrop-blur-xl p-8 flex flex-col gap-6 z-[60]">
+                <div class="flex items-center gap-3 mb-6 pb-6 border-b border-white/10">
+                    <button
+                        class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
+                        data-lang="en">ENGLISH</button>
+                    <button
+                        class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
+                        data-lang="fr">FRANÇAIS</button>
+                </div>
                 <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="destinations.html">
+                    href="destinations.html" data-i18n="nav-destinations">
                     <span class="material-symbols-outlined">explore</span> Destinations
                 </a>
                 <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="services.html">
+                    href="services.html" data-i18n="nav-services">
                     <span class="material-symbols-outlined">design_services</span> Services
                 </a>
                 <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="about.html">
+                    href="about.html" data-i18n="nav-about">
                     <span class="material-symbols-outlined">groups</span> About Us
                 </a>
                 <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="contact.html">
+                    href="contact.html" data-i18n="nav-contact">
                     <span class="material-symbols-outlined">contact_support</span> Contact
                 </a>
-                <a href="quote.html"
+                <a href="quote.html" data-i18n="nav-quote"
                     class="mt-4 h-14 bg-brand-gradient text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2">
                     <span class="material-symbols-outlined">calendar_month</span> Obtain quote
                 </a>
@@ -100,16 +132,17 @@
                     data-alt="Group of corporate colleagues celebrating on a mountain peak during sunset"
                     style="background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.1) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDH1HXyCKs9WxSCe6DgR5yfwrkFrCYyJ7W_XNnVJclrzmTUM_s_jKPpw589h-dzETUb5k-WD8HYtSqCtPGTf8PdzSEHRYIxlIm9XkuAscDhFjTZ8Ms_bn5bpG5zO837pJ4_KWykP9siHuSlSXp8mxjssWmVG58t1ksW6WFLveh6l_syXo65O2vrenQURnfiaG3vmep0EUuiZbVUJFTPfKRIGovxztpImVPmAp-6dFlbh8OZD46HlZVMN_wMTl8yEnDIlAnMKG95eDYj'); background-size: cover; background-position: center;">
                     <div class="flex max-w-2xl flex-col gap-4 text-left">
-                        <div
+                        <div data-i18n="packages-hero-badge"
                             class="inline-flex w-fit items-center rounded-full bg-white/20 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm border border-white/10">
                             <span class="mr-1 material-symbols-outlined text-[16px]">verified</span> Premium B2B
                             Packages
                         </div>
-                        <h1
+                        <h1 data-i18n="packages-hero-title"
                             class="font-display text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
                             Curated Corporate Experiences
                         </h1>
-                        <h2 class="text-base font-normal leading-relaxed text-slate-200 md:text-lg">
+                        <h2 data-i18n="packages-hero-subtitle"
+                            class="text-base font-normal leading-relaxed text-slate-200 md:text-lg">
                             Boost morale and strategy with our premium travel packages designed for modern teams. From
                             wellness retreats to adrenaline-pumping excursions.
                         </h2>
@@ -118,18 +151,18 @@
                         <div class="flex flex-col gap-2 sm:flex-row">
                             <div class="flex flex-1 items-center gap-2 px-3">
                                 <span class="material-symbols-outlined text-slate-400">search</span>
-                                <input
+                                <input data-i18n="packages-search-placeholder"
                                     class="h-10 w-full border-none bg-transparent text-sm font-medium text-slate-900 placeholder-slate-400 focus:outline-none dark:text-white"
                                     placeholder="Search destinations or themes..." type="text" />
                             </div>
                             <div class="h-px w-full bg-slate-100 dark:bg-slate-700 sm:h-10 sm:w-px"></div>
                             <div class="flex flex-1 items-center gap-2 px-3">
                                 <span class="material-symbols-outlined text-slate-400">calendar_month</span>
-                                <input
+                                <input data-i18n="packages-search-dates"
                                     class="h-10 w-full border-none bg-transparent text-sm font-medium text-slate-900 placeholder-slate-400 focus:outline-none dark:text-white"
                                     placeholder="Dates" type="text" />
                             </div>
-                            <button
+                            <button data-i18n="packages-search-btn"
                                 class="h-10 w-full rounded-lg bg-primary px-6 text-sm font-bold text-white shadow-md transition-colors hover:bg-primary/90 sm:w-auto">
                                 Search
                             </button>
@@ -147,8 +180,10 @@
                             class="flex size-10 items-center justify-center rounded-full bg-blue-50 text-primary dark:bg-blue-900/20">
                             <span class="material-symbols-outlined">workspace_premium</span>
                         </div>
-                        <h3 class="text-sm font-bold text-[#111418] dark:text-white">Premium Support</h3>
-                        <p class="text-xs text-slate-500">24/7 dedicated agents</p>
+                        <h3 class="text-sm font-bold text-[#111418] dark:text-white" data-i18n="packages-stats-support">
+                            Premium Support</h3>
+                        <p class="text-xs text-slate-500" data-i18n="packages-stats-support-desc">24/7 dedicated agents
+                        </p>
                     </div>
                     <div
                         class="flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-white p-4 text-center dark:border-slate-800 dark:bg-slate-900">
@@ -156,8 +191,10 @@
                             class="flex size-10 items-center justify-center rounded-full bg-blue-50 text-primary dark:bg-blue-900/20">
                             <span class="material-symbols-outlined">groups</span>
                         </div>
-                        <h3 class="text-sm font-bold text-[#111418] dark:text-white">Group Rates</h3>
-                        <p class="text-xs text-slate-500">Optimized for large teams</p>
+                        <h3 class="text-sm font-bold text-[#111418] dark:text-white" data-i18n="packages-stats-rates">
+                            Group Rates</h3>
+                        <p class="text-xs text-slate-500" data-i18n="packages-stats-rates-desc">Optimized for large
+                            teams</p>
                     </div>
                     <div
                         class="flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-white p-4 text-center dark:border-slate-800 dark:bg-slate-900">
@@ -165,8 +202,10 @@
                             class="flex size-10 items-center justify-center rounded-full bg-blue-50 text-primary dark:bg-blue-900/20">
                             <span class="material-symbols-outlined">verified_user</span>
                         </div>
-                        <h3 class="text-sm font-bold text-[#111418] dark:text-white">Fully Insured</h3>
-                        <p class="text-xs text-slate-500">Comprehensive travel protection</p>
+                        <h3 class="text-sm font-bold text-[#111418] dark:text-white" data-i18n="packages-stats-insured">
+                            Fully Insured</h3>
+                        <p class="text-xs text-slate-500" data-i18n="packages-stats-insured-desc">Comprehensive travel
+                            protection</p>
                     </div>
                     <div
                         class="flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-white p-4 text-center dark:border-slate-800 dark:bg-slate-900">
@@ -174,8 +213,10 @@
                             class="flex size-10 items-center justify-center rounded-full bg-blue-50 text-primary dark:bg-blue-900/20">
                             <span class="material-symbols-outlined">hub</span>
                         </div>
-                        <h3 class="text-sm font-bold text-[#111418] dark:text-white">Customizable</h3>
-                        <p class="text-xs text-slate-500">Tailor any itinerary</p>
+                        <h3 class="text-sm font-bold text-[#111418] dark:text-white" data-i18n="packages-stats-custom">
+                            Customizable</h3>
+                        <p class="text-xs text-slate-500" data-i18n="packages-stats-custom-desc">Tailor any itinerary
+                        </p>
                     </div>
                 </div>
             </section>
@@ -185,25 +226,27 @@
                     <!-- Section Header with Chips -->
                     <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                         <div>
-                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Trending Packages</h3>
-                            <p class="text-slate-500 dark:text-slate-400">Explore our most popular corporate
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white"
+                                data-i18n="packages-trending-title">Trending Packages</h3>
+                            <p class="text-slate-500 dark:text-slate-400" data-i18n="packages-trending-desc">Explore our
+                                most popular corporate
                                 getaways.</p>
                         </div>
                         <!-- Chips -->
                         <div class="flex flex-wrap gap-2">
-                            <button
+                            <button data-i18n="packages-filter-all"
                                 class="rounded-full bg-slate-900 px-4 py-2 text-sm font-medium text-white shadow-sm transition-transform active:scale-95 dark:bg-white dark:text-slate-900">
                                 All Packages
                             </button>
-                            <button
+                            <button data-i18n="packages-filter-retreats"
                                 class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-primary dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white">
                                 Corporate Retreats
                             </button>
-                            <button
+                            <button data-i18n="packages-filter-extreme"
                                 class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-primary dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white">
                                 Extreme Sports
                             </button>
-                            <button
+                            <button data-i18n="packages-filter-culture"
                                 class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-primary dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white">
                                 Cultural Immersion
                             </button>
@@ -219,31 +262,34 @@
                                     class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                                     data-alt="Lush green Bali rice terraces during daytime"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDFuulT9ZMCVZt7RwRjjjhtHQN1ZIzg4wQZwFir_SU9F7CTbSb8PT1POD9vF_-509kilyI10ij_KgOw5RKiexmfzOB_TxdaOuw4vnhp21GJ3mwTLJAXm75-nhFLHtTI4CQeVNiOdqQNi-b4NqZivXNYK4-9ILnTkyJUvIQYnuUShZeXVqg48NvVwJF6-HWhJTHhUTzfrVoXRij_E1XGBNsQgUVBEjosIP9oSRGBfnyS07rq5Y1paC8Kw_v2SV5ElL1dUu0BqIlkRlR" />
-                                <div
+                                <div data-i18n="packages-card-best-seller"
                                     class="absolute right-3 top-3 rounded-md bg-white/90 px-2 py-1 text-xs font-bold uppercase tracking-wider text-slate-900 backdrop-blur-sm">
                                     Best Seller
                                 </div>
                             </div>
                             <div class="flex flex-1 flex-col p-5">
-                                <div
+                                <div data-i18n="packages-card-wellness"
                                     class="mb-2 flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-primary">
                                     <span class="material-symbols-outlined text-[16px]">spa</span> Wellness Retreat
                                 </div>
-                                <h4 class="mb-1 text-lg font-bold text-slate-900 dark:text-white">Bali Executive Zen
+                                <h4 class="mb-1 text-lg font-bold text-slate-900 dark:text-white"
+                                    data-i18n="packages-card-bali-title">Bali Executive Zen
                                 </h4>
                                 <div class="mb-4 flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400">
-                                    <span class="material-symbols-outlined text-[16px]">location_on</span> Ubud,
-                                    Indonesia
+                                    <span class="material-symbols-outlined text-[16px]">location_on</span> <span
+                                        data-i18n="packages-card-bali-loc">Ubud, Indonesia</span>
                                 </div>
                                 <div
                                     class="mb-4 flex gap-4 border-b border-dashed border-slate-200 pb-4 dark:border-slate-700">
                                     <div
                                         class="flex items-center gap-1.5 text-xs font-medium text-slate-600 dark:text-slate-300">
-                                        <span class="material-symbols-outlined text-[18px]">schedule</span> 5 Days
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span> 5 <span
+                                            data-i18n="packages-card-days">Days</span>
                                     </div>
                                     <div
                                         class="flex items-center gap-1.5 text-xs font-medium text-slate-600 dark:text-slate-300">
-                                        <span class="material-symbols-outlined text-[18px]">groups</span> 10-50 ppl
+                                        <span class="material-symbols-outlined text-[18px]">groups</span> 10-50 <span
+                                            data-i18n="packages-card-ppl">ppl</span>
                                     </div>
                                 </div>
                                 <div class="mb-4 flex items-center justify-between">
@@ -253,12 +299,13 @@
                                         <span class="material-symbols-outlined text-[18px]">restaurant</span>
                                     </div>
                                     <div class="text-right">
-                                        <p class="text-xs text-slate-500">From</p>
+                                        <p class="text-xs text-slate-500" data-i18n="packages-card-from">From</p>
                                         <p class="text-lg font-bold text-primary">$1,299 <span
+                                                data-i18n="packages-card-pp"
                                                 class="text-xs font-normal text-slate-500">/pp</span></p>
                                     </div>
                                 </div>
-                                <a href="quote.html"
+                                <a href="quote.html" data-i18n="packages-card-view"
                                     class="mt-auto w-full flex items-center justify-center rounded-lg bg-slate-100 py-2.5 text-sm font-bold text-slate-900 hover:bg-primary hover:text-white transition-colors dark:bg-slate-800 dark:text-white dark:hover:bg-primary">
                                     View Package
                                 </a>
@@ -274,27 +321,31 @@
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpEgzzpn2MCQQKSAeqw9D3VCJNuROxNTtr3GavI176qBFdivS-WOFUv7_P3C4f9pvHzHRtj4in-Nn1CHT-mcwOWFJ5-Fw3iVaHaR5LrH2JA_IU4H6E5u7YSLEBvC3Q9PU9v99H_ltZyQ0UpDAikFyRaz85HyWkdF9r-OOvnpidNd9dqwcbp9dkZtFPVSXfo6QNrwoxMxPSiy5DcFv6LNCAjw6fl_lv9xMG05PCc5cHWeAugoNyT4OrTgOvy_0odPb6rEsd4lNxuI4d" />
                             </div>
                             <div class="flex flex-1 flex-col p-5">
-                                <div
+                                <div data-i18n="packages-filter-extreme"
                                     class="mb-2 flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-orange-600">
                                     <span class="material-symbols-outlined text-[16px]">downhill_skiing</span>
                                     Extreme
                                     Sports
                                 </div>
-                                <h4 class="mb-1 text-lg font-bold text-slate-900 dark:text-white">Swiss Alps
+                                <h4 class="mb-1 text-lg font-bold text-slate-900 dark:text-white"
+                                    data-i18n="packages-card-alps-title">Swiss Alps
                                     Strategy</h4>
                                 <div class="mb-4 flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400">
-                                    <span class="material-symbols-outlined text-[16px]">location_on</span> Zermatt,
-                                    Switzerland
+                                    <span class="material-symbols-outlined text-[16px]">location_on</span> <span
+                                        data-i18n="packages-card-alps-loc">Zermatt,
+                                        Switzerland</span>
                                 </div>
                                 <div
                                     class="mb-4 flex gap-4 border-b border-dashed border-slate-200 pb-4 dark:border-slate-700">
                                     <div
                                         class="flex items-center gap-1.5 text-xs font-medium text-slate-600 dark:text-slate-300">
-                                        <span class="material-symbols-outlined text-[18px]">schedule</span> 7 Days
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span> 7 <span
+                                            data-i18n="packages-card-days">Days</span>
                                     </div>
                                     <div
                                         class="flex items-center gap-1.5 text-xs font-medium text-slate-600 dark:text-slate-300">
-                                        <span class="material-symbols-outlined text-[18px]">groups</span> 5-20 ppl
+                                        <span class="material-symbols-outlined text-[18px]">groups</span> 5-20 <span
+                                            data-i18n="packages-card-ppl">ppl</span>
                                     </div>
                                 </div>
                                 <div class="mb-4 flex items-center justify-between">
@@ -304,12 +355,13 @@
                                         <span class="material-symbols-outlined text-[18px]">wine_bar</span>
                                     </div>
                                     <div class="text-right">
-                                        <p class="text-xs text-slate-500">From</p>
+                                        <p class="text-xs text-slate-500" data-i18n="packages-card-from">From</p>
                                         <p class="text-lg font-bold text-primary">$2,450 <span
+                                                data-i18n="packages-card-pp"
                                                 class="text-xs font-normal text-slate-500">/pp</span></p>
                                     </div>
                                 </div>
-                                <a href="quote.html"
+                                <a href="quote.html" data-i18n="packages-card-view"
                                     class="mt-auto w-full flex items-center justify-center rounded-lg bg-slate-100 py-2.5 text-sm font-bold text-slate-900 hover:bg-primary hover:text-white transition-colors dark:bg-slate-800 dark:text-white dark:hover:bg-primary">
                                     View Package
                                 </a>
@@ -325,26 +377,30 @@
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeFvJh_N9nryFdm0xuzdUFdb6kT1tgHYwv_EVDRWd3zgsjlIFubBqXXtFVPfEelMPoheHusvBBhqDh_FtI9X98dMI1Ql8xMaJMvbP6_R0RlDtaWaBXtVzYmVm747dgYKzKlcB2cFwwKe-bkK4dHyuC6EBSIfP8A1nPLlzups-r1lyaB4VCBZ3VO7OxOYt-4VZoS9w-g6A3uRW-j0NRC9ZvE2oIjUKniSZY1_9udRjqvjudvH3uATtAUu41coh5TgyxsVAFtMoeBXmZ" />
                             </div>
                             <div class="flex flex-1 flex-col p-5">
-                                <div
+                                <div data-i18n="packages-filter-culture"
                                     class="mb-2 flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-purple-600">
                                     <span class="material-symbols-outlined text-[16px]">temple_buddhist</span>
                                     Cultural
                                 </div>
-                                <h4 class="mb-1 text-lg font-bold text-slate-900 dark:text-white">Kyoto Innovation
+                                <h4 class="mb-1 text-lg font-bold text-slate-900 dark:text-white"
+                                    data-i18n="packages-card-kyoto-title">Kyoto Innovation
                                     Tour</h4>
                                 <div class="mb-4 flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400">
-                                    <span class="material-symbols-outlined text-[16px]">location_on</span> Kyoto,
-                                    Japan
+                                    <span class="material-symbols-outlined text-[16px]">location_on</span> <span
+                                        data-i18n="packages-card-kyoto-loc">Kyoto,
+                                        Japan</span>
                                 </div>
                                 <div
                                     class="mb-4 flex gap-4 border-b border-dashed border-slate-200 pb-4 dark:border-slate-700">
                                     <div
                                         class="flex items-center gap-1.5 text-xs font-medium text-slate-600 dark:text-slate-300">
-                                        <span class="material-symbols-outlined text-[18px]">schedule</span> 6 Days
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span> 6 <span
+                                            data-i18n="packages-card-days">Days</span>
                                     </div>
                                     <div
                                         class="flex items-center gap-1.5 text-xs font-medium text-slate-600 dark:text-slate-300">
-                                        <span class="material-symbols-outlined text-[18px]">groups</span> 15-40 ppl
+                                        <span class="material-symbols-outlined text-[18px]">groups</span> 15-40 <span
+                                            data-i18n="packages-card-ppl">ppl</span>
                                     </div>
                                 </div>
                                 <div class="mb-4 flex items-center justify-between">
@@ -354,12 +410,13 @@
                                         <span class="material-symbols-outlined text-[18px]">local_cafe</span>
                                     </div>
                                     <div class="text-right">
-                                        <p class="text-xs text-slate-500">From</p>
+                                        <p class="text-xs text-slate-500" data-i18n="packages-card-from">From</p>
                                         <p class="text-lg font-bold text-primary">$1,890 <span
+                                                data-i18n="packages-card-pp"
                                                 class="text-xs font-normal text-slate-500">/pp</span></p>
                                     </div>
                                 </div>
-                                <a href="quote.html"
+                                <a href="quote.html" data-i18n="packages-card-view"
                                     class="mt-auto w-full flex items-center justify-center rounded-lg bg-slate-100 py-2.5 text-sm font-bold text-slate-900 hover:bg-primary hover:text-white transition-colors dark:bg-slate-800 dark:text-white dark:hover:bg-primary">
                                     View Package
                                 </a>
@@ -379,21 +436,25 @@
                                     class="mb-2 flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-amber-600">
                                     <span class="material-symbols-outlined text-[16px]">history_edu</span> History
                                 </div>
-                                <h4 class="mb-1 text-lg font-bold text-slate-900 dark:text-white">Petra Heritage
+                                <h4 class="mb-1 text-lg font-bold text-slate-900 dark:text-white"
+                                    data-i18n="packages-card-petra-title">Petra Heritage
                                     Walk</h4>
                                 <div class="mb-4 flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400">
-                                    <span class="material-symbols-outlined text-[16px]">location_on</span> Petra,
-                                    Jordan
+                                    <span class="material-symbols-outlined text-[16px]">location_on</span> <span
+                                        data-i18n="packages-card-petra-loc">Petra,
+                                        Jordan</span>
                                 </div>
                                 <div
                                     class="mb-4 flex gap-4 border-b border-dashed border-slate-200 pb-4 dark:border-slate-700">
                                     <div
                                         class="flex items-center gap-1.5 text-xs font-medium text-slate-600 dark:text-slate-300">
-                                        <span class="material-symbols-outlined text-[18px]">schedule</span> 4 Days
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span> 4 <span
+                                            data-i18n="packages-card-days">Days</span>
                                     </div>
                                     <div
                                         class="flex items-center gap-1.5 text-xs font-medium text-slate-600 dark:text-slate-300">
-                                        <span class="material-symbols-outlined text-[18px]">groups</span> 10-30 ppl
+                                        <span class="material-symbols-outlined text-[18px]">groups</span> 10-30 <span
+                                            data-i18n="packages-card-ppl">ppl</span>
                                     </div>
                                 </div>
                                 <div class="mb-4 flex items-center justify-between">
@@ -403,12 +464,13 @@
                                         <span class="material-symbols-outlined text-[18px]">camera_alt</span>
                                     </div>
                                     <div class="text-right">
-                                        <p class="text-xs text-slate-500">From</p>
+                                        <p class="text-xs text-slate-500" data-i18n="packages-card-from">From</p>
                                         <p class="text-lg font-bold text-primary">$1,550 <span
+                                                data-i18n="packages-card-pp"
                                                 class="text-xs font-normal text-slate-500">/pp</span></p>
                                     </div>
                                 </div>
-                                <a href="quote.html"
+                                <a href="quote.html" data-i18n="packages-card-view"
                                     class="mt-auto w-full flex items-center justify-center rounded-lg bg-slate-100 py-2.5 text-sm font-bold text-slate-900 hover:bg-primary hover:text-white transition-colors dark:bg-slate-800 dark:text-white dark:hover:bg-primary">
                                     View Package
                                 </a>
@@ -433,12 +495,16 @@
             </div>
             <div class="flex w-full flex-col justify-center p-8 lg:w-2/5 lg:p-12">
                 <div class="mb-4 flex items-center gap-2">
-                    <span class="rounded bg-primary px-2 py-0.5 text-xs font-bold text-white">LIMITED
+                    <span class="rounded bg-primary px-2 py-0.5 text-xs font-bold text-white"
+                        data-i18n="packages-promo-badge">LIMITED
                         TIME</span>
-                    <span class="text-sm font-medium text-primary">Corporate Summer Special</span>
+                    <span class="text-sm font-medium text-primary" data-i18n="packages-promo-subtitle">Corporate Summer
+                        Special</span>
                 </div>
-                <h2 class="mb-4 text-3xl font-bold text-white">The Mediterranean Voyage</h2>
-                <p class="mb-6 text-slate-300">Treat your top performers to an exclusive 7-day yacht
+                <h2 class="mb-4 text-3xl font-bold text-white" data-i18n="packages-promo-title">The Mediterranean Voyage
+                </h2>
+                <p class="mb-6 text-slate-300" data-i18n="packages-promo-desc">Treat your top performers to an exclusive
+                    7-day yacht
                     experience across the Greek Isles. Includes private chef, strategy workshops on deck,
                     and
                     island hopping.</p>
@@ -447,21 +513,21 @@
                         <div class="flex size-8 items-center justify-center rounded-full bg-slate-800 text-primary">
                             <span class="material-symbols-outlined text-[18px]">sailing</span>
                         </div>
-                        <span class="text-sm text-slate-300">Private Yacht</span>
+                        <span class="text-sm text-slate-300" data-i18n="packages-promo-yacht">Private Yacht</span>
                     </div>
                     <div class="flex items-center gap-2">
                         <div class="flex size-8 items-center justify-center rounded-full bg-slate-800 text-primary">
                             <span class="material-symbols-outlined text-[18px]">group</span>
                         </div>
-                        <span class="text-sm text-slate-300">Up to 20 Guests</span>
+                        <span class="text-sm text-slate-300" data-i18n="packages-promo-guests">Up to 20 Guests</span>
                     </div>
                 </div>
                 <div class="flex gap-4">
-                    <button
+                    <button data-i18n="packages-promo-itinerary"
                         class="rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white hover:bg-primary/90 transition-all">
                         Download Itinerary
                     </button>
-                    <a href="quote.html"
+                    <a href="quote.html" data-i18n="packages-promo-pricing"
                         class="rounded-lg border border-slate-700 bg-transparent px-6 py-3 text-sm font-bold text-white hover:bg-slate-800 transition-all">
                         Request Pricing
                     </a>
@@ -473,25 +539,28 @@
     <!-- Lead Gen / Footer CTA -->
     <section class="bg-primary/5 py-16 dark:bg-slate-800/50">
         <div class="mx-auto max-w-4xl px-4 text-center">
-            <span
+            <span data-i18n="packages-cta-badge"
                 class="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary dark:text-white dark:bg-primary/20">Custom
                 Requirements?</span>
-            <h2 class="mb-4 text-3xl font-bold text-slate-900 dark:text-white">Build Your Own Corporate Retreat
+            <h2 class="mb-4 text-3xl font-bold text-slate-900 dark:text-white" data-i18n="packages-cta-title">Build Your
+                Own Corporate Retreat
             </h2>
-            <p class="mb-8 text-lg text-slate-600 dark:text-slate-300">Don't see what you're looking for? Our
+            <p class="mb-8 text-lg text-slate-600 dark:text-slate-300" data-i18n="packages-cta-desc">Don't see what
+                you're looking for? Our
                 travel architects can design a bespoke itinerary tailored to your company's goals and budget.
             </p>
             <form class="mx-auto flex max-w-lg flex-col gap-3 sm:flex-row">
-                <input
+                <input data-i18n="packages-cta-placeholder"
                     class="flex-1 rounded-lg border-slate-300 p-3 text-sm shadow-sm focus:border-primary focus:ring-primary dark:border-slate-600 dark:bg-slate-900 dark:text-white focus:outline-none"
                     placeholder="Enter your work email" type="email" />
-                <button
+                <button data-i18n="packages-cta-btn"
                     class="whitespace-nowrap rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-primary/90 transition-all"
                     type="button">
                     Get Started
                 </button>
             </form>
-            <p class="mt-4 text-xs text-slate-400">Free consultation. No commitment required.</p>
+            <p class="mt-4 text-xs text-slate-400" data-i18n="packages-cta-footer">Free consultation. No commitment
+                required.</p>
         </div>
     </section>
     </main>
@@ -509,60 +578,60 @@
                                 class="text-[10px] text-neutral-400 font-light tracking-widest lowercase">Consortium</span>
                         </div>
                     </div>
-                    <p class="text-neutral-400 text-sm">
+                    <p class="text-neutral-400 text-sm" data-i18n="footer-desc">
                         Corporate travel agency specializing in extreme sports and spiritual retreats.
                     </p>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <h4 class="font-bold text-primary-accent flex items-center gap-2">
+                    <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-company">
                         <span class="material-symbols-outlined text-sm">business</span>
                         Company
                     </h4>
-                    <a class="text-neutral-400 hover:text-white text-sm" href="about.html">About Us</a>
-                    <a class="text-neutral-400 hover:text-white text-sm" href="#">Careers</a>
-                    <a class="text-neutral-400 hover:text-white text-sm" href="#">Press</a>
+                    <a class="text-neutral-400 hover:text-white text-sm" href="about.html" data-i18n="nav-about">About
+                        Us</a>
+                    <a class="text-neutral-400 hover:text-white text-sm" href="#" data-i18n="footer-careers">Careers</a>
+                    <a class="text-neutral-400 hover:text-white text-sm" href="#" data-i18n="footer-press">Press</a>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <h4 class="font-bold text-primary-accent flex items-center gap-2">
+                    <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-services">
                         <span class="material-symbols-outlined text-sm">flight</span>
                         Services
                     </h4>
-                    <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="services.html">
+                    <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="services.html"
+                        data-i18n="footer-extreme">
                         <span class="material-symbols-outlined text-[14px]">terrain</span> Extreme Retreats
                     </a>
-                    <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="services.html">
+                    <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="services.html"
+                        data-i18n="footer-spiritual">
                         <span class="material-symbols-outlined text-[14px]">self_improvement</span> Spiritual
                         Retreats
                     </a>
-                    <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="services.html">
+                    <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="services.html"
+                        data-i18n="footer-custom">
                         <span class="material-symbols-outlined text-[14px]">edit_calendar</span> Custom Itineraries
                     </a>
-                    <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="packages.html">
+                    <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="packages.html"
+                        data-i18n="footer-all-packages">
                         <span class="material-symbols-outlined text-[14px]">inventory_2</span> All Packages
                     </a>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <h4 class="font-bold text-primary-accent flex items-center gap-2">
+                    <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-company">
                         <span class="material-symbols-outlined text-sm">contact_phone</span>
                         Contact
                     </h4>
                     <a class="text-neutral-400 hover:text-white text-sm" href="#">support@worldtravel.com</a>
                     <a class="text-neutral-400 hover:text-white text-sm" href="#">+1 (555) 123-4567</a>
-                    <div class="flex gap-4 mt-2">
-                        <span
-                            class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-6 h-6 flex items-center justify-center text-sm font-bold border border-neutral-600 rounded-full">X</span>
-                        <span
-                            class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-6 h-6 flex items-center justify-center text-sm font-bold border border-neutral-600 rounded-full">in</span>
-                        <span
-                            class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-6 h-6 flex items-center justify-center text-sm font-bold border border-neutral-600 rounded-full">ig</span>
-                    </div>
                 </div>
             </div>
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-neutral-500 text-sm">© 2023 World Travel Consortium. All rights reserved.</p>
+                <p class="text-neutral-500 text-sm" data-i18n="footer-rights">© 2023 World Travel Consortium. All rights
+                    reserved.</p>
                 <div class="flex gap-6">
-                    <a class="text-neutral-500 hover:text-white text-sm" href="#">Privacy Policy</a>
-                    <a class="text-neutral-500 hover:text-white text-sm" href="#">Terms of Service</a>
+                    <a class="text-neutral-500 hover:text-white text-sm" href="#" data-i18n="footer-privacy">Privacy
+                        Policy</a>
+                    <a class="text-neutral-500 hover:text-white text-sm" href="#" data-i18n="footer-terms">Terms of
+                        Service</a>
                 </div>
             </div>
         </div>

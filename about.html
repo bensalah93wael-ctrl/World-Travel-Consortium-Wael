@@ -35,29 +35,53 @@
                 <div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
                     <nav class="flex items-center gap-9">
                         <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
-                            href="destinations.html">
+                            href="destinations.html" data-i18n="nav-destinations">
                             <span class="material-symbols-outlined text-[18px]">explore</span>
                             Destinations
                         </a>
                         <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
-                            href="services.html">
+                            href="services.html" data-i18n="nav-services">
                             <span class="material-symbols-outlined text-[18px]">design_services</span>
                             Services
                         </a>
                         <a class="text-primary-accent text-sm font-medium transition-colors flex items-center gap-2"
-                            href="about.html">
+                            href="about.html" data-i18n="nav-about">
                             <span class="material-symbols-outlined text-[18px]">groups</span>
                             About Us
                         </a>
                         <a class="text-white text-sm font-medium hover:text-primary-accent transition-colors flex items-center gap-2"
-                            href="contact.html">
+                            href="contact.html" data-i18n="nav-contact">
                             <span class="material-symbols-outlined text-[18px]">contact_support</span>
                             Contact
                         </a>
                     </nav>
-                    <a href="quote.html" id="book-consultation-btn"
-                        class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-brand-gradient hover:opacity-90 transition-all text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 gap-2">
-                        <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                    <div class="relative group ml-4 h-full flex items-center pr-4 border-r border-white/10">
+                        <button
+                            class="flex items-center gap-1.5 text-white/70 hover:text-white transition-all text-xs font-bold py-2 px-3 hover:bg-white/5 rounded-lg border border-transparent hover:border-white/10">
+                            <span class="material-symbols-outlined text-[16px] text-primary-accent">language</span>
+                            <span class="current-lang-text uppercase">EN</span>
+                            <span class="material-symbols-outlined text-[16px] opacity-50">expand_more</span>
+                        </button>
+                        <div
+                            class="absolute right-4 top-full mt-1 w-32 bg-brand-dark/98 border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[70] backdrop-blur-xl translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                            <div class="p-1.5 flex flex-col gap-1">
+                                <button
+                                    class="lang-btn w-full flex items-center justify-between px-3 py-2 text-[11px] font-bold rounded-lg hover:bg-white/10 transition-all text-white/70 hover:text-white"
+                                    data-lang="en">
+                                    ENGLISH
+                                </button>
+                                <button
+                                    class="lang-btn w-full flex items-center justify-between px-3 py-2 text-[11px] font-bold rounded-lg hover:bg-white/10 transition-all text-white/70 hover:text-white"
+                                    data-lang="fr">
+                                    FRANÇAIS
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="quote.html" id="book-consultation-btn" data-i18n="nav-quote"
+                        class="group/btn flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-brand-gradient hover:opacity-90 transition-all text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 gap-2">
+                        <span
+                            class="material-symbols-outlined text-[18px] group-hover/btn:rotate-12 transition-transform">calendar_month</span>
                         <span class="truncate">Obtain quote</span>
                     </a>
                 </div>
@@ -67,24 +91,32 @@
             </div>
             <!-- Mobile Menu Overlay -->
             <nav id="mobile-menu"
-                class="hidden lg:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-brand-dark/98 backdrop-blur-xl p-8 flex flex-col gap-6 z-[60]">
+                class="hidden lg:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-brand-dark backdrop-blur-xl p-8 flex flex-col gap-6 z-[60]">
+                <div class="flex items-center gap-3 mb-6 pb-6 border-b border-white/10">
+                    <button
+                        class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
+                        data-lang="en">ENGLISH</button>
+                    <button
+                        class="lang-btn flex-1 py-3 px-4 rounded-xl border border-white/10 text-xs font-bold transition-all"
+                        data-lang="fr">FRANÇAIS</button>
+                </div>
                 <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="destinations.html">
+                    href="destinations.html" data-i18n="nav-destinations">
                     <span class="material-symbols-outlined">explore</span> Destinations
                 </a>
                 <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="services.html">
+                    href="services.html" data-i18n="nav-services">
                     <span class="material-symbols-outlined">design_services</span> Services
                 </a>
                 <a class="text-primary-accent text-xl font-bold transition-colors flex items-center gap-4"
-                    href="about.html">
+                    href="about.html" data-i18n="nav-about">
                     <span class="material-symbols-outlined">groups</span> About Us
                 </a>
                 <a class="text-white text-xl font-bold hover:text-primary-accent transition-colors flex items-center gap-4"
-                    href="contact.html">
+                    href="contact.html" data-i18n="nav-contact">
                     <span class="material-symbols-outlined">contact_support</span> Contact
                 </a>
-                <a href="quote.html" id="mobile-book-btn"
+                <a href="quote.html" id="mobile-book-btn" data-i18n="nav-quote"
                     class="mt-4 h-14 bg-brand-gradient text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2">
                     <span class="material-symbols-outlined">calendar_month</span> Obtain quote
                 </a>
@@ -106,11 +138,14 @@
                             class="inline-block py-1 px-3 rounded-full bg-secondary-violet/10 border border-secondary-violet/20 text-secondary-violet font-semibold text-sm mb-6">
                             EST. 2008
                         </span>
-                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-primary">
+                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-primary"
+                            data-i18n="about-hero-title">
                             We Engineer <br />
-                            <span class="text-secondary-violet">Transformative Journeys.</span>
                         </h1>
-                        <p class="mt-4 text-xl text-neutral-600">
+                        <span
+                            class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-secondary-violet"
+                            data-i18n="about-hero-subtitle">Transformative Journeys.</span>
+                        <p class="mt-4 text-xl text-neutral-600" data-i18n="about-hero-desc">
                             Bridging the gap between the boardroom and base camp. We design corporate retreats that
                             build
                             resilience, foster connection, and spark innovation.
@@ -158,22 +193,21 @@
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex flex-col lg:flex-row items-center gap-12">
                         <div class="w-full lg:w-1/2">
-                            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">
-                                From Adrenaline to Zen: <br />
-                                <span class="text-secondary-violet">The WTC Story</span>
+                            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary" data-i18n="about-story-title">
+                                From Adrenaline to Zen: The WTC Story
                             </h2>
                             <div class="prose prose-lg text-neutral-600 max-w-none">
-                                <p class="mb-4">
+                                <p class="mb-4" data-i18n="about-story-p1">
                                     World Travel Consortium was founded on a simple premise: <strong>Growth doesn't
                                         happen in the comfort zone.</strong>
                                 </p>
-                                <p class="mb-4">
+                                <p class="mb-4" data-i18n="about-story-p2">
                                     In 2008, our founders—a former corporate executive and a professional
                                     mountaineer—realized that traditional corporate retreats were broken. Golf courses
                                     and hotel ballrooms weren't creating the deep bonds needed for modern
                                     high-performance teams.
                                 </p>
-                                <p>
+                                <p data-i18n="about-story-p3">
                                     We set out to create experiences that matter. Whether it's scaling a peak in the
                                     Andes to teach resilience or practicing silent meditation in Kyoto to foster
                                     clarity, our itineraries are meticulously crafted to align with your organizational
@@ -184,17 +218,20 @@
                             <div class="mt-8 flex gap-8 md:gap-16">
                                 <div>
                                     <p class="text-3xl font-bold text-primary">15+</p>
-                                    <p class="text-xs md:text-sm text-neutral-500 uppercase tracking-wide">Years of
+                                    <p class="text-xs md:text-sm text-neutral-500 uppercase tracking-wide"
+                                        data-i18n="about-stats-years">Years of
                                         Experience</p>
                                 </div>
                                 <div>
                                     <p class="text-3xl font-bold text-primary">500+</p>
-                                    <p class="text-xs md:text-sm text-neutral-500 uppercase tracking-wide">Retreats
+                                    <p class="text-xs md:text-sm text-neutral-500 uppercase tracking-wide"
+                                        data-i18n="about-stats-retreats">Retreats
                                         Organized</p>
                                 </div>
                                 <div>
                                     <p class="text-3xl font-bold text-primary">50+</p>
-                                    <p class="text-xs md:text-sm text-neutral-500 uppercase tracking-wide">Global
+                                    <p class="text-xs md:text-sm text-neutral-500 uppercase tracking-wide"
+                                        data-i18n="about-stats-partners">Global
                                         Partners</p>
                                 </div>
                             </div>
@@ -212,8 +249,10 @@
             <section class="w-full py-20 bg-neutral-50">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center max-w-3xl mx-auto mb-16">
-                        <h2 class="text-3xl font-bold text-primary mb-4">Our Core Philosophy</h2>
-                        <p class="text-neutral-600 text-lg">We don't just book flights; we curate environments where
+                        <h2 class="text-3xl font-bold text-primary mb-4" data-i18n="about-philosophy-title">Our Core
+                            Philosophy</h2>
+                        <p class="text-neutral-600 text-lg" data-i18n="about-philosophy-subtitle">We don't just book
+                            flights; we curate environments where
                             breakthroughs happen.</p>
                     </div>
                     <div class="grid md:grid-cols-3 gap-8">
@@ -223,8 +262,9 @@
                                 class="w-14 h-14 bg-secondary-blue/10 rounded-xl flex items-center justify-center mb-6 text-secondary-blue group-hover:scale-110 group-hover:bg-brand-gradient group-hover:text-white transition-all duration-300">
                                 <span class="material-symbols-outlined text-3xl">psychology</span>
                             </div>
-                            <h3 class="text-xl font-bold text-neutral-800 mb-3">Psychological Safety</h3>
-                            <p class="text-neutral-600 leading-relaxed">
+                            <h3 class="text-xl font-bold text-neutral-800 mb-3" data-i18n="about-phil1-title">
+                                Psychological Safety</h3>
+                            <p class="text-neutral-600 leading-relaxed" data-i18n="about-phil1-desc">
                                 We design environments that encourage vulnerability and trust, the foundations of any
                                 high-performing team.
                             </p>
@@ -235,8 +275,9 @@
                                 class="w-14 h-14 bg-secondary-violet/10 rounded-xl flex items-center justify-center mb-6 text-secondary-violet group-hover:scale-110 group-hover:bg-brand-gradient group-hover:text-white transition-all duration-300">
                                 <span class="material-symbols-outlined text-3xl">hiking</span>
                             </div>
-                            <h3 class="text-xl font-bold text-neutral-800 mb-3">Challenge by Choice</h3>
-                            <p class="text-neutral-600 leading-relaxed">
+                            <h3 class="text-xl font-bold text-neutral-800 mb-3" data-i18n="about-phil2-title">Challenge
+                                by Choice</h3>
+                            <p class="text-neutral-600 leading-relaxed" data-i18n="about-phil2-desc">
                                 From extreme sports to deep introspection, we tailor the intensity to push boundaries
                                 while respecting individual limits.
                             </p>
@@ -247,8 +288,9 @@
                                 class="w-14 h-14 bg-primary-accent/10 rounded-xl flex items-center justify-center mb-6 text-primary-accent group-hover:scale-110 group-hover:bg-brand-gradient group-hover:text-white transition-all duration-300">
                                 <span class="material-symbols-outlined text-3xl">public</span>
                             </div>
-                            <h3 class="text-xl font-bold text-neutral-800 mb-3">Cultural Immersion</h3>
-                            <p class="text-neutral-600 leading-relaxed">
+                            <h3 class="text-xl font-bold text-neutral-800 mb-3" data-i18n="about-phil3-title">Cultural
+                                Immersion</h3>
+                            <p class="text-neutral-600 leading-relaxed" data-i18n="about-phil3-desc">
                                 Authentic connection with local traditions provides perspective and grounds your team in
                                 a global context.
                             </p>
@@ -261,8 +303,10 @@
             <section class="w-full py-20 bg-white relative overflow-hidden">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="text-center mb-16">
-                        <h2 class="text-3xl font-bold text-primary mb-4">Meet the Visionaries</h2>
-                        <p class="text-neutral-600">Experts in logistics, psychology, and adventure.</p>
+                        <h2 class="text-3xl font-bold text-primary mb-4" data-i18n="about-team-title">Meet the
+                            Visionaries</h2>
+                        <p class="text-neutral-600" data-i18n="about-team-subtitle">Experts in logistics, psychology,
+                            and adventure.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div class="text-center group">
@@ -316,7 +360,8 @@
             <!-- Trusted By Section -->
             <section class="w-full py-12 bg-neutral-50 border-y border-neutral-200">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <p class="text-sm uppercase tracking-widest text-neutral-500 mb-8 font-semibold">Trusted by
+                    <p class="text-sm uppercase tracking-widest text-neutral-500 mb-8 font-semibold"
+                        data-i18n="hero-trusted">Trusted by
                         innovators at</p>
                     <div
                         class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
@@ -339,22 +384,22 @@
                     <div
                         class="absolute bottom-0 left-0 w-64 h-64 bg-primary-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
                     </div>
-                    <h2
+                    <h2 data-i18n="ready-title"
                         class="relative z-10 text-white text-3xl md:text-5xl font-bold mb-6 tracking-tight flex flex-col items-center gap-3">
                         <span class="material-symbols-outlined text-5xl opacity-80 mb-2">diamond</span>
                         Ready to Elevate Your Team?
                     </h2>
-                    <p class="relative z-10 text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                    <p data-i18n="ready-desc" class="relative z-10 text-white/90 text-lg mb-8 max-w-2xl mx-auto">
                         Whether you need the adrenaline of the ascent or the clarity of the center, we have a curated
                         itinerary waiting for you.
                     </p>
                     <div class="relative z-10 flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="quote.html"
+                        <a href="quote.html" data-i18n="ready-book"
                             class="flex items-center justify-center rounded-lg h-12 px-8 bg-white text-primary hover:bg-neutral-100 transition-colors text-base font-bold shadow-lg gap-2">
                             <span class="material-symbols-outlined">event_available</span>
                             Book Free Consultation
                         </a>
-                        <a href="packages.html"
+                        <a href="packages.html" data-i18n="ready-packages"
                             class="flex items-center justify-center rounded-lg h-12 px-8 bg-transparent border border-white/50 hover:bg-white/10 hover:border-white transition-colors text-white text-base font-bold gap-2">
                             <span class="material-symbols-outlined">inventory_2</span>
                             View All Packages
@@ -377,61 +422,61 @@
                                     class="text-[10px] text-neutral-400 font-light tracking-widest lowercase">Consortium</span>
                             </div>
                         </div>
-                        <p class="text-neutral-400 text-sm">
+                        <p class="text-neutral-400 text-sm" data-i18n="footer-desc">
                             Corporate travel agency specializing in extreme sports and spiritual retreats.
                         </p>
                     </div>
                     <div class="flex flex-col gap-4">
-                        <h4 class="font-bold text-primary-accent flex items-center gap-2">
+                        <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-company">
                             <span class="material-symbols-outlined text-sm">business</span>
                             Company
                         </h4>
-                        <a class="text-neutral-400 hover:text-white text-sm" href="about.html">About Us</a>
-                        <a class="text-neutral-400 hover:text-white text-sm" href="#">Careers</a>
-                        <a class="text-neutral-400 hover:text-white text-sm" href="#">Press</a>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="about.html"
+                            data-i18n="nav-about">About Us</a>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="#"
+                            data-i18n="footer-careers">Careers</a>
+                        <a class="text-neutral-400 hover:text-white text-sm" href="#" data-i18n="footer-press">Press</a>
                     </div>
                     <div class="flex flex-col gap-4">
-                        <h4 class="font-bold text-primary-accent flex items-center gap-2">
+                        <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-services">
                             <span class="material-symbols-outlined text-sm">flight</span>
                             Services
                         </h4>
-                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="#">
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="#"
+                            data-i18n="footer-extreme">
                             <span class="material-symbols-outlined text-[14px]">terrain</span> Extreme Retreats
                         </a>
                         <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2"
-                            href="packages.html">
+                            href="packages.html" data-i18n="footer-all-packages">
                             <span class="material-symbols-outlined text-[14px]">inventory_2</span> All Packages
                         </a>
-                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="#">
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="#"
+                            data-i18n="footer-spiritual">
                             <span class="material-symbols-outlined text-[14px]">self_improvement</span> Spiritual
                             Retreats
                         </a>
-                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="#">
+                        <a class="text-neutral-400 hover:text-white text-sm flex items-center gap-2" href="#"
+                            data-i18n="footer-custom">
                             <span class="material-symbols-outlined text-[14px]">edit_calendar</span> Custom Itineraries
                         </a>
                     </div>
                     <div class="flex flex-col gap-4">
-                        <h4 class="font-bold text-primary-accent flex items-center gap-2">
+                        <h4 class="font-bold text-primary-accent flex items-center gap-2" data-i18n="footer-company">
                             <span class="material-symbols-outlined text-sm">contact_phone</span>
                             Contact
                         </h4>
                         <a class="text-neutral-400 hover:text-white text-sm" href="#">support@worldtravel.com</a>
                         <a class="text-neutral-400 hover:text-white text-sm" href="#">+1 (555) 123-4567</a>
-                        <div class="flex gap-4 mt-2">
-                            <span
-                                class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-6 h-6 flex items-center justify-center text-sm font-bold border border-neutral-600 rounded-full">X</span>
-                            <span
-                                class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-6 h-6 flex items-center justify-center text-sm font-bold border border-neutral-600 rounded-full">in</span>
-                            <span
-                                class="text-neutral-400 hover:text-primary-accent hover:border-primary-accent transition-colors cursor-pointer w-6 h-6 flex items-center justify-center text-sm font-bold border border-neutral-600 rounded-full">ig</span>
-                        </div>
                     </div>
                 </div>
                 <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-neutral-500 text-sm">© 2023 World Travel Consortium. All rights reserved.</p>
+                    <p class="text-neutral-500 text-sm" data-i18n="footer-rights">© 2023 World Travel Consortium. All
+                        rights reserved.</p>
                     <div class="flex gap-6">
-                        <a class="text-neutral-500 hover:text-white text-sm" href="#">Privacy Policy</a>
-                        <a class="text-neutral-500 hover:text-white text-sm" href="#">Terms of Service</a>
+                        <a class="text-neutral-500 hover:text-white text-sm" href="#" data-i18n="footer-privacy">Privacy
+                            Policy</a>
+                        <a class="text-neutral-500 hover:text-white text-sm" href="#" data-i18n="footer-terms">Terms of
+                            Service</a>
                     </div>
                 </div>
             </div>

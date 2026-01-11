@@ -1,4 +1,6 @@
 import '../css/global.css'
+import './i18n.js'
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- Mobile Menu ---
