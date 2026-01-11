@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>World Travel Consortium - Pages Management</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ea2a33",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211111",
+                        "surface-dark": "#1a0f0f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#1b0e0e] dark:text-white h-screen overflow-hidden flex font-display">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-surface-dark text-white flex flex-col h-full shrink-0 border-r border-[#332222]">
+        <div class="p-6">
+            <h1 class="text-xl font-bold tracking-tight">World Travel<br /><span class="text-primary">Consortium</span>
+            </h1>
+            <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Admin CMS</p>
+        </div>
+        <nav class="flex-1 px-4 py-4 flex flex-col gap-2 overflow-y-auto">
+            <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors"
+                href="dashboard.html">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span class="font-medium text-sm">Dashboard</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-3 rounded-lg bg-primary/10 text-primary group transition-colors"
+                href="pages.html">
+                <span class="material-symbols-outlined filled">web</span>
+                <span class="font-medium text-sm">Pages</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors"
+                href="packages.html">
+                <span class="material-symbols-outlined">inventory_2</span>
+                <span class="font-medium text-sm">Packages</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors"
+                href="#">
+                <span class="material-symbols-outlined">chat_bubble</span>
+                <span class="font-medium text-sm">Inquiries</span>
+                <span class="ml-auto bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full"
+                    id="sidebar-inquiry-count">0</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors"
+                href="form-builder.html">
+                <span class="material-symbols-outlined">dynamic_form</span>
+                <span class="font-medium text-sm">Form Builder</span>
+            </a>
+            <div class="my-4 border-t border-white/10"></div>
+            <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-gray-400 hover:bg-white/5 hover:text-white transition-colors"
+                href="../index.html" target="_blank">
+                <span class="material-symbols-outlined">public</span>
+                <span class="font-medium text-sm">View Website</span>
+            </a>
+        </nav>
+        <div class="p-4 border-t border-white/10">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-gray-700 to-gray-600 flex items-center justify-center text-white text-sm font-bold shadow-inner"
+                    id="user-avatar">
+                    AD
+                </div>
+                <div class="flex flex-col">
+                    <p class="text-sm font-medium text-white" id="user-email">Admin</p>
+                    <p class="text-xs text-gray-400">Super Admin</p>
+                </div>
+                <button class="ml-auto text-gray-400 hover:text-white" id="logout-btn">
+                    <span class="material-symbols-outlined text-[20px]">logout</span>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-full overflow-hidden relative">
+        <!-- Header -->
+        <header
+            class="h-20 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark flex items-center justify-between px-8 shrink-0">
+            <div class="flex flex-col">
+                <div class="flex items-center gap-2 text-sm text-gray-500 mb-1">
+                    <span class="hover:text-primary cursor-pointer transition-colors">Home</span>
+                    <span class="material-symbols-outlined text-[12px]">chevron_right</span>
+                    <span class="font-medium text-gray-900 dark:text-gray-100">Pages Management</span>
+                </div>
+                <h2 class="text-xl font-bold text-[#1b0e0e] dark:text-white">Website Pages</h2>
+            </div>
+            <div class="flex items-center gap-4">
+                <!-- Create Button -->
+                <button id="create-page-btn"
+                    class="flex items-center gap-2 h-10 px-4 bg-primary hover:bg-primary/90 text-white rounded-lg text-sm font-bold transition-all shadow-sm hover:shadow-md">
+                    <span class="material-symbols-outlined text-[20px]">add</span>
+                    <span>Create New Page</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Scrollable Content -->
+        <div class="flex-1 overflow-y-auto p-8 bg-background-light dark:bg-background-dark">
+            <div class="max-w-6xl mx-auto">
+                <div
+                    class="bg-white dark:bg-[#2a2a2a] rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr
+                                    class="bg-gray-50 dark:bg-white/5 border-b border-gray-100 dark:border-gray-800 text-xs uppercase tracking-wider text-gray-500 font-semibold">
+                                    <th class="px-6 py-4">Page Title / Slug</th>
+                                    <th class="px-6 py-4">Last Updated</th>
+                                    <th class="px-6 py-4">Status</th>
+                                    <th class="px-6 py-4 text-right">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 dark:divide-gray-800" id="pages-list">
+                                <!-- Rows injected by JS -->
+                                <tr class="px-6 py-8 text-center text-gray-500">
+                                    <td colspan="4" class="p-8 text-center">Loading pages...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Create Page Modal -->
+    <div id="create-modal"
+        class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+        <div
+            class="bg-white dark:bg-[#2a2a2a] rounded-xl shadow-2xl w-full max-w-md p-6 border border-gray-100 dark:border-gray-700">
+            <h3 class="text-lg font-bold mb-4 text-[#1b0e0e] dark:text-white">Create New Page</h3>
+            <div class="flex flex-col gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-500 mb-1">Page Slug (URL)</label>
+                    <input type="text" id="new-page-slug" placeholder="e.g. about-us"
+                        class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#1a0f0f] text-sm p-2.5 focus:ring-primary focus:border-primary">
+                    <p class="text-xs text-gray-400 mt-1">This will be used for the page URL.</p>
+                </div>
+                <div class="flex gap-3 mt-2">
+                    <button id="cancel-create"
+                        class="flex-1 py-2.5 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-bold text-gray-600 hover:bg-gray-50 transition-colors">Cancel</button>
+                    <button id="confirm-create"
+                        class="flex-1 py-2.5 bg-primary text-white rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors">Create
+                        Page</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Verification Modal -->
+    <div id="delete-modal"
+        class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+        <div
+            class="bg-white dark:bg-[#2a2a2a] rounded-xl shadow-2xl w-full max-w-md p-6 border border-red-200 dark:border-red-900/30">
+            <h3 class="text-lg font-bold mb-2 text-red-600 flex items-center gap-2">
+                <span class="material-symbols-outlined">warning</span> Delete Page
+            </h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                This action cannot be undone. To confirm deletion, type the page slug <span id="delete-target-slug"
+                    class="font-mono font-bold text-[#1b0e0e] dark:text-white bg-gray-100 dark:bg-black px-1 rounded"></span>
+                below:
+            </p>
+            <input type="text" id="delete-verification-input" placeholder="Type slug here"
+                class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-[#1a0f0f] text-sm p-2.5 mb-4 focus:ring-red-500 focus:border-red-500">
+            <div class="flex gap-3">
+                <button id="cancel-delete"
+                    class="flex-1 py-2.5 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-bold text-gray-600 hover:bg-gray-50 transition-colors">Cancel</button>
+                <button id="confirm-delete" disabled
+                    class="flex-1 py-2.5 bg-red-600 text-white rounded-lg text-sm font-bold hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Delete
+                    Permanently</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logic -->
+    <script>
+        const supabaseUrl = 'https://piiffvqqfecuejqyiqmf.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBpaWZmdnFxZmVjdWVqcXlpcW1mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgxNDkyNzAsImV4cCI6MjA4MzcyNTI3MH0.YYv6Ws3f9WjUvwc-Gl-_TEThQTYkC86ed3tjw176Huc';
+        const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+        let pagesData = [];
+        let pageToDelete = null;
+
+        // Security
+        async function checkSession() {
+            const { data: { session } } = await supabaseClient.auth.getSession();
+            if (!session) window.location.href = 'index.html';
+            else {
+                document.getElementById('user-email').innerText = session.user.email;
+                document.getElementById('user-avatar').innerText = session.user.email.substring(0, 2).toUpperCase();
+            }
+        }
+        checkSession();
+
+        // Fetch Pages make sure that the 'pages' table exists in supabase
+        async function fetchPages() {
+            // First check if table exists by trying to select
+            const { data, error } = await supabaseClient
+                .from('pages')
+                .select('*')
+                .order('updated_at', { ascending: false });
+
+            if (error) {
+                console.error("Error fetching pages:", error);
+                document.getElementById('pages-list').innerHTML = `<tr><td colspan="4" class="p-8 text-center text-red-500">Error loading pages. ensure 'pages' table exists.</td></tr>`;
+                return;
+            }
+
+            pagesData = data || [];
+            renderPages();
+        }
+
+        function renderPages() {
+            const container = document.getElementById('pages-list');
+            if (pagesData.length === 0) {
+                container.innerHTML = `<tr><td colspan="4" class="p-8 text-center text-gray-500">No pages found. Create one to get started.</td></tr>`;
+                return;
+            }
+
+            container.innerHTML = pagesData.map(page => `
+                <tr class="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group">
+                    <td class="px-6 py-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                                <span class="material-symbols-outlined">article</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="font-bold text-[#1b0e0e] dark:text-white capitalize">${page.slug.replace('-', ' ')}</span>
+                                <span class="text-xs text-gray-400 font-mono">/${page.slug}</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-6 py-6 text-sm text-gray-500">
+                        ${page.updated_at ? new Date(page.updated_at).toLocaleDateString() + ' ' + new Date(page.updated_at).toLocaleTimeString() : 'Never'}
+                    </td>
+                    <td class="px-6 py-6">
+                        ${page.content ?
+                    '<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">Published</span>' :
+                    '<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400">Draft</span>'}
+                    </td>
+                    <td class="px-6 py-6 text-right">
+                        <div class="flex items-center justify-end gap-2">
+                             <a href="${getEditUrl(page.slug)}" 
+                                class="flex items-center gap-1.5 px-3 py-1.5 bg-gray-100 hover:bg-gray-200 dark:bg-white/5 dark:hover:bg-white/10 rounded-lg text-xs font-bold text-gray-700 dark:text-gray-300 transition-colors">
+                                <span class="material-symbols-outlined text-[16px]">edit</span>
+                                Edit
+                            </a>
+                            <button onclick="initiateDelete('${page.slug}')"
+                                class="flex items-center gap-1.5 px-3 py-1.5 bg-red-50 hover:bg-red-100 dark:bg-red-900/10 dark:hover:bg-red-900/20 rounded-lg text-xs font-bold text-red-600 dark:text-red-400 transition-colors">
+                                <span class="material-symbols-outlined text-[16px]">delete</span>
+                                Delete
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // Helper to determine edit link
+        function getEditUrl(slug) {
+            if (slug === 'home') return 'home-settings.html';
+            // Placeholder for future generic editor or other specific pages
+            return 'home-settings.html'; // For now, default to home-settings or a generic one if built
+        }
+
+        // Create Page Logic
+        const createModal = document.getElementById('create-modal');
+        document.getElementById('create-page-btn').addEventListener('click', () => {
+            createModal.classList.remove('hidden');
+        });
+        document.getElementById('cancel-create').addEventListener('click', () => {
+            createModal.classList.add('hidden');
+        });
+        document.getElementById('confirm-create').addEventListener('click', async () => {
+            const slug = document.getElementById('new-page-slug').value.trim().toLowerCase().replace(/\s+/g, '-');
+            if (!slug) return alert('Please enter a slug');
+
+            const { error } = await supabaseClient.from('pages').insert([{ slug: slug }]);
+            if (error) {
+                alert('Error creating page: ' + error.message);
+            } else {
+                createModal.classList.add('hidden');
+                document.getElementById('new-page-slug').value = '';
+                fetchPages();
+            }
+        });
+
+        // Delete Logic
+        const deleteModal = document.getElementById('delete-modal');
+        const deleteInput = document.getElementById('delete-verification-input');
+        const confirmDeleteBtn = document.getElementById('confirm-delete');
+
+        window.initiateDelete = (slug) => {
+            pageToDelete = slug;
+            document.getElementById('delete-target-slug').innerText = slug;
+            deleteInput.value = '';
+            confirmDeleteBtn.disabled = true;
+            deleteModal.classList.remove('hidden');
+        };
+
+        deleteInput.addEventListener('input', (e) => {
+            if (e.target.value === pageToDelete) {
+                confirmDeleteBtn.disabled = false;
+            } else {
+                confirmDeleteBtn.disabled = true;
+            }
+        });
+
+        document.getElementById('cancel-delete').addEventListener('click', () => {
+            deleteModal.classList.add('hidden');
+            pageToDelete = null;
+        });
+
+        confirmDeleteBtn.addEventListener('click', async () => {
+            if (!pageToDelete) return;
+
+            const { error } = await supabaseClient.from('pages').delete().eq('slug', pageToDelete);
+            if (error) {
+                alert('Error deleting page: ' + error.message);
+            } else {
+                deleteModal.classList.add('hidden');
+                fetchPages();
+            }
+        });
+
+        // Initial Load
+        fetchPages();
+
+    </script>
+</body>
+
+</html>
